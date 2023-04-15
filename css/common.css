@@ -1,0 +1,226 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+/*----- reset -----*/
+body, h1, h2, h3, h4, h5, p, ul, li, ol, dl, dt, dd, figure, input, textarea {
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: 100%;
+  list-style: none;
+  outline: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+input,
+button,
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font: inherit;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  display: none;
+}
+
+input[type=submit],
+input[type=button],
+label,
+button,
+select {
+  cursor: pointer;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+/*----- common -----*/
+.inner {
+  margin: 0 auto;
+  max-width: 1030px;
+  width: 100%;
+  background-color: rgba(241, 92, 168, 0.2);
+  padding: 0 15px;
+}
+
+/*----- flex -----*/
+.flex {
+  display: flex;
+}
+.flex.--fdr {
+  flex-direction: row;
+}
+.flex.--wrap {
+  flex-wrap: wrap;
+}
+.flex.--aic {
+  align-items: center;
+}
+.flex.--jcsb {
+  justify-content: space-between;
+}
+.flex.--jcc {
+  justify-content: center;
+}
+.flex.--fdc {
+  flex-direction: column;
+}
+.flex.--rev {
+  flex-direction: column-reverse;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+/*----- 余白関連 -----*/
+.mt40 {
+  margin-top: 40px;
+}
+
+.mt104 {
+  margin-top: 104px;
+}
+
+.mr20 {
+  margin-right: 20px;
+}
+
+/* -------------------------------------------- */
+/* ボタン */
+/* -------------------------------------------- */
+.header-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding: 10px 8px;
+  font-weight: 700;
+  font-size: 10px;
+}
+.header-btn__text {
+  margin-top: 8px;
+}
+
+.header-btn__icon {
+  width: 14px;
+  height: 14px;
+}
+
+.siryou-btn {
+  background-color: #23C7CE;
+  color: #fff;
+}
+
+.contact-btn {
+  background-color: #97C736;
+  color: #fff;
+}
+
+.spMenuBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  font-weight: 400;
+  line-height: 1;
+  width: 158px;
+  padding: 12px;
+}
+.spMenuBtn__wrap {
+  padding: 0px 20px;
+  margin-top: 32px;
+}
+.spMenuBtn__wrap .spMenuBtn:first-child {
+  margin-right: 20px;
+}
+.spMenuBtn__icon {
+  margin-right: 8px;
+  width: 24px;
+}
+.spMenuBtn__text {
+  font-size: 1rem;
+}
+
+.footer-btn {
+  width: 110px;
+}
+
+.seiden-logo {
+  margin-right: 20px;
+}
+
+.seiden-logo,
+.social_house-logo {
+  transition: opacity 0.4s;
+}
+.seiden-logo:hover,
+.social_house-logo:hover {
+  opacity: 0.6;
+}
+
+@media (min-width: 765px) {
+  .header-btn {
+    font-size: 16px;
+    padding: 16px;
+  }
+  .header-btn__text {
+    margin-top: 16px;
+  }
+  .siryou-btn {
+    min-width: 98px;
+  }
+  .contact-btn {
+    min-width: 132px;
+  }
+  .header-btn__icon {
+    width: 28px;
+    height: 28px;
+  }
+  .pcMenuBtn {
+    border: 1px solid #97C736;
+    background-color: #fff;
+    padding: 8px 16px;
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1;
+  }
+  .pcMenuBtn:first-child {
+    margin-right: 16px;
+  }
+  .footer-btn {
+    width: 220px;
+  }
+  .seiden-logo {
+    margin-right: 40px;
+  }
+}/*# sourceMappingURL=common.css.map */

@@ -1,0 +1,294 @@
+@charset "UTF-8";
+*{
+  box-sizing: border-box;
+}
+
+
+/*----- common -----*/ 
+@function rem($px){
+  @return ($px/16) *1rem;
+}
+
+$textColor: #3D2F23;
+$white: #fff;
+$bgColor: #fffaeb;
+$pink: #ea689a;
+$yellow: #FAC017;
+$skyblue: #23C7CE;
+$skyblueHover: #1DB4BA;
+$green: #97C736;
+$greenHover: #83AC32;
+$gray: #ccc;
+
+
+body {
+	font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Arial, Verdana,sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: rem(14);
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  color: $textColor;
+  background-color: #fff;
+}
+
+@media (min-width: 765px) {
+
+  body {
+    font-size: rem(16);
+  }
+
+}
+
+/* Hover Event */
+@media (hover: hover){
+
+}
+
+
+/* -------------------------------------------- */
+/* header */
+/* -------------------------------------------- */
+.header{
+  &__wrap{
+    height: 100%;
+  }
+  
+  &__btn-wrap{
+    display: flex;
+    height: 100%;
+  }
+}
+
+//----- ロゴ -----
+.header-logo{
+  padding-left: 20px;
+
+  &__link{
+    width: 100%;
+    line-height: 1;
+  }
+
+  &__image{
+    width: 150px;
+  }
+}
+
+@media (min-width: 765px) {
+  .header{
+    &__wrap{
+      height: 100px;
+    }
+  }
+
+  //-----ロゴ -----
+  .header-logo{
+    padding-left: 40px;
+
+    &__image{
+      width: 230px;
+    }
+  }
+
+}
+
+/* -------------------------------------------- */
+/* ナビメニュー */
+/* -------------------------------------------- */
+//----- スマホ用ナビ -----
+.sp-nav{
+  display: none;
+}
+
+.header-link-wrap{
+
+}
+
+.sp-nav-list{
+  font-size: rem(12);
+
+  &__item{
+    padding: 17px 20px;
+    border-bottom: 1px solid $gray;
+
+    &:first-child{
+      border-top: 1px solid $gray;
+    }
+  }
+}
+
+// ハンバーガーメニュー 
+.burger{
+  width: 50px;
+  position: relative;
+  cursor: pointer;
+  z-index: 3;
+  background-color: $textColor;
+}
+
+.bar{
+  width: 23px;
+  height: 3px;
+  border-radius: 6px;
+  background-color: $white;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all .5s;
+  display: inline-block;
+
+  &:nth-of-type(1){
+    top:12px;	
+  }
+
+  &:nth-of-type(2){
+    top:20px;	
+  }
+  
+  &:nth-of-type(3){
+    top:28px;	
+
+    &::after {
+      content:"Menu";
+      position: absolute;
+      top: 3px;
+      left: -3px;
+      color: $white;
+      font-size: rem(10);
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+  }
+}
+
+.burger.active .bar:nth-of-type(2){
+  opacity: 0;
+}
+
+.burger.active .bar:nth-of-type(1){
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 40%;
+}
+
+.burger.active .bar:nth-of-type(3){
+  top: 40%;
+  left:50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 40%;
+
+  &::after{
+    content:"Close";
+    transform: translateY(0) rotate(-45deg);
+    top:6px;
+    left:4px;
+  }
+}
+
+//----- PC用ナビ -----
+.pc-nav{
+  display: none;
+  margin-right: 16px;
+}
+
+.pc-nav__btnWrap{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pc-nav-list{
+  margin-top: 20px;
+  font-weight: 700;
+  margin-right: -16px;
+
+  &__item{
+    padding: 0 17px;
+    position: relative;
+    font-size: rem(14);
+
+    &:not(:last-child)::after{
+      content: "";
+      width: 18px;
+      height: 1px;
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: -10px;
+      background-color: $green;
+      transform:rotate(140deg)
+    }
+  }
+}
+
+@media (min-width: 765px) {
+  .burger{
+    display: none;
+  }
+
+  //----- PC用ナビ -----
+  .pc-nav{
+    display: block;
+  }
+
+}
+
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+
+
+@media (min-width: 765px) {
+
+
+}
+
+/* -------------------------------------------- */
+/* footer */
+/* -------------------------------------------- */
+.footer{
+  &__btn-wrap{
+    padding: 32px 0 96px;
+    background: #000;
+  }
+
+  &__link-wrap{
+    background-color: $textColor;
+    color:$white;
+  }
+}
+
+.footer__link{
+  &--left{
+    border: 1px solid #0fff00;
+  }
+  
+  &--center{
+    border: 1px solid #0fff00;
+    display: none;
+    
+  }
+  
+  &--right{
+    border: 1px solid #0fff00;
+
+  }
+}
+
+.footer-logo{
+  width: 113px;
+}
+
+
+@media (min-width: 765px) {
+
+}
+
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+
+
+@media (min-width: 765px) {
+
+
+}

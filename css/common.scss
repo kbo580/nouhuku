@@ -1,0 +1,281 @@
+@charset "UTF-8";
+*{
+  box-sizing: border-box;
+}
+
+/*----- reset -----*/
+body,h1,h2,h3,h4,h5,p,ul,li,ol,dl,dt,dd,figure,input,textarea {
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: 100%;
+  list-style: none;
+  outline:0;
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+a { 
+  color: inherit;
+  text-decoration: none;
+}
+
+img{
+  max-width:100%;
+	height: auto;
+  vertical-align: bottom;
+}
+
+input,
+button,
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font: inherit;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  display: none;
+}
+
+input[type='submit'],
+input[type='button'],
+label,
+button,
+select {
+  cursor: pointer;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+header,main,section,footer, div, ul, li, h1,h2,h3,dl,dt,dd{
+  // background-color: rgba(0,200,100,0.1);
+  // border: 1px solid rgba(0,0,0,0.1);
+}
+
+/*----- common -----*/ 
+@function rem($px){
+  @return ($px/16) *1rem;
+}
+
+$textColor: #3D2F23;
+$white: #fff;
+$bgColor: #fffaeb;
+$pink: #ea689a;
+$yellow: #FAC017;
+$skyblue: #23C7CE;
+$skyblueHover: #1DB4BA;
+$green: #97C736;
+$greenHover: #83AC32;
+$gray: #ccc;
+
+.inner{
+  margin: 0 auto;
+  max-width: 1030px;
+  width: 100%;
+  background-color: rgba(241,92,168,0.2);
+  padding: 0 15px;
+}
+
+/*----- flex -----*/
+.flex{
+  display: flex;
+
+  &.--fdr{
+    flex-direction: row;
+  }
+
+  &.--wrap{
+    flex-wrap: wrap;
+  }
+
+  &.--aic{
+    align-items: center;
+  }
+
+  &.--jcsb{
+    justify-content: space-between;
+  }
+
+  &.--jcc{
+    justify-content: center;
+  }
+
+	&.--fdc{
+    flex-direction: column;
+  }
+
+  &.--rev{
+    flex-direction: column-reverse;
+  }
+}
+
+.bold{
+  font-weight: 700;
+}
+
+
+/*----- 余白関連 -----*/
+.mt40{
+  margin-top: 40px;
+}
+
+.mt104{
+  margin-top: 104px;
+}
+
+.mr20{
+  margin-right: 20px;
+}
+
+/* -------------------------------------------- */
+/* ボタン */
+/* -------------------------------------------- */
+//-------- headerのボタン ------
+.header-btn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding: 10px 8px;
+  font-weight: 700;
+  font-size: 10px;
+
+  &__text{
+    margin-top: 8px;
+  }
+}
+
+.header-btn__icon{
+  width: 14px;
+  height: 14px;
+}
+
+.siryou-btn{
+  background-color: $skyblue;
+  color: $white;
+}
+
+.contact-btn{
+  background-color: $green;
+  color: $white;
+}
+
+//-------- スマホ用メニューのボタン ------
+.spMenuBtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  font-weight: 400;
+  line-height: 1;
+  width: 158px;
+  padding: 12px;
+
+  &__wrap{
+    padding: 0px 20px;
+    margin-top: 32px;
+
+    .spMenuBtn:first-child{
+      margin-right: 20px;
+    }
+  }
+
+  &__icon{
+    margin-right: 8px;
+    width: 24px;
+  }
+
+  &__text{
+    font-size: rem(16);
+  }
+}
+
+//-------- footerのボタン(バナー) ------
+.footer-btn{
+  width: 110px;
+}
+
+.seiden-logo{
+  margin-right: 20px;
+}
+
+.seiden-logo,
+.social_house-logo{
+  transition: opacity .4s;
+  &:hover{
+    opacity: .6;
+  }
+}
+
+@media (min-width: 765px) {
+  //-------- headerのボタン ------
+  .header-btn{
+    font-size: 16px;
+    padding: 16px;
+    
+    &__text{
+      margin-top: 16px;
+    }
+  }
+
+  .siryou-btn{
+    min-width: 98px;
+  }
+
+  .contact-btn{
+    min-width: 132px;
+  }
+
+  .header-btn__icon{
+    width: 28px;
+    height: 28px;
+  }
+
+  //-------- PC用メニューのボタン(上の２つ) ------
+  .pcMenuBtn{
+    border: 1px solid $green;
+    background-color: #fff;
+    padding: 8px 16px;
+    display: inline-block;
+    font-size: rem(12);
+    font-weight: 500;
+    line-height: 1;
+  
+    &:first-child{
+      margin-right: 16px;
+    }
+  }
+
+  //-------- footerのボタン(バナー) ------
+  .footer-btn{
+    width: 220px;
+  }
+  
+  .seiden-logo{
+    margin-right: 40px;
+  }
+
+
+
+
+
+
+}
+
+
+
