@@ -39,11 +39,6 @@ body {
 
 }
 
-/* Hover Event */
-@media (hover: hover){
-
-}
-
 
 /* -------------------------------------------- */
 /* header */
@@ -235,22 +230,130 @@ body {
 /* -------------------------------------------- */
 /* main */
 /* -------------------------------------------- */
-main{
-  height: 2000px;
-}
 
 @media (min-width: 765px) {
 
 
 }
 /* -------------------------------------------- */
-/*  */
+/* cta */
 /* -------------------------------------------- */
+.cta{
+
+}
+
+//hoverで拡大用
+.mask{
+  display: block;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.bgImage{
+  &::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+}
+
+//大きいイメージ
+.l-image{
+  width: 50%;
+  height: calc(88/375*100vw);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &__text{
+    color:$white;
+    border: 1px solid $white;
+    font-size: clamp(12px,2vw,32px);
+    padding: 5px 12px;
+    font-weight: 700;
+    line-height: 1;
+    position: absolute;
+    z-index: 2;
+  }
+}
+
+
+//横長のイメージ
+.wide-image{
+  position: relative;
+
+  &::before{
+    border-radius: 8px;
+  }
+  
+  &__wrap{
+    margin-top: 80px;
+  }
+
+  &__text-wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+  }
+  
+  &__text{
+    color:$white;
+    font-size: rem(24);
+    font-weight: 700;
+    padding: 72px 24px;
+  }
+}
+
+//小さいイメージ
+.s-image{
+  width: calc((100% - 41px )/3);
+  margin-top: 40px;
+  position: relative;
+  &::before{
+    border-radius: 8px;
+  }
+
+  &__text-wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+  }
+
+  &__wrap{
+    padding-bottom: 128px;
+  }
+
+  &__text{
+    color:$white;
+    padding: 38px 24px;
+    font-size: rem(16);
+  }
+}
 
 
 @media (min-width: 765px) {
+  .cta{
 
+  }
 
+  //大きいイメージ
+  .l-image{
+    height: calc(320/1366*100vw);
+
+    &__text{
+      padding: 0.75em 1.25em;
+    }
+  }
 }
 
 /* -------------------------------------------- */
@@ -400,3 +503,24 @@ main{
 
 
 }
+
+/* Hover Event */
+@media (hover: hover){
+  .cta-image{
+    transform: scale(1);
+    transition: transform .3s ease-in-out;
+  }
+  
+  .l-image:hover .cta-image,
+  .wide-image:hover .cta-image,
+  .s-image:hover .cta-image{
+    transform: scale(1.2);
+  }
+
+
+
+
+}
+
+
+

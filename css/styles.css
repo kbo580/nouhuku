@@ -19,7 +19,6 @@ body {
     font-size: 1rem;
   }
 }
-/* Hover Event */
 /* -------------------------------------------- */
 /* header */
 /* -------------------------------------------- */
@@ -177,13 +176,100 @@ body {
 /* -------------------------------------------- */
 /* main */
 /* -------------------------------------------- */
-main {
-  height: 2000px;
+/* -------------------------------------------- */
+/* cta */
+/* -------------------------------------------- */
+.mask {
+  display: block;
+  line-height: 0;
+  overflow: hidden;
 }
 
-/* -------------------------------------------- */
-/*  */
-/* -------------------------------------------- */
+.bgImage::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.l-image {
+  width: 50%;
+  height: 23.4666666667vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.l-image__text {
+  color: #fff;
+  border: 1px solid #fff;
+  font-size: clamp(12px, 2vw, 32px);
+  padding: 5px 12px;
+  font-weight: 700;
+  line-height: 1;
+  position: absolute;
+  z-index: 2;
+}
+
+.wide-image {
+  position: relative;
+}
+.wide-image::before {
+  border-radius: 8px;
+}
+.wide-image__wrap {
+  margin-top: 80px;
+}
+.wide-image__text-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+.wide-image__text {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 72px 24px;
+}
+
+.s-image {
+  width: calc((100% - 41px) / 3);
+  margin-top: 40px;
+  position: relative;
+}
+.s-image::before {
+  border-radius: 8px;
+}
+.s-image__text-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+.s-image__wrap {
+  padding-bottom: 128px;
+}
+.s-image__text {
+  color: #fff;
+  padding: 38px 24px;
+  font-size: 1rem;
+}
+
+@media (min-width: 765px) {
+  .l-image {
+    height: 23.4260614934vw;
+  }
+  .l-image__text {
+    padding: 0.75em 1.25em;
+  }
+}
 /* -------------------------------------------- */
 /* footer */
 /* -------------------------------------------- */
@@ -295,4 +381,16 @@ main {
 }
 /* -------------------------------------------- */
 /*  */
-/* -------------------------------------------- *//*# sourceMappingURL=styles.css.map */
+/* -------------------------------------------- */
+/* Hover Event */
+@media (hover: hover) {
+  .cta-image {
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+  }
+  .l-image:hover .cta-image,
+  .wide-image:hover .cta-image,
+  .s-image:hover .cta-image {
+    transform: scale(1.2);
+  }
+}/*# sourceMappingURL=styles.css.map */
