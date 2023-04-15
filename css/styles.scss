@@ -228,6 +228,133 @@ body {
 }
 
 /* -------------------------------------------- */
+/* mv */
+/* -------------------------------------------- */
+.mv{
+  padding: 20px 20px 52px;
+  position: relative;
+
+  // 背景
+  &::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 120px;
+    left: 0;
+    z-index: -1;
+    background: url(../images/24771547_l.png) center;
+  }
+
+  &__image{
+    width: 100%;
+  }
+
+  &__copy{
+    background-color: $skyblue;
+    color:$white;
+    font-weight: 500;
+    line-height: 1;
+    font-size: rem(22);
+    font-size: clamp(22px,3vw,40px);
+  }
+
+  &__copy-wrap{
+    
+    &.--sp{
+      margin-top: -60px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      
+      .mv__copy{
+        padding: 5px 8px;
+        display: inline-block;
+  
+        &.--bottom{
+          margin-top: 12px;
+        }
+      }
+    }
+
+    &.--pc{
+      display: none;
+    }
+  }
+  
+
+  &__text{
+    font-size: rem(12);
+    font-size: clamp(12px, 3vw,16px);
+    padding: 32px 0;
+  }
+}
+
+@media (min-width: 765px) {
+  .mv{
+    padding: 10px 20px 52px;
+    position: relative;
+  
+    // 背景
+    &::before{
+      top: 54.5%;
+      background: url(../images/mv-bg-pc.png) center;
+    }
+
+    &__text-wrap{
+      width: calc(408/1366*100vw);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: calc(40/1366*100vw) 0 calc(10/1366*100vw);
+    }
+  
+    .pc-cont{
+      display: flex;
+    }
+
+    &__image{
+      width: calc(880/1366*100vw);
+    }
+
+    &__copy{
+
+    }
+  
+    &__copy-wrap{
+      
+      &.--sp{
+        display: none;
+      }
+  
+      &.--pc{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: -22px;
+
+        .mv__copy{
+          padding: 12px 24px;
+          padding: calc(12/1366*100vw) calc(24/1366*100vw);
+    
+          &.--center,
+          &.--bottom{
+            margin-top: 24px;
+          }
+        }
+      }
+    }
+  
+    &__text{
+      font-size: rem(16);
+      line-height: 1.8;
+      padding: calc(80/1366*100vw) 0px calc(32/1366*100vw) 40px;
+    }
+  }
+
+}
+
+/* -------------------------------------------- */
 /* main */
 /* -------------------------------------------- */
 
@@ -235,6 +362,25 @@ body {
 
 
 }
+
+/* -------------------------------------------- */
+/* main */
+/* -------------------------------------------- */
+
+@media (min-width: 765px) {
+
+
+}
+
+/* -------------------------------------------- */
+/* main */
+/* -------------------------------------------- */
+
+@media (min-width: 765px) {
+
+
+}
+
 /* -------------------------------------------- */
 /* cta */
 /* -------------------------------------------- */

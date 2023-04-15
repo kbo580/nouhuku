@@ -174,6 +174,106 @@ body {
   }
 }
 /* -------------------------------------------- */
+/* mv */
+/* -------------------------------------------- */
+.mv {
+  padding: 20px 20px 52px;
+  position: relative;
+}
+.mv::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 120px;
+  left: 0;
+  z-index: -1;
+  background: url(../images/24771547_l.png) center;
+}
+.mv__image {
+  width: 100%;
+}
+.mv__copy {
+  background-color: #23C7CE;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1;
+  font-size: 1.375rem;
+  font-size: clamp(22px, 3vw, 40px);
+}
+.mv__copy-wrap.--sp {
+  margin-top: -60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.mv__copy-wrap.--sp .mv__copy {
+  padding: 5px 8px;
+  display: inline-block;
+}
+.mv__copy-wrap.--sp .mv__copy.--bottom {
+  margin-top: 12px;
+}
+.mv__copy-wrap.--pc {
+  display: none;
+}
+.mv__text {
+  font-size: 0.75rem;
+  font-size: clamp(12px, 3vw, 16px);
+  padding: 32px 0;
+}
+
+@media (min-width: 765px) {
+  .mv {
+    padding: 10px 20px 52px;
+    position: relative;
+  }
+  .mv::before {
+    top: 54.5%;
+    background: url(../images/mv-bg-pc.png) center;
+  }
+  .mv__text-wrap {
+    width: 29.8682284041vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.9282576867vw 0 0.7320644217vw;
+  }
+  .mv .pc-cont {
+    display: flex;
+  }
+  .mv__image {
+    width: 64.4216691069vw;
+  }
+  .mv__copy-wrap.--sp {
+    display: none;
+  }
+  .mv__copy-wrap.--pc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: -22px;
+  }
+  .mv__copy-wrap.--pc .mv__copy {
+    padding: 12px 24px;
+    padding: 0.878477306vw 1.756954612vw;
+  }
+  .mv__copy-wrap.--pc .mv__copy.--center, .mv__copy-wrap.--pc .mv__copy.--bottom {
+    margin-top: 24px;
+  }
+  .mv__text {
+    font-size: 1rem;
+    line-height: 1.8;
+    padding: 5.8565153734vw 0px 2.3426061493vw 40px;
+  }
+}
+/* -------------------------------------------- */
+/* main */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/* main */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
 /* main */
 /* -------------------------------------------- */
 /* -------------------------------------------- */

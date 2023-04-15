@@ -85,11 +85,16 @@ $gray: #ccc;
 .inner{
   margin: 0 auto;
   width: 100%;
-  background-color: rgba(241,92,168,0.2);
+  // background-color: rgba(241,92,168,0.2);
 
   &.--l{
     max-width: 1000px;
     padding: 0 15px;
+  }
+
+  &.--xl{
+    max-width: 1320px;
+    padding: 0 20px;
   }
 }
 
@@ -206,6 +211,31 @@ $gray: #ccc;
 /* -------------------------------------------- */
 /* ボタン */
 /* -------------------------------------------- */
+.btn{
+  background-color: $green;
+  color:$white;
+  line-height: 1;
+  font-weight: 900;
+
+  &.--nouhuku{
+    font-size: rem(16);
+    padding: 15px 20px;
+    display: inline-block;
+  }
+
+  &.--more{
+
+  }
+
+  &.--confirm{
+
+  }
+}
+
+.btn-wrap{
+  text-align: center;
+}
+
 //-------- headerのボタン ------
 .header-btn{
   display: flex;
@@ -313,7 +343,26 @@ $gray: #ccc;
   }
 }
 
+
+
 @media (min-width: 765px) {
+  .btn{
+  
+    &.--nouhuku{
+      font-size: rem(24);
+      padding: 20px 40px;
+      display: inline-block;
+    }
+  
+    &.--more{
+  
+    }
+  
+    &.--confirm{
+  
+    }
+  }
+
   //-------- headerのボタン ------
   .header-btn{
     font-size: 16px;
