@@ -77,6 +77,9 @@ select::-ms-expand {
 .flex.--fdr {
   flex-direction: row;
 }
+.flex.--fdc {
+  flex-direction: column;
+}
 .flex.--wrap {
   flex-wrap: wrap;
 }
@@ -88,9 +91,6 @@ select::-ms-expand {
 }
 .flex.--jcc {
   justify-content: center;
-}
-.flex.--fdc {
-  flex-direction: column;
 }
 .flex.--rev {
   flex-direction: column-reverse;

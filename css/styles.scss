@@ -259,23 +259,54 @@ body {
 
 .footer__link{
   &--left{
-    border: 1px solid #0fff00;
+    // border: 1px solid #0fff00;
+    font-weight: 500;
+    width: 50%;
+    
+    p{
+      font-size: rem(10);
+      transform: scale(0.7);
+      transform-origin: 0%;
+      white-space: nowrap;
+
+    }
   }
   
   &--center{
-    border: 1px solid #0fff00;
+    // border: 1px solid #0fff00;
     display: none;
     
   }
   
   &--right{
-    border: 1px solid #0fff00;
-
+    // border: 1px solid #0fff00;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 50%;
   }
 }
 
 .footer-logo{
   width: 113px;
+}
+
+.footer-icon{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.fb-icon{
+  margin-right: 8px;
+}
+
+.footer-copy{
+  // border: 1px solid #fff;
+  font-size: rem(10);
+  transform: scale(0.6);
+      transform-origin: 100%;
+      white-space: nowrap;
+      word-wrap: break-word;
 }
 
 

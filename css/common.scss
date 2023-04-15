@@ -98,6 +98,10 @@ $gray: #ccc;
     flex-direction: row;
   }
 
+  &.--fdc{
+    flex-direction: column;
+  }
+  
   &.--wrap{
     flex-wrap: wrap;
   }
@@ -112,10 +116,6 @@ $gray: #ccc;
 
   &.--jcc{
     justify-content: center;
-  }
-
-	&.--fdc{
-    flex-direction: column;
   }
 
   &.--rev{

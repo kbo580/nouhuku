@@ -190,18 +190,44 @@ body {
 }
 
 .footer__link--left {
-  border: 1px solid #0fff00;
+  font-weight: 500;
+  width: 50%;
+}
+.footer__link--left p {
+  font-size: 0.625rem;
+  transform: scale(0.7);
+  transform-origin: 0%;
+  white-space: nowrap;
 }
 .footer__link--center {
-  border: 1px solid #0fff00;
   display: none;
 }
 .footer__link--right {
-  border: 1px solid #0fff00;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 50%;
 }
 
 .footer-logo {
   width: 113px;
+}
+
+.footer-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.fb-icon {
+  margin-right: 8px;
+}
+
+.footer-copy {
+  font-size: 0.625rem;
+  transform: scale(0.6);
+  transform-origin: 100%;
+  white-space: nowrap;
+  word-wrap: break-word;
 }
 
 /* -------------------------------------------- */
