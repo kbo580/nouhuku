@@ -175,6 +175,13 @@ body {
   }
 }
 /* -------------------------------------------- */
+/* main */
+/* -------------------------------------------- */
+main {
+  height: 2000px;
+}
+
+/* -------------------------------------------- */
 /*  */
 /* -------------------------------------------- */
 /* -------------------------------------------- */
@@ -182,25 +189,21 @@ body {
 /* -------------------------------------------- */
 .footer__btn-wrap {
   padding: 32px 0 96px;
-  background: #000;
 }
 .footer__link-wrap {
   background-color: #3D2F23;
   color: #fff;
+  padding: 20px 30px;
 }
 
 .footer__link--left {
   font-weight: 500;
   width: 50%;
 }
-.footer__link--left p {
-  font-size: 0.625rem;
-  transform: scale(0.7);
-  transform-origin: 0%;
-  white-space: nowrap;
-}
 .footer__link--center {
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
   display: none;
+  padding-left: 16px;
 }
 .footer__link--right {
   align-items: flex-end;
@@ -222,14 +225,74 @@ body {
   margin-right: 8px;
 }
 
+.footer-info {
+  font-size: 0.625rem;
+  transform: scale(0.7);
+  transform-origin: 0%;
+  white-space: nowrap;
+  margin-top: 12px;
+}
+
 .footer-copy {
   font-size: 0.625rem;
   transform: scale(0.6);
   transform-origin: 100%;
   white-space: nowrap;
-  word-wrap: break-word;
 }
 
+@media (min-width: 765px) {
+  .footer__btn-wrap {
+    padding: 32px 0 40px;
+  }
+  .footer__link-wrap {
+    padding: 40px 40px;
+  }
+  .footer__link--left {
+    width: auto;
+    margin-right: 64px;
+  }
+  .footer__link--center {
+    width: auto;
+    display: block;
+    font-size: 0.875rem;
+    flex: auto;
+  }
+  .footer__link--right {
+    width: auto;
+    position: relative;
+  }
+  .footer-logo {
+    width: 226px;
+  }
+  .footer-info {
+    font-size: 0.875rem;
+    transform: scale(1);
+    margin-top: 24px;
+  }
+  .footer-link-title {
+    margin-right: 64px;
+  }
+  .footer-nav-list {
+    margin-right: 64px;
+  }
+  .footer-nav-list__item:not(:first-child) {
+    margin-top: 24px;
+  }
+  .footer-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .fb-icon {
+    margin-right: 16px;
+  }
+  .footer-copy {
+    font-size: 0.75rem;
+    transform: scale(1);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
 /* -------------------------------------------- */
 /*  */
 /* -------------------------------------------- *//*# sourceMappingURL=styles.css.map */

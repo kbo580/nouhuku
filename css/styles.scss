@@ -233,6 +233,17 @@ body {
 }
 
 /* -------------------------------------------- */
+/* main */
+/* -------------------------------------------- */
+main{
+  height: 2000px;
+}
+
+@media (min-width: 765px) {
+
+
+}
+/* -------------------------------------------- */
 /*  */
 /* -------------------------------------------- */
 
@@ -248,38 +259,29 @@ body {
 .footer{
   &__btn-wrap{
     padding: 32px 0 96px;
-    background: #000;
   }
 
   &__link-wrap{
     background-color: $textColor;
     color:$white;
+    padding: 20px 30px;
   }
 }
 
 .footer__link{
   &--left{
-    // border: 1px solid #0fff00;
     font-weight: 500;
-    width: 50%;
-    
-    p{
-      font-size: rem(10);
-      transform: scale(0.7);
-      transform-origin: 0%;
-      white-space: nowrap;
-
-    }
+    width: 50%; 
   }
   
   &--center{
-    // border: 1px solid #0fff00;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
     display: none;
+    padding-left: 16px;
     
   }
   
   &--right{
-    // border: 1px solid #0fff00;
     align-items: flex-end;
     justify-content: space-between;
     width: 50%;
@@ -300,17 +302,92 @@ body {
   margin-right: 8px;
 }
 
+.footer-info{
+  font-size: rem(10);
+  transform: scale(0.7);
+  transform-origin: 0%;
+  white-space: nowrap;
+  margin-top: 12px;
+}
+
 .footer-copy{
-  // border: 1px solid #fff;
   font-size: rem(10);
   transform: scale(0.6);
-      transform-origin: 100%;
-      white-space: nowrap;
-      word-wrap: break-word;
+  transform-origin: 100%;
+  white-space: nowrap;
 }
 
 
 @media (min-width: 765px) {
+  .footer{
+    &__btn-wrap{
+      padding: 32px 0 40px;
+    }
+  
+    &__link-wrap{
+      padding: 40px 40px;
+    }
+  }
+  
+  .footer__link{
+    &--left{
+      width: auto;
+      margin-right: 64px;
+    }
+    
+    &--center{
+      width: auto;
+      display: block;
+      font-size: rem(14);
+      flex: auto;
+    }
+    
+    &--right{
+      width: auto;
+      position: relative;
+    }
+  }
+  
+  .footer-logo{
+    width: 226px;
+  }
+
+  .footer-info{
+    font-size: rem(14);
+    transform: scale(1);
+    margin-top: 24px;
+  }
+
+  .footer-link-title{
+    margin-right: 64px;
+  }
+
+  .footer-nav-list{
+    margin-right: 64px;
+
+    &__item{
+      &:not(:first-child){
+        margin-top: 24px;
+      }
+    }
+  }
+
+  .footer-icon{
+    width: 40px;
+    height: 40px;
+  }
+  
+  .fb-icon{
+    margin-right: 16px;
+  }
+  
+  .footer-copy{
+    font-size: rem(12);
+    transform: scale(1);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
 
 }
 

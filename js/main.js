@@ -14,3 +14,22 @@ $(function(){
   });
 
 });
+
+// ボタンを隠す
+// $('#toTop').hide();
+
+//画面をスクロールしたらフェードイン
+$(window).scroll(function(){
+  if($(this).scrollTop()>300){
+    $('#toTop').fadeIn(400);
+  }
+  else{
+    $('#toTop').fadeOut(400);
+  }
+});
+
+//「topへ戻る」ボタンを押すとtopから0の地点へスクロールする
+$('#toTop').click(function(){ 
+  $('html,body').animate({'scrollTop':0},500);
+  return false;
+});
