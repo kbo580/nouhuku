@@ -82,14 +82,19 @@ $green: #97C736;
 $greenHover: #83AC32;
 $gray: #ccc;
 
+.bg-brown{
+  background-color: $bgColor;
+}
+
 .inner{
   margin: 0 auto;
   width: 100%;
   // background-color: rgba(241,92,168,0.2);
+  border: 1px dotted #ddd;
 
   &.--l{
-    max-width: 1000px;
-    padding: 0 15px;
+    max-width: 1040px;
+    padding: 0 20px;
   }
 
   &.--xl{
@@ -123,6 +128,11 @@ $gray: #ccc;
   &.--s{
     width: 32px;
     height: 32px;
+  }
+
+  &.--ss{
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -191,11 +201,28 @@ $gray: #ccc;
   .pc-only{
     display: block;
   }
+
+  //+マーク
+  .icon-wrap {
+
+    &.--ss{
+      width: 32px;
+      height: 32px;
+    }
+  }
 }
 
 
+/* -------------------------------------------- */
+/* 余白関連 */
+/* -------------------------------------------- */
+//section間の余白
+.sec-pad{
+  border: 1px solid #000;
+  padding-top: 52px;
+  padding-bottom: 52px;
+}
 
-/*----- 余白関連 -----*/
 .mt40{
   margin-top: 40px;
 }
@@ -208,6 +235,63 @@ $gray: #ccc;
   margin-right: 20px;
 }
 
+@media (min-width: 765px) {
+  .sec-pad{
+    padding-top: 104px;
+    padding-bottom: 104px;
+  }
+}
+/* -------------------------------------------- */
+/* 見出し */
+/* -------------------------------------------- */
+.sec-heading{
+  position: relative;
+  margin-bottom: 1em;
+  font-size: rem(18);
+  font-weight: 500;
+  letter-spacing: 0;
+  text-align: center;
+  margin-bottom: 43px;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    display: inline-block;
+    width: 32px;
+    height: 4px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: $skyblue;
+    border-radius: 2px;
+  }
+}
+
+.br--sp-only{
+  display: block;
+}
+.br--pc-only{
+  display: none;
+}
+
+@media (min-width: 765px){
+  .sec-heading{
+    font-size: rem(36);
+    margin-bottom: 92px;
+    
+    &::before {
+      width: 64px;
+    }
+  }
+
+  .br--sp-only{
+    display: none;
+  }
+  .br--pc-only{
+    display: block;
+  }
+}
 /* -------------------------------------------- */
 /* ボタン */
 /* -------------------------------------------- */
@@ -234,6 +318,11 @@ $gray: #ccc;
 
 .btn-wrap{
   text-align: center;
+}
+
+//ボタン用余白
+.mt20{
+  margin-top: 20px;
 }
 
 //-------- headerのボタン ------
@@ -363,6 +452,12 @@ $gray: #ccc;
     }
   }
 
+  //ボタン用余白
+  .mt20{
+    margin-top: 40px;
+  }
+
+
   //-------- headerのボタン ------
   .header-btn{
     font-size: 16px;
@@ -423,12 +518,102 @@ $gray: #ccc;
     }
   }
 
-
-
-
-
-
 }
 
+/* -------------------------------------------- */
+/* パーツ */
+/* -------------------------------------------- */
+//カードリスト
+.card-list{
+  margin-top: -20px;
+
+  &__item{
+    width: calc((100% - 15px)/2);
+    margin-top: 20px;
+  }
+
+  &__thumb{
+    position: relative;
+  }
+  
+  &__image{
+    aspect-ratio: 320/200;
+    object-fit: cover;
+  }
+
+  &__label{
+    font-size: rem(10);
+    transform: scale(0.8);
+    transform-origin: 0;
+    background: $yellow;
+    font-weight: 700;
+    padding: 3px 5px;
+    display: inline-block;
+    position: absolute;
+    right: -9%;
+    bottom: -11%;
+  }
+
+  &__heading{
+    font-size: rem(12);
+    margin-top: 21px;
+  }
+  
+  &__desc{
+    font-size: rem(12);
+    padding: 12px 0;
+    border-bottom: 1px solid #dddddd;
+  }
+
+  &__cat{
+    font-size: rem(10);
+    color:#777777;
+    margin-top: 12px;
+  }
+
+  &__icon{
+    width: 15px;
+    margin-right: 8px;
+  }
+}
+
+@media (min-width: 765px){
+  //カードリスト
+  .card-list{
+    margin-top: -60px;
+
+    &__item{
+      width: calc((100% - 86px)/3);
+      margin-top: 60px;
+    }
+
+    &__label{
+      font-size: rem(12);
+      transform: scale(1);
+      padding: 6px 16px;
+      right: 0%;
+      bottom: -4%;
+    }
+
+    &__heading{
+      font-size: rem(16);
+      margin-top: 24px;
+    }
+    
+    &__desc{
+      font-size: rem(16);
+      padding: 5px 0 24px;
+    }
+
+    &__cat{
+      margin-top: 14px;
+    }
+
+    &__icon{
+      width: 16px;
+      margin-right: 4px;
+    }
+  }
+}
 
 

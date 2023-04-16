@@ -33,3 +33,11 @@ $('#toTop').click(function(){
   $('html,body').animate({'scrollTop':0},500);
   return false;
 });
+
+//アコーディオン
+$('.hide').hide();
+$('#moreBtn').on('click', function() {
+	$('.hide').slideToggle();
+  return false;
+
+});

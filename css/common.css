@@ -62,13 +62,18 @@ select::-ms-expand {
 }
 
 /*----- common -----*/
+.bg-brown {
+  background-color: #fffaeb;
+}
+
 .inner {
   margin: 0 auto;
   width: 100%;
+  border: 1px dotted #ddd;
 }
 .inner.--l {
-  max-width: 1000px;
-  padding: 0 15px;
+  max-width: 1040px;
+  padding: 0 20px;
 }
 .inner.--xl {
   max-width: 1320px;
@@ -98,6 +103,10 @@ select::-ms-expand {
 .icon-wrap.--s {
   width: 32px;
   height: 32px;
+}
+.icon-wrap.--ss {
+  width: 20px;
+  height: 20px;
 }
 
 .icon {
@@ -159,8 +168,20 @@ select::-ms-expand {
   .pc-only {
     display: block;
   }
+  .icon-wrap.--ss {
+    width: 32px;
+    height: 32px;
+  }
 }
-/*----- 余白関連 -----*/
+/* -------------------------------------------- */
+/* 余白関連 */
+/* -------------------------------------------- */
+.sec-pad {
+  border: 1px solid #000;
+  padding-top: 52px;
+  padding-bottom: 52px;
+}
+
 .mt40 {
   margin-top: 40px;
 }
@@ -173,6 +194,61 @@ select::-ms-expand {
   margin-right: 20px;
 }
 
+@media (min-width: 765px) {
+  .sec-pad {
+    padding-top: 104px;
+    padding-bottom: 104px;
+  }
+}
+/* -------------------------------------------- */
+/* 見出し */
+/* -------------------------------------------- */
+.sec-heading {
+  position: relative;
+  margin-bottom: 1em;
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-align: center;
+  margin-bottom: 43px;
+}
+.sec-heading::before {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  display: inline-block;
+  width: 32px;
+  height: 4px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #23C7CE;
+  border-radius: 2px;
+}
+
+.br--sp-only {
+  display: block;
+}
+
+.br--pc-only {
+  display: none;
+}
+
+@media (min-width: 765px) {
+  .sec-heading {
+    font-size: 2.25rem;
+    margin-bottom: 92px;
+  }
+  .sec-heading::before {
+    width: 64px;
+  }
+  .br--sp-only {
+    display: none;
+  }
+  .br--pc-only {
+    display: block;
+  }
+}
 /* -------------------------------------------- */
 /* ボタン */
 /* -------------------------------------------- */
@@ -189,6 +265,10 @@ select::-ms-expand {
 }
 .btn-wrap {
   text-align: center;
+}
+
+.mt20 {
+  margin-top: 20px;
 }
 
 .header-btn {
@@ -294,6 +374,9 @@ select::-ms-expand {
     padding: 20px 40px;
     display: inline-block;
   }
+  .mt20 {
+    margin-top: 40px;
+  }
   .header-btn {
     font-size: 16px;
     padding: 16px;
@@ -336,5 +419,84 @@ select::-ms-expand {
   }
   .toTop a::before {
     font-size: 32px;
+  }
+}
+/* -------------------------------------------- */
+/* パーツ */
+/* -------------------------------------------- */
+.card-list {
+  margin-top: -20px;
+}
+.card-list__item {
+  width: calc((100% - 15px) / 2);
+  margin-top: 20px;
+}
+.card-list__thumb {
+  position: relative;
+}
+.card-list__image {
+  aspect-ratio: 320/200;
+  object-fit: cover;
+}
+.card-list__label {
+  font-size: 0.625rem;
+  transform: scale(0.8);
+  transform-origin: 0;
+  background: #FAC017;
+  font-weight: 700;
+  padding: 3px 5px;
+  display: inline-block;
+  position: absolute;
+  right: -9%;
+  bottom: -11%;
+}
+.card-list__heading {
+  font-size: 0.75rem;
+  margin-top: 21px;
+}
+.card-list__desc {
+  font-size: 0.75rem;
+  padding: 12px 0;
+  border-bottom: 1px solid #dddddd;
+}
+.card-list__cat {
+  font-size: 0.625rem;
+  color: #777777;
+  margin-top: 12px;
+}
+.card-list__icon {
+  width: 15px;
+  margin-right: 8px;
+}
+
+@media (min-width: 765px) {
+  .card-list {
+    margin-top: -60px;
+  }
+  .card-list__item {
+    width: calc((100% - 86px) / 3);
+    margin-top: 60px;
+  }
+  .card-list__label {
+    font-size: 0.75rem;
+    transform: scale(1);
+    padding: 6px 16px;
+    right: 0%;
+    bottom: -4%;
+  }
+  .card-list__heading {
+    font-size: 1rem;
+    margin-top: 24px;
+  }
+  .card-list__desc {
+    font-size: 1rem;
+    padding: 5px 0 24px;
+  }
+  .card-list__cat {
+    margin-top: 14px;
+  }
+  .card-list__icon {
+    width: 16px;
+    margin-right: 4px;
   }
 }/*# sourceMappingURL=common.css.map */
