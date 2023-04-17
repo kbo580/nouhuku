@@ -62,8 +62,12 @@ select::-ms-expand {
 }
 
 /*----- common -----*/
-.bg-brown {
+.bg-cream {
   background-color: #fffaeb;
+}
+
+.bg-brown {
+  background-color: #A07907;
 }
 
 .inner {

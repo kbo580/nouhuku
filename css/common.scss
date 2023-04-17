@@ -73,7 +73,7 @@ header,main,section,footer, div, ul, li, h1,h2,h3,dl,dt,dd{
 
 $textColor: #3D2F23;
 $white: #fff;
-$bgColor: #fffaeb;
+$cream: #fffaeb;
 $pink: #ea689a;
 $yellow: #FAC017;
 $skyblue: #23C7CE;
@@ -81,9 +81,14 @@ $skyblueHover: #1DB4BA;
 $green: #97C736;
 $greenHover: #83AC32;
 $gray: #ccc;
+$brown: #A07907;
+
+.bg-cream{
+  background-color: $cream;
+}
 
 .bg-brown{
-  background-color: $bgColor;
+  background-color: $brown;
 }
 
 .inner{

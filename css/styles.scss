@@ -11,7 +11,7 @@
 
 $textColor: #3D2F23;
 $white: #fff;
-$bgColor: #fffaeb;
+$cream: #fffaeb;
 $pink: #ea689a;
 $yellow: #FAC017;
 $skyblue: #23C7CE;
@@ -19,6 +19,7 @@ $skyblueHover: #1DB4BA;
 $green: #97C736;
 $greenHover: #83AC32;
 $gray: #ccc;
+$brown: #A07907;
 
 
 body {
@@ -536,6 +537,236 @@ body {
     padding: 0 20px;
   }
 }
+@media (min-width: 765px) {
+
+
+}
+
+/* -------------------------------------------- */
+/* compare */
+/* -------------------------------------------- */
+.compare{
+
+}
+
+.compare-list{
+
+  &__heading{
+    border-radius: 100px;
+    color:$white;
+    width: 178px;
+    padding: 6px 0;
+    font-size: rem(12);
+    margin: 0 auto;
+    // white-space: nowrap;
+    text-align: center;
+  }
+
+  &__image{
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
+
+    img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__list{
+    margin-top: 20px;
+  }
+
+  &__list.mt32{
+    margin-top: 32px;
+  }
+
+  &__sub-heading{
+    font-size: rem(12);
+    font-weight: 700;
+    text-align: center;
+    padding: 8px 0;
+  }
+  
+  &__desc{
+    font-size: rem(12);
+    margin-top: 1em;
+  }
+}
+
+//左側
+.compare-list__item.--left{
+
+  .compare-list{
+    &__heading{
+      background-color: $brown;
+    }
+
+    &__sub-heading{
+      border-top: 2px dashed $brown;
+      border-bottom: 2px dashed $brown;
+    }
+  }
+}
+
+//右側
+.compare-list__item.--right{
+  margin-top: 40px;
+
+  .compare-list{
+    &__heading{
+      background-color: $skyblue;
+    }
+
+    &__sub-heading{
+      border-top: 2px dashed $skyblue;
+      border-bottom: 2px dashed $skyblue;
+    }
+  }
+}
+
+//横並びの画像
+.compare-wide-image__wrap{
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-top: 40px;
+}
+
+.compare-wide-image{
+  width: 50%;
+}
+
+//壱番下のコピー
+.compare-copy{
+  margin-top: 40px;
+
+  &__heading{
+    color: $green;
+    font-size: rem(16);
+    letter-spacing: 0;
+
+    &:not(:first-child){
+      margin-top: 32px;
+    }
+  }
+  
+  &__desc{
+    font-size:rem(10);
+    margin-top: 12px;
+    letter-spacing: 0;
+    line-height: 1.65;
+  }
+  
+  &__strong{
+    font-size:rem(16);
+    font-weight: 700;
+  }
+}
+
+
+@media (min-width: 765px) {
+  .compare{
+
+  }
+  
+  .compare-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  
+    &__item{
+      width: calc((100% - 40px) /2 );
+    }
+  
+    &__heading{
+      width: 356px;
+      padding: 12px 0px;
+      font-size: rem(24);
+    }
+  
+    &__image{
+      margin-top: 40px;
+      height: 200px;
+    }
+  
+    &__list{
+      margin-top: 24px;
+    }
+  
+    &__list.mt32{
+      margin-top: 70px;
+    }
+  
+    &__sub-heading{
+      font-size: rem(16);
+      padding: 16px 0;
+    }
+    
+    &__desc{
+      font-size: rem(16);
+      padding: 0 18px;
+    }
+  }
+  
+  //左側
+  .compare-list__item.--left{
+
+  }
+  
+  //右側
+  .compare-list__item.--right{
+    margin-top: 40px;
+    margin-top: 0;
+  }
+
+
+  //横並びの画像
+  .compare-wide-image__wrap{
+    margin-top: 80px;
+  }
+
+
+  //壱番下のコピー
+  .compare-copy{
+    margin-top: 80px;
+
+    &__heading{
+      font-size: rem(32);
+      letter-spacing: 0.05em;
+
+      &:not(:first-child){
+        margin-top: 40px;
+      }
+    }
+    
+    &__desc{
+      font-size:rem(16);
+      margin-top: 24px;
+      line-height: 1.8;
+      letter-spacing: 0.05em;
+    }
+    
+    &__strong{
+      font-size:rem(24);
+    }
+  }
+
+}
+
+/* -------------------------------------------- */
+/* main */
+/* -------------------------------------------- */
+
+@media (min-width: 765px) {
+
+
+}
+
+/* -------------------------------------------- */
+/* main */
+/* -------------------------------------------- */
+
 @media (min-width: 765px) {
 
 
