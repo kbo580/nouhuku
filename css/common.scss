@@ -95,7 +95,7 @@ $brown: #A07907;
   margin: 0 auto;
   width: 100%;
   // background-color: rgba(241,92,168,0.2);
-  border: 1px dotted #ddd;
+  // border: 1px dotted #333;
 
   &.--l{
     max-width: 1040px;
@@ -107,6 +107,8 @@ $brown: #A07907;
     padding: 0 20px;
   }
 }
+
+
 
 .pc-only{
   display: none;
@@ -203,6 +205,10 @@ $brown: #A07907;
 }
 
 @media (min-width: 765px) {
+  .sp-only{
+    display: none;
+  }
+  
   .pc-only{
     display: block;
   }

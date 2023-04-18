@@ -666,6 +666,7 @@ body {
 
 
 @media (min-width: 765px) {
+
   .compare{
 
   }
@@ -673,7 +674,6 @@ body {
   .compare-list{
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
   
     &__item{
       width: calc((100% - 40px) /2 );
@@ -695,7 +695,7 @@ body {
     }
   
     &__list.mt32{
-      margin-top: 70px;
+      margin-top: 40px;
     }
   
     &__sub-heading{
@@ -706,8 +706,10 @@ body {
     &__desc{
       font-size: rem(16);
       padding: 0 18px;
+      min-height: 82px;
     }
   }
+
   
   //左側
   .compare-list__item.--left{
@@ -755,20 +757,232 @@ body {
 }
 
 /* -------------------------------------------- */
-/* main */
+/* feature */
 /* -------------------------------------------- */
+.feature{
+  &__copy{
+    font-size: rem(12);
+  }
+}
+
+.feature-card{
+  border: 2px solid $skyblue;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 20px;
+
+  &__wrap{
+    margin-top: 32px;
+  }
+
+  &__num{
+    width: 24px;
+    height: 16px;
+    object-fit: cover;
+    margin-right: 8px;
+  }
+
+  &__heading{
+    font-size: rem(12);
+    border-bottom: 2px dashed $skyblue;
+    padding-bottom: 16px;
+  }
+
+  &__image{
+    margin: 16px auto 0;
+    width: calc(260 / 375 *100vw);
+    height: calc(161 / 375 *100vw);
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__desc{
+    font-size: rem(12);
+    margin-top: 16px;
+  }
+}
 
 @media (min-width: 765px) {
+  .feature{
+    &__copy{
+      font-size: rem(16);
+    }
+  }
+  
+  .feature-card{
+    padding: 24px;
+    margin-top: 40px;
+  
+    &__wrap{
+      margin-top: 40px;
+    }
+  
+    &__num{
+      width: 48px;
+      height: 32px;
+      margin-right: 16px;
+    }
+  
+    &__heading{
+      font-size: rem(24);
+      padding-bottom: 24px;
+    }
+  
+    &__image{
+      margin: 0;
+      width: 190px;
+      height: 120px;
+    }
+  
+    &__desc{
+      font-size: rem(16);
+      margin-top: 0px;
+      line-height: 1.6;
+      margin-right: 40px;
+      flex:1;
+    }
+
+    //pcのflex用
+    &__cont{
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      margin-top: 24px;
+    }
+  }
 
 
 }
 
 /* -------------------------------------------- */
-/* main */
+/* delicious */
 /* -------------------------------------------- */
+.delicious{
+  &__question{
+    color:$green;
+    font-size: rem(16);
+  }
+
+  &__answer{
+    font-weight: 700;
+    font-size: rem(12);
+    margin-top: 20px;
+  }
+  
+  &__reason{
+    font-size: rem(12);
+    margin-top: 20px;
+  }
+}
+
+//商品の紹介
+.delicious-intro{
+  border: 1px solid $green;
+  background-color: $white;
+  padding: 16px;
+  min-width: 315px;
+  margin: 32px 10px 0;
+
+  &__heading{
+    font-size: rem(12);
+    padding-bottom: 16px;
+    color: $green;
+    border-bottom: 2px dashed $green;
+    line-height: 1;
+  }
+
+  &__image{
+    margin: 16px auto 0 ;
+    width: calc(176 / 375 *100vw);
+    height: calc(82 / 375 *100vw);
+  }
+}
+
+.delicious-intro-table{
+  //表の行
+  &__item{
+    margin-top: 12px;
+    font-size: rem(10);
+    width: 100%;
+  }
+
+  //左側のラベル
+  .table-left{
+    min-width: 88px;
+    margin-right: 16px;
+  }
+  
+  //右側のラベル
+  .table-right{
+    
+  }
+}
 
 @media (min-width: 765px) {
+  .delicious{
+    &__question{
+      font-size: rem(32);
+    }
+  
+    &__answer{
+      font-size: rem(24);
+      margin-top: 24px;
+    }
+    
+    &__reason{
+      font-size: rem(16);
+      margin-top: 40px;
+    }
+  }
+  
+  //商品の紹介
+  .delicious-intro{
+    padding: 40px;
+    margin: 40px 40px 0;
+    display: flex;
 
+    &__cont{
+      width: calc(460 / 1366 *100vw);
+      margin-right: calc(24 / 1366 *100vw);
+      flex: auto;
+    }
+  
+    &__heading{
+      font-size: rem(24);
+      padding-bottom: 16px;
+    }
+  
+    &__image{
+      margin: 0;
+      height: 100%;
+      width: calc(356 / 1366 *100vw);
+      flex: auto;
+    }
+  
+  }
+
+  .delicious-intro-table{
+    //表の行
+    &__item{
+      margin-top: 12px;
+      font-size: rem(16);
+    }
+  
+    //左側のラベル
+    .table-left{
+      min-width: 136px;
+      margin-right: 40px;
+    }
+    
+    //右側のラベル
+    .table-right{
+
+    }
+  }
 
 }
 
