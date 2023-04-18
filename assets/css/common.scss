@@ -95,7 +95,7 @@ $brown: #A07907;
   margin: 0 auto;
   width: 100%;
   // background-color: rgba(241,92,168,0.2);
-  // border: 1px dotted #333;
+  border: 1px dotted #333;
 
   &.--l{
     max-width: 1040px;
@@ -107,7 +107,6 @@ $brown: #A07907;
     padding: 0 20px;
   }
 }
-
 
 
 .pc-only{
@@ -252,9 +251,11 @@ $brown: #A07907;
     padding-bottom: 104px;
   }
 }
+
 /* -------------------------------------------- */
 /* 見出し */
 /* -------------------------------------------- */
+//セクションの見出し
 .sec-heading{
   position: relative;
   margin-bottom: 1em;
@@ -279,6 +280,27 @@ $brown: #A07907;
   }
 }
 
+//---------- 下層ページの見出し ---------
+.page-mv{
+  background: #ddd;
+  width: 100%;
+  padding: calc(36/375*100vw) calc(20/375*100vw);
+  
+  &.--voice{
+    background: url(../images/voice-bg.jpg) center/cover no-repeat;
+  }
+}
+
+.page-heading{
+  font-size: rem(20);
+  padding: 1em;
+  max-width: 335px;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.4;
+}
+
 .br--sp-only{
   display: block;
 }
@@ -294,6 +316,16 @@ $brown: #A07907;
     &::before {
       width: 64px;
     }
+  }
+
+  //下層ページの見出し
+  .page-mv{
+    padding: 72px 20px;
+  }
+
+  .page-heading{
+    font-size: rem(40);
+    max-width: 690px;
   }
 
   .br--sp-only{
@@ -334,6 +366,11 @@ $brown: #A07907;
 //ボタン用余白
 .mt20{
   margin-top: 20px;
+}
+
+//ボーダー付きリンク
+.link--border{
+  text-decoration: underline;
 }
 
 //-------- headerのボタン ------
@@ -404,14 +441,6 @@ $brown: #A07907;
 
 .seiden-logo{
   margin-right: 20px;
-}
-
-.seiden-logo,
-.social_house-logo{
-  transition: opacity .4s;
-  &:hover{
-    opacity: .6;
-  }
 }
 
 //-------- topへ戻るボタン ------
@@ -534,7 +563,7 @@ $brown: #A07907;
 /* -------------------------------------------- */
 /* パーツ */
 /* -------------------------------------------- */
-//カードリスト
+//---------- カードリスト ---------
 .card-list{
   margin-top: -20px;
 
@@ -589,7 +618,7 @@ $brown: #A07907;
 }
 
 @media (min-width: 765px){
-  //カードリスト
+  //---------- カードリスト ---------
   .card-list{
     margin-top: -60px;
 
@@ -627,4 +656,219 @@ $brown: #A07907;
   }
 }
 
+//---------- 数字付きリスト ---------
+.numbered-list{
 
+  &__item{
+
+  }
+
+  &__icon{
+    background-color: $skyblue;
+    color: $white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-weight: 700;
+    line-height: 1;
+
+    .flow-list__icon-title{
+      font-size: rem(10);
+      transform: scale(0.7);
+    }
+
+    .flow-list__icon-num{
+      font-size: rem(16);
+    }
+  }
+
+  &__title{
+    font-weight: 700;
+    font-size: rem(12);
+
+  }
+
+  &__answer{
+    font-size: rem(12);
+    margin-top: 18px;
+  }
+
+  &__body{
+    padding-left: 12px;
+    padding-top: 12px;
+    flex: 1;
+  }
+
+}
+
+@media (min-width: 765px){
+  //---------- 数字付きリスト ---------
+  .numbered-list{
+    
+    &__item{
+  
+    }
+  
+    &__icon{
+      width: 70px;
+      height: 70px;
+  
+      .flow-list__icon-title{
+        font-size: rem(14);
+        transform: scale(1);
+      }
+  
+      .flow-list__icon-num{
+        font-size: rem(32);
+      }
+    }
+  
+    &__title{
+      font-size: rem(24);
+    }
+  
+    &__answer{
+      font-size: rem(16);
+      margin-top: 24px;
+    }
+  
+    &__body{
+      padding-left: 24px;
+      padding-top: 24px;
+      flex: 1;
+    }
+  }
+
+}
+
+//---------- Voiceページ共通 ---------
+.voice{
+  &__heading{
+    
+  }
+
+  &__wrap{
+    border: 3px solid $green;
+    padding: 16px;
+  }
+  
+  &__name{
+    font-size: rem(12);
+    font-weight: 700;
+    margin-top: 10px;
+    white-space: nowrap;
+  }
+
+  &__link-wrap{
+    text-align: right;
+  }
+
+  &__link{
+    font-size: rem(10);
+    transform: scale(0.7);
+    display: block;
+    transform-origin: 100%;
+  }
+}
+
+.voice-qaa-list{
+  font-size: rem(12);
+
+  &__item{
+    margin-top: 20px;
+  }
+  &__item:not(:first-child){
+    margin-top: 32px;
+  }
+
+  &__title{
+    font-size: rem(12);
+    margin-top: 32px;
+  }
+  
+  &__question{
+    font-weight: 700;
+  }
+
+  &__answer{
+    margin-top: 12px;
+  }
+
+  &__image{
+    margin: 32px auto 0;
+    width: 225px;
+
+    img{
+      aspect-ratio: 225/141;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+  }
+}
+
+.heading--green{
+  color: $green;
+}
+
+
+
+//---------- アイコン付きタイトル ---------
+.iconed-heading{
+  display: flex;
+  align-items: center;
+  border-bottom: 1px dashed $green;
+  padding-bottom: 12px;
+
+  &::before{
+    content:"" ;
+    width: 24px;
+    height: 24px;
+    display: block;
+    background: url(../images/voice-icon.png) no-repeat center/cover;
+    margin-right: 8px;
+  }
+}
+
+
+
+
+
+
+
+/*-------------  Hover Event ------------ */
+@media (hover: hover){
+
+  .seiden-logo,
+  .social_house-logo{
+    transition: opacity .4s;
+    &:hover{
+      opacity: .6;
+    }
+  }
+
+  .footer-nav-list__link{
+    transition: text-decoration .4s;
+
+    &:hover{
+      text-decoration: underline $white;
+    }
+  }
+
+  .cta-image{
+    transform: scale(1);
+    transition: transform .3s ease-in-out;
+  }
+  
+  .l-image:hover .cta-image,
+  .wide-image:hover .cta-image,
+  .s-image:hover .cta-image{
+    transform: scale(1.2);
+  }
+
+
+
+
+}

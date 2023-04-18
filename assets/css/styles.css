@@ -516,7 +516,7 @@ body {
 }
 .compare-copy__desc.--first {
   line-height: 1.65;
-  font-size: 0.0625rem;
+  font-size: 0.625rem;
   letter-spacing: 0;
 }
 .compare-copy__strong {
@@ -581,6 +581,8 @@ body {
   }
   .compare-copy__desc.--first {
     line-height: 2.4;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
   }
   .compare-copy__strong {
     font-size: 1.5rem;
@@ -763,9 +765,6 @@ body {
     margin-right: 40px;
   }
 }
-/* -------------------------------------------- */
-/* main */
-/* -------------------------------------------- */
 /* -------------------------------------------- */
 /* cta */
 /* -------------------------------------------- */
@@ -971,16 +970,4 @@ body {
 }
 /* -------------------------------------------- */
 /*  */
-/* -------------------------------------------- */
-/* Hover Event */
-@media (hover: hover) {
-  .cta-image {
-    transform: scale(1);
-    transition: transform 0.3s ease-in-out;
-  }
-  .l-image:hover .cta-image,
-  .wide-image:hover .cta-image,
-  .s-image:hover .cta-image {
-    transform: scale(1.2);
-  }
-}/*# sourceMappingURL=styles.css.map */
+/* -------------------------------------------- *//*# sourceMappingURL=styles.css.map */

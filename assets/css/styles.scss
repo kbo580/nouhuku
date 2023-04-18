@@ -687,7 +687,7 @@ body {
     
     &.--first{
       line-height: 1.65;
-      font-size:rem(1);
+      font-size:rem(10);
       letter-spacing: 0;
     }
   }
@@ -782,9 +782,11 @@ body {
       margin-top: 24px;
       line-height: 1.8;
       letter-spacing: 0.05em;
-
+      
       &.--first{
         line-height: 2.4;
+        font-size:rem(16);
+        letter-spacing: 0.05em;
       }
     }
     
@@ -1033,15 +1035,6 @@ body {
 
     }
   }
-
-}
-
-/* -------------------------------------------- */
-/* main */
-/* -------------------------------------------- */
-
-@media (min-width: 765px) {
-
 
 }
 
@@ -1314,23 +1307,8 @@ body {
 
 }
 
-/* Hover Event */
-@media (hover: hover){
-  .cta-image{
-    transform: scale(1);
-    transition: transform .3s ease-in-out;
-  }
-  
-  .l-image:hover .cta-image,
-  .wide-image:hover .cta-image,
-  .s-image:hover .cta-image{
-    transform: scale(1.2);
-  }
 
 
-
-
-}
 
 
 

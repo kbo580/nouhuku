@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/common.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/voice.css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<title></title>
+</head>
+
+<body>
+  <header id="header" class="header">
+    <div class="header__wrap flex --jcsb">
+      <h1 class="header-logo flex --aic">
+        <a href="index.html" class="header-logo__link">
+          <img src="assets/images/logo.png" alt="" class="header-logo__image">
+        </a>
+      </h1>
+
+      <div class="header-link-wrap flex --aic">
+        <!-- pc-nav -->
+        <div class="pc-nav">
+          <div class="pc-nav__btnWrap">
+            <a href="event.html" class="pcMenuBtn">導入事例・イベント情報</a>
+            <a href="faq.html" class="pcMenuBtn">よくある質問</a>
+          </div>
+
+          <nav>
+            <ul class="pc-nav-list flex">
+              <li class="pc-nav-list__item"><a href="voice.html" class="pc-nav-list__link">お客様からの声</a></li>
+              <li class="pc-nav-list__item"><a href="#" class="pc-nav-list__link">全国の販売先</a></li>
+              <li class="pc-nav-list__item"><a href="history.html" class="pc-nav-list__link">ノウフク道のあゆみ</a></li>
+              <li class="pc-nav-list__item"><a href="noufukurenkei.html" class="pc-nav-list__link">農福連携の進め方</a></li>
+              <li class="pc-nav-list__item"><a href="howto.html" class="pc-nav-list__link">野菜の作り方と装置の話</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!-- pc-nav -->
+
+        <div class="header__btn-wrap"> 
+          <a href="report.html" class="header-btn siryou-btn">
+            <div class="">
+              <img src="assets/images/icon-siryou.svg" alt="資料請求のアイコン" class="header-btn__icon">
+            </div>
+            <span class="header-btn__text">資料請求</span>
+          </a>
+    
+          <a href="contact.html" class="header-btn contact-btn">
+            <div class="header-btn__icon">
+              <img src="assets/images/icon-mail.svg" alt="お問い合わせのアイコン" class="header-btn__icon">
+            </div>
+            <span class="header-btn__text">お問い合わせ</span>
+          </a>
+    
+          <div class="burger" id="show">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </div>
+        <!-- /header__btn-wrap -->
+      </div>
+      <!-- header-link-wrap -->
+
+    </div>
+    <!-- header__wrap -->
+
+    <!-- sp-nav -->
+    <div class="sp-nav">
+      <nav>
+        <ul class="sp-nav-list">
+          <li class="sp-nav-list__item"><a href="index.html" class="sp-nav-list__link">ノウフク道トップ</a></li>
+          <li class="sp-nav-list__item"><a href="voice.html" class="sp-nav-list__link">お客様からの声</a></li>
+          <li class="sp-nav-list__item"><a href="#" class="sp-nav-list__link">全国の販売先</a></li>
+          <li class="sp-nav-list__item"><a href="history.html" class="sp-nav-list__link">ノウフク道のあゆみ</a></li>
+          <li class="sp-nav-list__item"><a href="noufukurenkei.html" class="sp-nav-list__link">農福連携の進め方</a></li>
+          <li class="sp-nav-list__item"><a href="howto.html" class="sp-nav-list__link">野菜の作り方と装置の話</a></li>
+          <li class="sp-nav-list__item"><a href="faq.html" class="sp-nav-list__link">よくある質問</a></li>
+        </ul>
+      </nav>
+
+      <div class="spMenuBtn__wrap flex">
+        <a href="report.html" class="spMenuBtn siryou-btn">
+          <div class="">
+            <img src="assets/images/icon-siryou.svg" alt="資料請求のアイコン" class="spMenuBtn__icon">
+          </div>
+  
+          <span class="spMenuBtn__text">資料請求</span>
+        </a>
+    
+        <a href="contact.html" class="spMenuBtn contact-btn">
+          <div class="">
+            <img src="assets/images/icon-mail.svg" alt="お問い合わせのアイコン" class="spMenuBtn__icon">
+          </div>
+          <span class="spMenuBtn__text">お問い合わせ</span>
+        </a>
+  
+      </div>
+      <!-- spMenuBtn-wrap -->
+    </div>
+    <!-- /sp-nav -->
+
+  </header>
+
+  <main>
+    <div class="page-mv --voice"> 
+      <h2 class="page-heading">お客様からの声</h2>
+    </div>
+    <!-- page-mv -->
+
+    <section class="voice sec-pad">
+      <div class="inner --l">
+        <h2 class="sec-heading">導入いただいた方からのお喜びの声</h2>
+
+        <!-- <ul>
+          <li>
+            <h3>北光園</h3>
+            <p>社会福祉法人稚内市社会福祉事業団（北海道稚内市）</p>
+            <p>http://www.wakkanai-fukusijigyodan.com/</p>
+
+            <h4>――導入に至った経緯</h4>
+
+            
+            1.どうして野菜工場を取り入れようと考えたのかお教えください
+            就労継続支援事業の新たな訓練活動を模索中、札幌で開催された農福連携セミナーにて建物内での完全密閉型水耕栽培を行っている社会福祉法人の取り組みを知り、まさに当法人が求めているものだと確信しました。
+
+            2.成電工業を何で知りましたか？
+            セミナーにて実践報告をいただきました社福法人を訪問した際に紹介されました。
+            3.どうして成電工業の野菜工場を導入しようと思ったのかお教えください。
+            園舎の空きスペースの有効活用の条件にマッチングしたこと、成電工業様のこれまでの歩み（沿革）と瀧澤社長に大きな信頼を抱きました。
+            <h4>――導入後の評価　実際成電工業の野菜工場を導入してみていかがでしたか？</h4>
+            
+            1.野菜の評価・卸先の評価
+            市内のスーパーマーケットをはじめ管内２０数店舗と
+取引をさせていただいてますが、お客様からは「えぐ
+みが無い」、「日持ちがいい」、「捨てるところが無
+くて無駄がない」、「栽培環境が安心」、「洗わず食
+べれて手間いらず」など高い評価をいただき、各店舗
+青果担当者様からは当園のレタスが地域に浸透し欠品
+時には入荷問い合わせがあるほどの人気。
+
+2.福祉的な観点の評価
+播種から育苗、移植、定植、収穫、包装、出荷と利用者様の心身の状況に応じた作業分担が可能であり、自分の仕事がレタス栽培に関わっているという事実を、日々成長するレタスを見て感じる事で働く喜びを実感できていると思います。また、販売会にも売り子として参加した際に購入者からの言葉が、喜びや時に問題意識の向上になっていると思います。活躍場面づくりが容易。
+
+3.成電工業の総合的な評価
+工場の設計段階から関わっていただき栽培装置の設置や栽培の全工程、事業の運営に向けた全てについてご支援・ご指導をしていただき、現在も継続し助言をいただいています。成電工業様の栽培装置と出会うことが出来て良かったと思います。
+
+4.導入時の印象的なエピソードなどありましたらお教えください。
+利用者、職員もそうですが、隣接する同法人の施設（老人ホーム）のまかない材料として納めてもおり、皆が新鮮な当園のレタス『最北の野菜工場ひかり菜』の大ファンになり生野菜嫌いを克服した方が多く現れました。
+
+
+――運営について
+1.導入前のイメージと導入後で相違がありましたか。
+何と言っても施設の知名度が上がりました。そして、職員雇用、人材確保面に於いても組織としての宣伝効果として大いに貢献してくれています。市内は勿論のこと、管内の町村からも多くの視察依頼があります。
+
+2.成電工業の対応はいかがでしたか
+スタートの時のみならず、継続的に適宜レスポンス良くフォローアップしていただいております。
+
+その他何かご意見等ありましたらご自由にお書きください。
+当初、栽培したレタスが地域に受入れていただけるのか心配でしたが、寒さ厳しく露地栽培期間が半年もない稚内ですが、いつでも旬な新鮮レタスが地域の皆様に愛されるまでになりました。今後とも支援のほど宜しくお願い致します。
+
+
+          </li>
+        </ul> -->
+
+      </div>
+      <!-- inner -->
+
+    </section>
+    <!-- /voice -->
+
+    <section class="voice-flow sec-pad bg-cream">
+      <div class="inner --l">
+        <h2 class="sec-heading">お問い合わせから導入までの<br class="sp-only">一般的な流れ</h2>
+
+        <picture class="voice-flow__image">
+          <source media="(max-width: 767px)" srcset="assets/images/voice-balloon-sp.png" width="" height="">
+          <source media="(min-width: 768px)" srcset="assets/images/voice-balloon-pc.png" width="" height="">
+          <img src="assets/images/voice-balloon-sp.png" alt="">
+        </picture>
+
+        <ol class="voice-flow-list numbered-list">
+          
+          <li class="voice-flow-list__item  numbered-list__item flex">
+            <div class="voice-flow-list__icon  numbered-list__icon flex --fdc --aic --jcc">
+              <span class="flow-list__icon-title numbered-list__icon-title">STEP</span>
+              <span class="flow-list__icon-num numbered-list__icon-num">01</span>
+            </div>
+
+            <div class="voice-flow-list__body numbered-list__body">
+              <p class="voice-flow-list__title numbered-list__title">問い合わせ</p>
+              <p class="voice-flow-list__answer numbered-list__answer"><a href="contact.html" class="link--border">お問い合わせフォーム</a>より、お気軽にお問い合わせください</p>
+            </div>
+          </li>
+
+          <li class="voice-flow-list__item  numbered-list__item flex">
+            <div class="voice-flow-list__icon  numbered-list__icon flex --fdc --aic --jcc">
+              <span class="flow-list__icon-title numbered-list__icon-title">STEP</span>
+              <span class="flow-list__icon-num numbered-list__icon-num">02</span>
+            </div>
+
+            <div class="voice-flow-list__body numbered-list__body">
+              <p class="voice-flow-list__title numbered-list__title">ヒアリング</p>
+              <p class="voice-flow-list__answer numbered-list__answer">お客様の構想（希望生産量と使用可能スペースと利用者さんの人数）を教えてください</p>
+            </div>
+          </li>
+
+          <li class="voice-flow-list__item  numbered-list__item flex">
+            <div class="voice-flow-list__icon  numbered-list__icon flex --fdc --aic --jcc">
+              <span class="flow-list__icon-title numbered-list__icon-title">STEP</span>
+              <span class="flow-list__icon-num numbered-list__icon-num">03</span>
+            </div>
+
+            <div class="voice-flow-list__body numbered-list__body">
+              <p class="voice-flow-list__title numbered-list__title">概算のお見積り</p>
+              <p class="voice-flow-list__answer numbered-list__answer">内容にご納得出来たら希望者にのみにお作りします</p>
+            </div>
+          </li>
+
+          <li class="voice-flow-list__item  numbered-list__item flex">
+            <div class="voice-flow-list__icon  numbered-list__icon flex --fdc --aic --jcc">
+              <span class="flow-list__icon-title numbered-list__icon-title">STEP</span>
+              <span class="flow-list__icon-num numbered-list__icon-num">04</span>
+            </div>
+
+            <div class="voice-flow-list__body numbered-list__body">
+              <p class="voice-flow-list__title numbered-list__title">現地調査</p>
+              <p class="voice-flow-list__answer numbered-list__answer">ご希望の方へ実地調査に訪問（半日）</p>
+            </div>
+          </li>
+
+          <li class="voice-flow-list__item  numbered-list__item flex">
+            <div class="voice-flow-list__icon  numbered-list__icon flex --fdc --aic --jcc">
+              <span class="flow-list__icon-title numbered-list__icon-title">STEP</span>
+              <span class="flow-list__icon-num numbered-list__icon-num">05</span>
+            </div>
+
+            <div class="voice-flow-list__body numbered-list__body">
+              <p class="voice-flow-list__title numbered-list__title">ご契約</p>
+              <p class="voice-flow-list__answer numbered-list__answer">正式な提案書をお渡しして納得いただけたらご契約となります</p>
+            </div>
+          </li>
+
+          <li class="voice-flow-list__item  numbered-list__item flex">
+            <div class="voice-flow-list__icon  numbered-list__icon flex --fdc --aic --jcc">
+              <span class="flow-list__icon-title numbered-list__icon-title">STEP</span>
+              <span class="flow-list__icon-num numbered-list__icon-num">06</span>
+            </div>
+
+            <div class="voice-flow-list__body numbered-list__body">
+              <p class="voice-flow-list__title numbered-list__title">建設・リフォーム</p>
+              <p class="voice-flow-list__answer numbered-list__answer">建物の建設、リフォームいたします</p>
+            </div>
+          </li>
+
+          <li class="voice-flow-list__item  numbered-list__item flex">
+            <div class="voice-flow-list__icon  numbered-list__icon flex --fdc --aic --jcc">
+              <span class="flow-list__icon-title numbered-list__icon-title">STEP</span>
+              <span class="flow-list__icon-num numbered-list__icon-num">07</span>
+            </div>
+
+            <div class="voice-flow-list__body numbered-list__body">
+              <p class="voice-flow-list__title numbered-list__title">研修</p>
+              <p class="voice-flow-list__answer numbered-list__answer">システムを納品する前に成電工業に来ていただいての研修（２～３日）</p>
+            </div>
+          </li>
+
+          <li class="voice-flow-list__item  numbered-list__item flex">
+            <div class="voice-flow-list__icon  numbered-list__icon flex --fdc --aic --jcc">
+              <span class="flow-list__icon-title numbered-list__icon-title">STEP</span>
+              <span class="flow-list__icon-num numbered-list__icon-num">08</span>
+            </div>
+
+            <div class="voice-flow-list__body numbered-list__body">
+              <p class="voice-flow-list__title numbered-list__title">システム納入・現地研修（生産開始と同時）</p>
+              <p class="voice-flow-list__answer numbered-list__answer">生産の各工程に切り替わるタイミングでお邪魔して現地研修（のべ５日間）を行います</p>
+            </div>
+          </li>
+
+        </ol>
+      </div>
+      <!-- inner -->
+    </section>
+    <!-- voice-flow -->
+
+  </main>
+
+  <div class="cta">
+    <div class="l-image__wrap flex">
+
+      <a href="report.html" class="l-image --siryou bgImage">
+        <span class="mask">
+          <img src="assets/images/cta-siryou.png" alt="" class="cta-image">
+        </span>
+        <p class="l-image__text">資料請求</p>
+      </a>
+
+      <a href="contact.html" class="l-image --contact bgImage">
+        <span class="mask">
+          <img src="assets/images/cta-contact.png" alt="" class="cta-image">
+        </span>
+        <p class="l-image__text">お問い合わせ</p>
+      </a>
+    </div>
+    <!-- l-image__wrap -->
+
+    <div class="inner --l">
+
+      <div class="pc-only">
+
+        <div class="wide-image__wrap">
+          <a href="faq.html" class="wide-image bgImage">
+            <span class="mask">
+              <img src="assets/images/cta-wide-image.png" alt="" class="cta-image">
+            </span>
+
+            <div class="wide-image__text-wrap flex --aic --jcsb plus">
+              <p class="wide-image__text">よくある質問</p>
+              <div class="icon-wrap --l"><span class="icon"></span></div>
+            </div>
+          </a>
+        </div>
+        <!-- cta__wide-image-wrap -->
+
+        <ul class="s-image__wrap flex --wrap --jcsb">
+          
+          <li class="s-image voice plus">
+            <a href="voice.html" class="s-image bgImage">
+              <span class="mask">
+                <img src="assets/images/cta-s-image_01.png" alt="" class="cta-image">
+              </span>
+  
+              <div class="s-image__text-wrap flex --aic --jcsb plus">
+                <p class="s-image__text">お客様からの声</p>
+                <div class="icon-wrap --s"><span class="icon"></span></div>
+              </div>
+            </a>
+          </li>
+          
+          <li class="s-image customer plus">
+            <a href="#" class="s-image bgImage">
+              <span class="mask">
+                <img src="assets/images/cta-s-image_02.png" alt="" class="cta-image">
+              </span>
+  
+              <div class="s-image__text-wrap flex --aic --jcsb plus">
+                <p class="s-image__text">全国の販売先</p>
+                <div class="icon-wrap --s"><span class="icon"></span></div>
+              </div>
+            </a>
+          </li>
+          
+          <li class="s-image history plus">
+            <a href="history.html" class="s-image bgImage">
+              <span class="mask">
+                <img src="assets/images/cta-s-image_03.png" alt="" class="cta-image">
+              </span>
+  
+              <div class="s-image__text-wrap flex --aic --jcsb plus">
+                <p class="s-image__text">ノウフク道のあゆみ</p>
+                <div class="icon-wrap --s"><span class="icon"></span></div>
+              </div>
+            </a>
+          </li>
+          
+          <li class="s-image event plus">
+            <a href="event.html" class="s-image bgImage">
+              <span class="mask">
+                <img src="assets/images/cta-s-image_04.png" alt="" class="cta-image">
+              </span>
+  
+              <div class="s-image__text-wrap flex --aic --jcsb plus">
+                <p class="s-image__text">導入事例・イベント情報</p>
+                <div class="icon-wrap --s"><span class="icon"></span></div>
+              </div>
+            </a>
+          </li>
+          
+          <li class="s-image howto plus">
+            <a href="howto.html" class="s-image bgImage">
+              <span class="mask">
+                <img src="assets/images/cta-s-image_05.png" alt="" class="cta-image">
+              </span>
+  
+              <div class="s-image__text-wrap flex --aic --jcsb plus">
+                <p class="s-image__text">野菜の作り方と装置の話</p>
+                <div class="icon-wrap --s"><span class="icon"></span></div>
+              </div>
+            </a>
+          </li>
+          
+          <li class="s-image noufukurenkei plus">
+            <a href="noufukurenkei.html" class="s-image bgImage">
+              <span class="mask">
+                <img src="assets/images/cta-s-image_06.png" alt="" class="cta-image">
+              </span>
+  
+              <div class="s-image__text-wrap flex --aic --jcsb plus">
+                <p class="s-image__text">農福連携の進め方</p>
+                <div class="icon-wrap --s"><span class="icon"></span></div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- pc-only -->
+
+        
+    </div>
+    <!-- /inner --l -->
+
+
+  </div>
+  <!-- /cta -->
+
+  <footer id="footer" class="footer">
+
+    <div class="footer__btn-wrap flex --jcc">
+      <a href="https://www.seidenkogyo.co.jp/" target="_blank" class="footer-btn seiden-logo">
+        <img src="assets/images/seiden_logo.png" alt="">
+      </a>
+
+      <a href="https://www.social-house.jp/" target="_blank" class="footer-btn social_house-logo">
+        <img src="assets/images/social_house.png" alt="">
+      </a>
+    </div>
+    <!-- footer__btn-wrap -->
+
+    <div class="footer__link-wrap flex --jcsb">
+
+      <div class="footer__link--left">
+        <figure class="footer-logo">
+          <img src="assets/images/footer-logo.png" alt="">
+        </figure>
+
+        <p class="footer-info">〒370-0871 群馬県高崎市上豊岡町571-9<br>Tel. 027-343-5111（代）<br>Fax. 027-343-5811</p>
+      </div>
+      <!-- footer__link--left -->
+
+      <div class="footer__link--center">
+        <nav class="flex">
+          <!-- 1列目 -->
+          <div class="footer-link-title">
+            <a href="index.html" class="footer-nav-list__link">ノウフク道トップ</a>
+          </div>
+
+          <!-- 2列目 -->
+          <ul class="footer-nav-list --left">
+            <li class="footer-nav-list__item"><a href="voice.html" class="footer-nav-list__link">お客様からの声</a></li>
+            <li class="footer-nav-list__item"><a href="" class="footer-nav-list__link">全国の販売先</a></li>
+            <li class="footer-nav-list__item"><a href="history.html" class="footer-nav-list__link">ノウフク道のあゆみ</a></li>
+            <li class="footer-nav-list__item"><a href="noufukurenkei.html" class="footer-nav-list__link">農福連携の進め方</a></li>
+          </ul>
+
+          <!-- 3列目 -->
+          <ul class="footer-nav-list --right">
+            <li class="footer-nav-list__item"><a href="howto.html" class="footer-nav-list__link">野菜の作り方と装置の話</a></li>
+            <li class="footer-nav-list__item"><a href="event.html" class="footer-nav-list__link">導入事例・イベント情報</a></li>
+            <li class="footer-nav-list__item"><a href="faq.html" class="footer-nav-list__link">よくある質問</a></li>
+          </ul>
+
+          <!-- 4列目 -->
+          <ul class="">
+            <li class="footer-nav-list__item"><a href="report.html" class="footer-nav-list__link">資料請求</a></li>
+            <li class="footer-nav-list__item"><a href="contact.html" class="footer-nav-list__link">お問い合わせ</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- footer__link--center -->
+
+      <div class="footer__link--right flex --fdc">
+        <div class="footer-sns-wrap">
+          <a href="" class="footer-icon fb-icon">
+            <img src="assets/images/footer_fb-icon.png" alt="">
+          </a>
+  
+          <a href="" class="footer-icon tw-icon">
+            <img src="assets/images/footer_tw-icon.png" alt="">
+          </a>
+        </div>
+        <!-- footer-sns-wrap -->
+
+        <p class="footer-copy">Copyright © 2023 noufukudo All right reserved.</p>
+
+      </div>
+      <!-- footer__link--right -->
+
+    </div>
+    <!-- footer__link-wrap -->
+    
+  </footer>
+  <div id="toTop" class="toTop"><a href="#"></a></div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

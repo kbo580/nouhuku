@@ -73,6 +73,7 @@ select::-ms-expand {
 .inner {
   margin: 0 auto;
   width: 100%;
+  border: 1px dotted #333;
 }
 .inner.--l {
   max-width: 1040px;
@@ -228,6 +229,25 @@ select::-ms-expand {
   border-radius: 2px;
 }
 
+.page-mv {
+  background: #ddd;
+  width: 100%;
+  padding: 9.6vw 5.3333333333vw;
+}
+.page-mv.--voice {
+  background: url(../images/voice-bg.jpg) center/cover no-repeat;
+}
+
+.page-heading {
+  font-size: 1.25rem;
+  padding: 1em;
+  max-width: 335px;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.4;
+}
+
 .br--sp-only {
   display: block;
 }
@@ -243,6 +263,13 @@ select::-ms-expand {
   }
   .sec-heading::before {
     width: 64px;
+  }
+  .page-mv {
+    padding: 72px 20px;
+  }
+  .page-heading {
+    font-size: 2.5rem;
+    max-width: 690px;
   }
   .br--sp-only {
     display: none;
@@ -271,6 +298,10 @@ select::-ms-expand {
 
 .mt20 {
   margin-top: 20px;
+}
+
+.link--border {
+  text-decoration: underline;
 }
 
 .header-btn {
@@ -333,15 +364,6 @@ select::-ms-expand {
 
 .seiden-logo {
   margin-right: 20px;
-}
-
-.seiden-logo,
-.social_house-logo {
-  transition: opacity 0.4s;
-}
-.seiden-logo:hover,
-.social_house-logo:hover {
-  opacity: 0.6;
 }
 
 .toTop {
@@ -500,5 +522,155 @@ select::-ms-expand {
   .card-list__icon {
     width: 16px;
     margin-right: 4px;
+  }
+}
+.numbered-list__icon {
+  background-color: #23C7CE;
+  color: #fff;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-weight: 700;
+  line-height: 1;
+}
+.numbered-list__icon .flow-list__icon-title {
+  font-size: 0.625rem;
+  transform: scale(0.7);
+}
+.numbered-list__icon .flow-list__icon-num {
+  font-size: 1rem;
+}
+.numbered-list__title {
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+.numbered-list__answer {
+  font-size: 0.75rem;
+  margin-top: 18px;
+}
+.numbered-list__body {
+  padding-left: 12px;
+  padding-top: 12px;
+  flex: 1;
+}
+
+@media (min-width: 765px) {
+  .numbered-list__icon {
+    width: 70px;
+    height: 70px;
+  }
+  .numbered-list__icon .flow-list__icon-title {
+    font-size: 0.875rem;
+    transform: scale(1);
+  }
+  .numbered-list__icon .flow-list__icon-num {
+    font-size: 2rem;
+  }
+  .numbered-list__title {
+    font-size: 1.5rem;
+  }
+  .numbered-list__answer {
+    font-size: 1rem;
+    margin-top: 24px;
+  }
+  .numbered-list__body {
+    padding-left: 24px;
+    padding-top: 24px;
+    flex: 1;
+  }
+}
+.voice__wrap {
+  border: 3px solid #97C736;
+  padding: 16px;
+}
+.voice__name {
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-top: 10px;
+  white-space: nowrap;
+}
+.voice__link-wrap {
+  text-align: right;
+}
+.voice__link {
+  font-size: 0.625rem;
+  transform: scale(0.7);
+  display: block;
+  transform-origin: 100%;
+}
+
+.voice-qaa-list {
+  font-size: 0.75rem;
+}
+.voice-qaa-list__item {
+  margin-top: 20px;
+}
+.voice-qaa-list__item:not(:first-child) {
+  margin-top: 32px;
+}
+.voice-qaa-list__title {
+  font-size: 0.75rem;
+  margin-top: 32px;
+}
+.voice-qaa-list__question {
+  font-weight: 700;
+}
+.voice-qaa-list__answer {
+  margin-top: 12px;
+}
+.voice-qaa-list__image {
+  margin: 32px auto 0;
+  width: 225px;
+}
+.voice-qaa-list__image img {
+  aspect-ratio: 225/141;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heading--green {
+  color: #97C736;
+}
+
+.iconed-heading {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px dashed #97C736;
+  padding-bottom: 12px;
+}
+.iconed-heading::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  display: block;
+  background: url(../images/voice-icon.png) no-repeat center/cover;
+  margin-right: 8px;
+}
+
+/*-------------  Hover Event ------------ */
+@media (hover: hover) {
+  .seiden-logo,
+  .social_house-logo {
+    transition: opacity 0.4s;
+  }
+  .seiden-logo:hover,
+  .social_house-logo:hover {
+    opacity: 0.6;
+  }
+  .footer-nav-list__link {
+    transition: text-decoration 0.4s;
+  }
+  .footer-nav-list__link:hover {
+    text-decoration: underline #fff;
+  }
+  .cta-image {
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+  }
+  .l-image:hover .cta-image,
+  .wide-image:hover .cta-image,
+  .s-image:hover .cta-image {
+    transform: scale(1.2);
   }
 }/*# sourceMappingURL=common.css.map */
