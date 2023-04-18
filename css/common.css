@@ -87,10 +87,6 @@ select::-ms-expand {
   display: none;
 }
 
-.plus {
-  position: relative;
-}
-
 .icon-wrap {
   position: absolute;
   right: 24px;
