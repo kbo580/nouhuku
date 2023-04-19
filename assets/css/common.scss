@@ -338,29 +338,32 @@ $brown: #A07907;
 /* -------------------------------------------- */
 /* ボタン */
 /* -------------------------------------------- */
+
+//中央配置用
+.btn-wrap{
+  text-align: center;
+}
+
 .btn{
   background-color: $green;
   color:$white;
   line-height: 1;
   font-weight: 900;
+  display: inline-block;
 
   &.--nouhuku{
     font-size: rem(16);
     padding: 15px 20px;
-    display: inline-block;
   }
-
+  
   &.--more{
-
+    font-size: rem(16);
+    padding: 14px 18px;
   }
 
   &.--confirm{
 
   }
-}
-
-.btn-wrap{
-  text-align: center;
 }
 
 //ボタン用余白
@@ -480,11 +483,11 @@ $brown: #A07907;
     &.--nouhuku{
       font-size: rem(24);
       padding: 20px 40px;
-      display: inline-block;
     }
-  
+    
     &.--more{
-  
+      font-size: rem(24);
+      padding: 20px 40px;
     }
   
     &.--confirm{
@@ -617,45 +620,6 @@ $brown: #A07907;
   }
 }
 
-@media (min-width: 765px){
-  //---------- カードリスト ---------
-  .card-list{
-    margin-top: -60px;
-
-    &__item{
-      width: calc((100% - 86px)/3);
-      margin-top: 60px;
-    }
-
-    &__label{
-      font-size: rem(12);
-      transform: scale(1);
-      padding: 6px 16px;
-      right: 0%;
-      bottom: -4%;
-    }
-
-    &__heading{
-      font-size: rem(16);
-      margin-top: 24px;
-    }
-    
-    &__desc{
-      font-size: rem(16);
-      padding: 5px 0 24px;
-    }
-
-    &__cat{
-      margin-top: 14px;
-    }
-
-    &__icon{
-      width: 16px;
-      margin-right: 4px;
-    }
-  }
-}
-
 //---------- 数字付きリスト ---------
 .numbered-list{
 
@@ -698,13 +662,50 @@ $brown: #A07907;
     padding-top: 12px;
     flex: 1;
   }
-
 }
 
+
 @media (min-width: 765px){
+  //---------- カードリスト ---------
+  .card-list{
+    margin-top: -60px;
+
+    &__item{
+      width: calc((100% - 86px)/3);
+      margin-top: 60px;
+    }
+
+    &__label{
+      font-size: rem(12);
+      transform: scale(1);
+      padding: 6px 16px;
+      right: 0%;
+      bottom: -4%;
+    }
+
+    &__heading{
+      font-size: rem(16);
+      margin-top: 24px;
+    }
+    
+    &__desc{
+      font-size: rem(16);
+      padding: 5px 0 24px;
+    }
+
+    &__cat{
+      margin-top: 14px;
+    }
+
+    &__icon{
+      width: 16px;
+      margin-right: 4px;
+    }
+  }
+
   //---------- 数字付きリスト ---------
   .numbered-list{
-    
+  
     &__item{
   
     }
@@ -739,17 +740,30 @@ $brown: #A07907;
     }
   }
 
+
+
+
 }
 
-//---------- Voiceページ共通 ---------
+
+
+/* -------------------------------------------- */
+/* Voiceページ共通 */
+/* -------------------------------------------- */
 .voice{
+
+  &__heading-cont{
+    border-bottom: 1px dashed $green;
+    padding-bottom: 12px;
+  }
+
   &__heading{
-    
+    font-size: rem(16);
   }
 
   &__wrap{
     border: 3px solid $green;
-    padding: 16px;
+    padding: 16px 16px 32px;
   }
   
   &__name{
@@ -757,18 +771,39 @@ $brown: #A07907;
     font-weight: 700;
     margin-top: 10px;
     white-space: nowrap;
+    text-align: right;
   }
 
   &__link-wrap{
-    text-align: right;
+    margin-top: 4px;
+    display: flex;
+    justify-content: flex-end;
   }
 
   &__link{
     font-size: rem(10);
     transform: scale(0.7);
-    display: block;
     transform-origin: 100%;
   }
+}
+
+//---------- アイコン付きタイトル ---------
+.iconed-heading{
+
+  &::before{
+    content:"" ;
+    width: 24px;
+    height: 24px;
+    display: block;
+    background: url(../images/voice-icon.png) no-repeat center/cover;
+    margin-right: 8px;
+  }
+}
+
+//---------- voiceの質問と答えのリスト ---------
+//緑色のタイトル
+.heading--green{
+  color: $green;
 }
 
 .voice-qaa-list{
@@ -777,6 +812,7 @@ $brown: #A07907;
   &__item{
     margin-top: 20px;
   }
+
   &__item:not(:first-child){
     margin-top: 32px;
   }
@@ -784,6 +820,10 @@ $brown: #A07907;
   &__title{
     font-size: rem(12);
     margin-top: 32px;
+
+    &.--first{
+      margin-top: 32px;
+    }
   }
   
   &__question{
@@ -796,7 +836,8 @@ $brown: #A07907;
 
   &__image{
     margin: 32px auto 0;
-    width: 225px;
+    width: 77%;
+    max-width: 600px;
 
     img{
       aspect-ratio: 225/141;
@@ -804,32 +845,149 @@ $brown: #A07907;
       height: 100%;
       object-fit: cover;
     }
-
-
   }
 }
 
-.heading--green{
-  color: $green;
+//----------  ページネーション ----------
+.post-navigation{
+
+  // リンクの枠 
+  .nav-links{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+  }
+
+  .nav-previous,
+  .nav-next{
+    background: $green;
+    width: 44px;
+    height: 44px;
+    position: relative;
+
+    a{
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+    }
+
+    //矢印
+    .navigation-arrow{
+      width: 11px;
+      height: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
 }
 
+//voiceページの一覧へ戻るボタン
+.btn.--return{
+  padding: 16px 20px;
+  font-size: rem(12);
+}
 
+@media (min-width: 765px){
+  .voice{
+    &__heading-cont{
+      padding-bottom: 20px;
+    }
 
-//---------- アイコン付きタイトル ---------
-.iconed-heading{
-  display: flex;
-  align-items: center;
-  border-bottom: 1px dashed $green;
-  padding-bottom: 12px;
-
-  &::before{
-    content:"" ;
-    width: 24px;
-    height: 24px;
-    display: block;
-    background: url(../images/voice-icon.png) no-repeat center/cover;
-    margin-right: 8px;
+    &__heading{
+      font-size: rem(32);
+    }
+  
+    &__wrap{
+      padding: 28px 40px 64px;
+    }
+    
+    &__name{
+      font-size: rem(16);
+      margin-top: 0px;
+    }
+  
+    &__link-wrap{
+      margin-top: 12px;
+    }
+  
+    &__link{
+      font-size: rem(12);
+      transform: scale(1);
+    }
   }
+
+  //---------- アイコン付きタイトル ---------
+  .iconed-heading{
+
+    &::before{
+      width: 48px;
+      height: 48px;
+      margin-right: 16px;
+    }
+  }
+
+  //---------- voiceの質問と答えのリスト ---------
+  .voice-qaa-list{
+    font-size: rem(16);
+
+    &__item{
+      margin-top: 40px;
+    }
+
+    &__item:not(:first-child){
+      margin-top: 40px;
+    }
+
+    &__title{
+      font-size: rem(24);
+      margin-top: 64px;
+
+      &.--first{
+        margin-top: 48px;
+      }
+    }
+
+    &__answer{
+      margin-top: 24px;
+      padding: 0 16px;
+    }
+
+    &__image{
+      margin: 40px auto 0;
+    }
+  }
+
+  //----------  ページネーション ----------
+  .post-navigation{
+
+    // リンクの枠 
+    .nav-links{
+      margin-top: 64px;
+    }
+
+    .nav-previous,
+    .nav-next{
+      width: auto;
+      height: auto;
+
+      a{
+        color:$white;
+        padding: 20px 40px;
+        font-size: rem(24);
+        font-weight: 700;
+        line-height: 1;
+      }
+    }
+  }
+
+  //voiceページの一覧へ戻るボタン
+  .btn.--return{
+    padding: 20px 40px;
+    font-size: rem(24);
+  }
+
 }
 
 
@@ -840,6 +998,14 @@ $brown: #A07907;
 
 /*-------------  Hover Event ------------ */
 @media (hover: hover){
+  //ボタン、voiceページの前へ、次へボタン
+  .btn,
+  .nav-previous,
+  .nav-next{
+    &:hover{
+      background: $greenHover;
+    }
+  }
 
   .seiden-logo,
   .social_house-logo{

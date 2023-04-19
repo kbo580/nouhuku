@@ -1,0 +1,143 @@
+@charset "UTF-8";
+*{
+  box-sizing: border-box;
+}
+
+
+/*----- common -----*/ 
+@function rem($px){
+  @return ($px/16) *1rem;
+}
+
+$textColor: #3D2F23;
+$white: #fff;
+$cream: #fffaeb;
+$pink: #ea689a;
+$yellow: #FAC017;
+$skyblue: #23C7CE;
+$skyblueHover: #1DB4BA;
+$green: #97C736;
+$greenHover: #83AC32;
+$gray: #ccc;
+$brown: #A07907;
+
+body {
+	font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Arial, Verdana,sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: rem(14);
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  color: $textColor;
+  background-color: #fff;
+}
+
+@media (min-width: 765px) {
+
+  body {
+    font-size: rem(16);
+  }
+
+}
+
+
+/* -------------------------------------------- */
+/* zenkokuの声 */
+/* -------------------------------------------- */
+.zenkoku-voice{
+  &__wrap{
+    padding: 16px;
+
+    &:not(:first-child){
+      margin-top: 20px;
+    }
+  }
+}
+
+.zenkoku-voice-list{
+  margin-top: 32px;
+}
+
+.zenkoku-address-list{
+  font-size: rem(10);
+  text-align: right;
+  line-height: 1.6;
+  margin-top: 32px;
+}
+
+//下部のお客さまの声
+.zenkoku-voice-bottom{
+
+  &__wrap{
+    padding: 16px;
+    font-size: rem(12);
+    margin-top: 20px;
+  }
+
+  &__name{
+    margin-top: 32px;
+    font-weight: 700;
+  }
+  
+  &__depart{
+    font-weight: 700;
+  }
+}
+
+@media (min-width: 765px) {
+  .zenkoku-voice{
+    &__wrap{
+      padding: 28px 40px 40px;
+  
+      &:not(:first-child){
+        margin-top: 40px;
+      }
+    }
+  }
+  
+  .zenkoku-voice-list{
+    margin-top: 40px;
+  }
+  
+  .zenkoku-address-list{
+    font-size: rem(16);
+    margin-top: 40px;
+  }
+  
+  //下部のお客さまの声
+  .zenkoku-voice-bottom{
+    display: flex;
+    justify-content: space-between;
+  
+    &__wrap{
+      padding: 16px;
+      padding: 40px 40px 36px;
+      font-size: rem(16);
+      width: calc((100% - 40px) /2);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+
+    &__name{
+      margin-top: 32px;
+      font-weight: 700;
+    }
+    
+    &__depart{
+      font-weight: 700;
+    }
+  }
+
+}
+
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+
+
+@media (min-width: 765px) {
+
+
+}
+

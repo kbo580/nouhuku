@@ -281,21 +281,25 @@ select::-ms-expand {
 /* -------------------------------------------- */
 /* ボタン */
 /* -------------------------------------------- */
+.btn-wrap {
+  text-align: center;
+}
+
 .btn {
   background-color: #97C736;
   color: #fff;
   line-height: 1;
   font-weight: 900;
+  display: inline-block;
 }
 .btn.--nouhuku {
   font-size: 1rem;
   padding: 15px 20px;
-  display: inline-block;
 }
-.btn-wrap {
-  text-align: center;
+.btn.--more {
+  font-size: 1rem;
+  padding: 14px 18px;
 }
-
 .mt20 {
   margin-top: 20px;
 }
@@ -396,7 +400,10 @@ select::-ms-expand {
   .btn.--nouhuku {
     font-size: 1.5rem;
     padding: 20px 40px;
-    display: inline-block;
+  }
+  .btn.--more {
+    font-size: 1.5rem;
+    padding: 20px 40px;
   }
   .mt20 {
     margin-top: 40px;
@@ -493,37 +500,6 @@ select::-ms-expand {
   margin-right: 8px;
 }
 
-@media (min-width: 765px) {
-  .card-list {
-    margin-top: -60px;
-  }
-  .card-list__item {
-    width: calc((100% - 86px) / 3);
-    margin-top: 60px;
-  }
-  .card-list__label {
-    font-size: 0.75rem;
-    transform: scale(1);
-    padding: 6px 16px;
-    right: 0%;
-    bottom: -4%;
-  }
-  .card-list__heading {
-    font-size: 1rem;
-    margin-top: 24px;
-  }
-  .card-list__desc {
-    font-size: 1rem;
-    padding: 5px 0 24px;
-  }
-  .card-list__cat {
-    margin-top: 14px;
-  }
-  .card-list__icon {
-    width: 16px;
-    margin-right: 4px;
-  }
-}
 .numbered-list__icon {
   background-color: #23C7CE;
   color: #fff;
@@ -555,6 +531,35 @@ select::-ms-expand {
 }
 
 @media (min-width: 765px) {
+  .card-list {
+    margin-top: -60px;
+  }
+  .card-list__item {
+    width: calc((100% - 86px) / 3);
+    margin-top: 60px;
+  }
+  .card-list__label {
+    font-size: 0.75rem;
+    transform: scale(1);
+    padding: 6px 16px;
+    right: 0%;
+    bottom: -4%;
+  }
+  .card-list__heading {
+    font-size: 1rem;
+    margin-top: 24px;
+  }
+  .card-list__desc {
+    font-size: 1rem;
+    padding: 5px 0 24px;
+  }
+  .card-list__cat {
+    margin-top: 14px;
+  }
+  .card-list__icon {
+    width: 16px;
+    margin-right: 4px;
+  }
   .numbered-list__icon {
     width: 70px;
     height: 70px;
@@ -579,24 +584,49 @@ select::-ms-expand {
     flex: 1;
   }
 }
+/* -------------------------------------------- */
+/* Voiceページ共通 */
+/* -------------------------------------------- */
+.voice__heading-cont {
+  border-bottom: 1px dashed #97C736;
+  padding-bottom: 12px;
+}
+.voice__heading {
+  font-size: 1rem;
+}
 .voice__wrap {
   border: 3px solid #97C736;
-  padding: 16px;
+  padding: 16px 16px 32px;
 }
 .voice__name {
   font-size: 0.75rem;
   font-weight: 700;
   margin-top: 10px;
   white-space: nowrap;
+  text-align: right;
 }
 .voice__link-wrap {
-  text-align: right;
+  margin-top: 4px;
+  display: flex;
+  justify-content: flex-end;
 }
 .voice__link {
   font-size: 0.625rem;
   transform: scale(0.7);
-  display: block;
   transform-origin: 100%;
+}
+
+.iconed-heading::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  display: block;
+  background: url(../images/voice-icon.png) no-repeat center/cover;
+  margin-right: 8px;
+}
+
+.heading--green {
+  color: #97C736;
 }
 
 .voice-qaa-list {
@@ -612,6 +642,9 @@ select::-ms-expand {
   font-size: 0.75rem;
   margin-top: 32px;
 }
+.voice-qaa-list__title.--first {
+  margin-top: 32px;
+}
 .voice-qaa-list__question {
   font-weight: 700;
 }
@@ -620,7 +653,8 @@ select::-ms-expand {
 }
 .voice-qaa-list__image {
   margin: 32px auto 0;
-  width: 225px;
+  width: 77%;
+  max-width: 600px;
 }
 .voice-qaa-list__image img {
   aspect-ratio: 225/141;
@@ -629,27 +663,116 @@ select::-ms-expand {
   object-fit: cover;
 }
 
-.heading--green {
-  color: #97C736;
-}
-
-.iconed-heading {
+.post-navigation .nav-links {
   display: flex;
-  align-items: center;
-  border-bottom: 1px dashed #97C736;
-  padding-bottom: 12px;
+  justify-content: space-between;
+  margin-top: 32px;
 }
-.iconed-heading::before {
-  content: "";
-  width: 24px;
-  height: 24px;
-  display: block;
-  background: url(../images/voice-icon.png) no-repeat center/cover;
-  margin-right: 8px;
+.post-navigation .nav-previous,
+.post-navigation .nav-next {
+  background: #97C736;
+  width: 44px;
+  height: 44px;
+  position: relative;
+}
+.post-navigation .nav-previous a,
+.post-navigation .nav-next a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.post-navigation .nav-previous .navigation-arrow,
+.post-navigation .nav-next .navigation-arrow {
+  width: 11px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
+.btn.--return {
+  padding: 16px 20px;
+  font-size: 0.75rem;
+}
+
+@media (min-width: 765px) {
+  .voice__heading-cont {
+    padding-bottom: 20px;
+  }
+  .voice__heading {
+    font-size: 2rem;
+  }
+  .voice__wrap {
+    padding: 28px 40px 64px;
+  }
+  .voice__name {
+    font-size: 1rem;
+    margin-top: 0px;
+  }
+  .voice__link-wrap {
+    margin-top: 12px;
+  }
+  .voice__link {
+    font-size: 0.75rem;
+    transform: scale(1);
+  }
+  .iconed-heading::before {
+    width: 48px;
+    height: 48px;
+    margin-right: 16px;
+  }
+  .voice-qaa-list {
+    font-size: 1rem;
+  }
+  .voice-qaa-list__item {
+    margin-top: 40px;
+  }
+  .voice-qaa-list__item:not(:first-child) {
+    margin-top: 40px;
+  }
+  .voice-qaa-list__title {
+    font-size: 1.5rem;
+    margin-top: 64px;
+  }
+  .voice-qaa-list__title.--first {
+    margin-top: 48px;
+  }
+  .voice-qaa-list__answer {
+    margin-top: 24px;
+    padding: 0 16px;
+  }
+  .voice-qaa-list__image {
+    margin: 40px auto 0;
+  }
+  .post-navigation .nav-links {
+    margin-top: 64px;
+  }
+  .post-navigation .nav-previous,
+  .post-navigation .nav-next {
+    width: auto;
+    height: auto;
+  }
+  .post-navigation .nav-previous a,
+  .post-navigation .nav-next a {
+    color: #fff;
+    padding: 20px 40px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .btn.--return {
+    padding: 20px 40px;
+    font-size: 1.5rem;
+  }
+}
 /*-------------  Hover Event ------------ */
 @media (hover: hover) {
+  .btn:hover,
+  .nav-previous:hover,
+  .nav-next:hover {
+    background: #83AC32;
+  }
   .seiden-logo,
   .social_house-logo {
     transition: opacity 0.4s;

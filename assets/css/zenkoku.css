@@ -1,0 +1,94 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+/*----- common -----*/
+body {
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Arial, Verdana, sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  color: #3D2F23;
+  background-color: #fff;
+}
+
+@media (min-width: 765px) {
+  body {
+    font-size: 1rem;
+  }
+}
+/* -------------------------------------------- */
+/* zenkokuの声 */
+/* -------------------------------------------- */
+.zenkoku-voice__wrap {
+  padding: 16px;
+}
+.zenkoku-voice__wrap:not(:first-child) {
+  margin-top: 20px;
+}
+
+.zenkoku-voice-list {
+  margin-top: 32px;
+}
+
+.zenkoku-address-list {
+  font-size: 0.625rem;
+  text-align: right;
+  line-height: 1.6;
+  margin-top: 32px;
+}
+
+.zenkoku-voice-bottom__wrap {
+  padding: 16px;
+  font-size: 0.75rem;
+  margin-top: 20px;
+}
+.zenkoku-voice-bottom__name {
+  margin-top: 32px;
+  font-weight: 700;
+}
+.zenkoku-voice-bottom__depart {
+  font-weight: 700;
+}
+
+@media (min-width: 765px) {
+  .zenkoku-voice__wrap {
+    padding: 28px 40px 40px;
+  }
+  .zenkoku-voice__wrap:not(:first-child) {
+    margin-top: 40px;
+  }
+  .zenkoku-voice-list {
+    margin-top: 40px;
+  }
+  .zenkoku-address-list {
+    font-size: 1rem;
+    margin-top: 40px;
+  }
+  .zenkoku-voice-bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+  .zenkoku-voice-bottom__wrap {
+    padding: 16px;
+    padding: 40px 40px 36px;
+    font-size: 1rem;
+    width: calc((100% - 40px) / 2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  .zenkoku-voice-bottom__name {
+    margin-top: 32px;
+    font-weight: 700;
+  }
+  .zenkoku-voice-bottom__depart {
+    font-weight: 700;
+  }
+}
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- *//*# sourceMappingURL=zenkoku.css.map */
