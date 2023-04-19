@@ -132,6 +132,165 @@ body {
 }
 
 /* -------------------------------------------- */
+/* vegetable */
+/* -------------------------------------------- */
+.vegetable{
+
+}
+
+.vegetable-list{
+  // margin-top: 20px;
+  margin-top: -2px; //listの上-itemの上のmargin
+
+  &__title{
+    font-size: rem(16);
+    color:$green;
+  }
+
+  &__name{
+    font-size: rem(12);
+    width: 50%;
+    margin-top: 18px;
+
+    &::before{
+      content: "";
+      width: 2px;
+      height: 8px;
+      background: $skyblue;
+      display: inline-block;
+      border-radius: 8px;
+      margin-right: 7px;
+    }
+  }
+
+  &__desc{
+    font-size: rem(10);
+    margin-top: 20px;
+  }
+}
+
+//3枚のレタス画像
+.vegetable-image{
+  width: 33.3%;
+  flex:1;
+}
+
+@media (min-width: 765px) {
+  .vegetable{
+
+  }
+  
+  .vegetable-list{
+    margin-top: 0px; 
+  
+    &__title{
+      font-size: rem(32);
+    }
+  
+    &__name{
+      font-size: rem(16);
+      width: 33%;
+      margin-top: 40px;
+  
+      &::before{
+        width: 4px;
+        height: 16px;
+        margin-right: 8px;
+      }
+    }
+  
+    &__desc{
+      font-size: rem(16);
+      margin-top: 24px;
+    }
+  }
+
+}
+
+/* -------------------------------------------- */
+/* sales-tec */
+/* -------------------------------------------- */
+.sales-tec{
+
+  &__copy{
+    font-weight: 700;
+    font-size: rem(12);
+    white-space: nowrap;
+  }
+
+  &-result{
+    font-size: rem(12);
+    margin-top: 32px;
+  }
+}
+
+ //上側のテキスト群
+.sales-tec-list{
+  font-size: rem(12);
+  margin-top: 32px;
+
+  &__item:not(:first-child){
+    margin-top: 20px;
+  }
+}
+
+.zenkoku-step-list{
+  margin-top: 32px;
+
+  &__item:not(:first-child){
+    margin-top: 20px;
+  }
+
+  &__add{
+    font-weight: 700;
+    margin-top: 20px;
+    font-size: rem(12);
+  }
+}
+
+@media (min-width: 765px) {
+  .sales-tec{
+
+    &__copy{
+      font-size: rem(24);
+      text-align: center;
+    }
+  
+    &-result{
+      font-size: rem(16);
+      margin-top: 40px;
+      line-height: 1.8;
+    }
+  }
+  
+  //上側のテキスト群
+  .sales-tec-list{
+    font-size: rem(16);
+    margin-top: 64px;
+  
+    &__item:not(:first-child){
+      margin-top: 40px;
+    }
+  }
+  
+  //下側のリスト群
+  .zenkoku-step-list{
+    margin-top: 64px;
+  
+    &__item:not(:first-child){
+      margin-top: 40px;
+    }
+  
+    &__add{
+      margin-top: 40px;
+      font-size: rem(16);
+      line-height: 1.8;
+    }
+  }
+
+
+}
+/* -------------------------------------------- */
 /*  */
 /* -------------------------------------------- */
 
