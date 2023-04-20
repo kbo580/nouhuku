@@ -104,15 +104,6 @@ body {
   width: 50%;
   margin-top: 18px;
 }
-.vegetable-list__name::before {
-  content: "";
-  width: 2px;
-  height: 8px;
-  background: #23C7CE;
-  display: inline-block;
-  border-radius: 8px;
-  margin-right: 7px;
-}
 .vegetable-list__desc {
   font-size: 0.625rem;
   margin-top: 20px;
@@ -134,11 +125,6 @@ body {
     font-size: 1rem;
     width: 33%;
     margin-top: 40px;
-  }
-  .vegetable-list__name::before {
-    width: 4px;
-    height: 16px;
-    margin-right: 8px;
   }
   .vegetable-list__desc {
     font-size: 1rem;
@@ -206,7 +192,4 @@ body {
     font-size: 1rem;
     line-height: 1.8;
   }
-}
-/* -------------------------------------------- */
-/*  */
-/* -------------------------------------------- *//*# sourceMappingURL=zenkoku.css.map */
+}/*# sourceMappingURL=zenkoku.css.map */

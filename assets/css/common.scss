@@ -95,7 +95,7 @@ $brown: #A07907;
   margin: 0 auto;
   width: 100%;
   // background-color: rgba(241,92,168,0.2);
-  border: 1px dotted #333;
+  // border: 1px dotted #333;
 
   &.--l{
     max-width: 1040px;
@@ -228,7 +228,7 @@ $brown: #A07907;
 /* -------------------------------------------- */
 //section間の余白
 .sec-pad{
-  border: 1px solid #000;
+  // border: 1px solid #000;
   padding-top: 52px;
   padding-bottom: 52px;
 }
@@ -664,6 +664,21 @@ $brown: #A07907;
   }
 }
 
+//野菜名の横に付くあしらい
+.blue-bar{
+
+  &::before{
+    content: "";
+    width: 2px;
+    height: 8px;
+    background: $skyblue;
+    display: inline-block;
+    border-radius: 8px;
+    margin-right: 7px;
+  }
+
+}
+
 
 @media (min-width: 765px){
   //---------- カードリスト ---------
@@ -740,6 +755,16 @@ $brown: #A07907;
     }
   }
 
+  //野菜名の横に付くあしらい
+  .blue-bar{
+
+    &::before{
+      width: 4px;
+      height: 16px;
+      margin-right: 8px;
+    }
+  }
+
 
 
 
@@ -762,7 +787,7 @@ $brown: #A07907;
   }
 
   &__wrap{
-    border: 3px solid $green;
+    border: 4px solid $green;
     padding: 16px 16px 32px;
   }
   

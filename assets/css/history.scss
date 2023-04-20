@@ -1,0 +1,340 @@
+@charset "UTF-8";
+*{
+  box-sizing: border-box;
+}
+
+
+/*----- common -----*/ 
+@function rem($px){
+  @return ($px/16) *1rem;
+}
+
+$textColor: #3D2F23;
+$white: #fff;
+$cream: #fffaeb;
+$pink: #ea689a;
+$yellow: #FAC017;
+$skyblue: #23C7CE;
+$skyblueHover: #1DB4BA;
+$green: #97C736;
+$greenHover: #83AC32;
+$gray: #ccc;
+$brown: #A07907;
+
+body {
+	font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Arial, Verdana,sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: rem(14);
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  color: $textColor;
+  background-color: #fff;
+}
+
+@media (min-width: 765px) {
+
+  body {
+    font-size: rem(16);
+  }
+
+}
+
+/* -------------------------------------------- */
+/* historyページ共通 */
+/* -------------------------------------------- */
+.history-table{
+  font-size: rem(12);
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: -12px;
+  
+  &__left,
+  &__right{
+    border-bottom: 1px solid #ddd;
+    padding: 12px 0 10px;
+  }
+  
+  &__left{
+    text-align: left;
+    width: 32.5%;
+    vertical-align: top;
+    position: relative;
+
+    &:before{
+      position: absolute;
+      content: " ";
+      display: block;
+      border-bottom: solid 1px $skyblue;
+      bottom: -1px;
+      left: 0;
+      width: 90%;
+    }
+  }
+
+  &__right{
+    flex: 1;
+  }
+}
+
+@media (min-width: 765px) {
+  .company{
+
+  }
+  
+  .history-table{
+    font-size: rem(16);
+    margin-top: -24px;
+    
+    &__left,
+    &__right{
+      padding: 24px 0 24px;
+    }
+    
+    &__left{
+      width: 21.8%;
+      padding-left: 16px;
+    }
+  }
+
+
+}
+
+/* -------------------------------------------- */
+/* thought */
+/* -------------------------------------------- */
+.thought{
+
+}
+
+.thought-list{
+
+  &__item{
+    border: 4px solid $green;
+    padding: 16px;
+
+    &:not(:first-child){
+      margin-top: 20px;
+    }
+  }
+  
+  &__label{
+    background: $skyblue;
+    color:$white;
+    display: inline-block;
+    border-radius: 17px;
+    font-size: rem(10);
+    padding: 3px 10px;
+    line-height: 1;
+    font-weight: 700;
+  }
+
+  &__title{
+    font-size: rem(16);
+    border-bottom: 1px dashed $green;
+    padding: 12px 0;
+  }
+
+  &__desc-wrap{
+    font-size: rem(12);
+    margin-top: 12px;
+  }
+
+  &__desc{
+
+    &:not(:first-child){
+      margin-top: 20px;
+    }
+  }
+}
+
+@media (min-width: 765px) {
+  .thought{
+
+  }
+  
+  .thought-list{
+  
+    &__item{
+      padding: 28px 40px;
+  
+      &:not(:first-child){
+        margin-top: 20px;
+      }
+    }
+    
+    &__label{
+      font-size: rem(16);
+      padding: 8px 16px;
+    }
+  
+    &__title{
+      font-size: rem(24);
+      padding: 16px 0 20px;
+    }
+  
+    &__desc-wrap{
+      font-size: rem(16);
+      margin-top: 16px;
+    }
+  
+    &__desc{
+      line-height: 1.8;
+      &:not(:first-child){
+        margin-top: 24px;
+      }
+    }
+  }
+}
+
+/* -------------------------------------------- */
+/* missionとvision */
+/* -------------------------------------------- */
+//---------- 共通部品 ----------
+.mission-vision{
+  line-height: 1.6;
+  font-size: rem(12);
+
+  &__image{
+    width: 150px;
+    width: 45%;
+  }
+
+  &__desc{
+    font-weight: 700;
+    width: 165px;
+    width: 50%;
+  }
+
+  &__conclusion{
+    font-weight: 700;
+    margin-top: 20px;
+  }
+
+  &__conclusion-pink{
+    color: #ea689a;
+  }
+}
+
+//----------- vision ---------
+.vision{
+  margin-top: 32px;
+}
+
+@media (min-width: 765px) {
+  //---------- missionとvisionの共通部品 ----------
+  .mission-vision{
+    font-size: rem(24);
+
+      &__image{
+        width: 40%;
+      }
+  
+      &__desc{
+        width: 56%;
+      }
+
+      &__conclusion{
+        margin-top: 20px;
+      }
+    }
+    
+  //----------- vision ---------
+  .vision{
+    margin-top: 24px;
+  }
+
+}
+
+/* -------------------------------------------- */
+/* company */
+/* -------------------------------------------- */
+.company{
+
+}
+
+
+
+
+
+/* -------------------------------------------- */
+/* prof */
+/* -------------------------------------------- */
+.prof{
+
+  &__image{
+    width: 41.8%;
+    margin: 0 auto;
+  }
+
+  &__table{
+    margin-top: 26px;
+  }
+}
+
+@media (min-width: 765px) {
+  .prof{
+
+    &__cont{
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+  
+    &__image{
+      width: 28%;
+      max-width: 280px;
+      margin: 0;
+    }
+  
+    &__table{
+      margin-top: -24px;
+      width: 68%;
+    }
+  }
+
+
+}
+
+/* -------------------------------------------- */
+/* message */
+/* -------------------------------------------- */
+.message{
+  &__heading{
+    color: $green;
+    font-size: rem(16);
+  }
+
+  &__wrap:not(:first-child){
+    margin-top: 32px;
+  }
+
+  &-list{
+    font-size: rem(12);
+
+    &__item{
+      margin-top: 16px;
+    }
+  }
+}
+
+@media (min-width: 765px) {
+  .message{
+    &__heading{
+      font-size: rem(32);
+    }
+  
+    &__wrap:not(:first-child){
+      margin-top: 64px;
+    }
+  
+    &-list{
+      font-size: rem(16);
+      line-height: 1.8;
+  
+      &__item{
+        margin-top: 24px;
+      }
+    }
+  }
+
+}

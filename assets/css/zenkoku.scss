@@ -139,7 +139,6 @@ body {
 }
 
 .vegetable-list{
-  // margin-top: 20px;
   margin-top: -2px; //listの上-itemの上のmargin
 
   &__title{
@@ -151,16 +150,6 @@ body {
     font-size: rem(12);
     width: 50%;
     margin-top: 18px;
-
-    &::before{
-      content: "";
-      width: 2px;
-      height: 8px;
-      background: $skyblue;
-      display: inline-block;
-      border-radius: 8px;
-      margin-right: 7px;
-    }
   }
 
   &__desc{
@@ -191,12 +180,6 @@ body {
       font-size: rem(16);
       width: 33%;
       margin-top: 40px;
-  
-      &::before{
-        width: 4px;
-        height: 16px;
-        margin-right: 8px;
-      }
     }
   
     &__desc{
@@ -288,15 +271,6 @@ body {
     }
   }
 
-
 }
-/* -------------------------------------------- */
-/*  */
-/* -------------------------------------------- */
 
-
-@media (min-width: 765px) {
-
-
-}
 
