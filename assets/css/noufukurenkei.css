@@ -1,0 +1,120 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+/*----- common -----*/
+body {
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Arial, Verdana, sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  color: #3D2F23;
+  background-color: #fff;
+}
+
+@media (min-width: 765px) {
+  body {
+    font-size: 1rem;
+  }
+}
+/* -------------------------------------------- */
+/* future */
+/* -------------------------------------------- */
+.future__copy {
+  font-size: 0.75rem;
+}
+
+@media (min-width: 765px) {
+  .future__copy {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+/* -------------------------------------------- */
+/* step */
+/* -------------------------------------------- */
+.step__copy {
+  font-size: 0.75rem;
+}
+.step__cont {
+  padding-top: 50px;
+}
+.step__image {
+  position: relative;
+  width: 44.8%;
+}
+.step__icon {
+  position: absolute;
+  top: -22%;
+  right: -12%;
+}
+.step__body {
+  flex: 1;
+}
+.step__title {
+  font-size: 1rem;
+  color: #97C736;
+}
+.step__desc.sp-only {
+  font-size: 0.75rem;
+  margin-top: 12px;
+}
+
+.examination-first-step,
+.examination-second-step {
+  border: 1px solid #97C736;
+  background-color: #fff;
+  padding: 16px;
+  margin-top: 20px;
+  font-size: 0.625rem;
+  line-height: 1.6;
+}
+
+.examination-list__title {
+  font-weight: 700;
+}
+.examination-list__item::before {
+  content: "●";
+  color: #23C7CE;
+}
+
+.examination-second-step .examination-list__item::before {
+  color: #3D2F23;
+}
+.examination-second-step__text {
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+.examination-second-step-list {
+  margin-top: 20px;
+}
+.examination-second-step-list__title {
+  font-weight: 700;
+  padding-bottom: 12px;
+}
+.examination-second-step-list__desc {
+  padding-left: 8px;
+}
+.examination-second-step-list__desc-left {
+  min-width: 80px;
+  display: inline-block;
+}
+
+@media (min-width: 765px) {
+  .step__copy {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- *//*# sourceMappingURL=noufukurenkei.css.map */

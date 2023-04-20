@@ -235,6 +235,15 @@ select::-ms-expand {
 .page-mv.--voice {
   background: url(../images/voice-bg.jpg) center/cover no-repeat;
 }
+.page-mv.--zenkoku {
+  background: url(../images/zenkoku-bg.png) center/cover no-repeat;
+}
+.page-mv.--history {
+  background: url(../images/history-bg.png) center/cover no-repeat;
+}
+.page-mv.--noufukurenkei {
+  background: url(../images/noufukurenkei-bg.png) center/cover no-repeat;
+}
 
 .page-heading {
   font-size: 1.25rem;
@@ -507,11 +516,11 @@ select::-ms-expand {
   font-weight: 700;
   line-height: 1;
 }
-.numbered-list__icon .flow-list__icon-title {
+.numbered-list__icon-title {
   font-size: 0.625rem;
   transform: scale(0.7);
 }
-.numbered-list__icon .flow-list__icon-num {
+.numbered-list__icon-num {
   font-size: 1rem;
 }
 .numbered-list__title {
@@ -572,11 +581,11 @@ select::-ms-expand {
     width: 70px;
     height: 70px;
   }
-  .numbered-list__icon .flow-list__icon-title {
+  .numbered-list__icon-title {
     font-size: 0.875rem;
     transform: scale(1);
   }
-  .numbered-list__icon .flow-list__icon-num {
+  .numbered-list__icon-num {
     font-size: 2rem;
   }
   .numbered-list__title {

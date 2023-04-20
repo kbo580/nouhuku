@@ -1,0 +1,186 @@
+@charset "UTF-8";
+*{
+  box-sizing: border-box;
+}
+
+
+/*----- common -----*/ 
+@function rem($px){
+  @return ($px/16) *1rem;
+}
+
+$textColor: #3D2F23;
+$white: #fff;
+$cream: #fffaeb;
+$pink: #ea689a;
+$yellow: #FAC017;
+$skyblue: #23C7CE;
+$skyblueHover: #1DB4BA;
+$green: #97C736;
+$greenHover: #83AC32;
+$gray: #ccc;
+$brown: #A07907;
+
+body {
+	font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Arial, Verdana,sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: rem(14);
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  color: $textColor;
+  background-color: #fff;
+}
+
+@media (min-width: 765px) {
+
+  body {
+    font-size: rem(16);
+  }
+
+}
+
+
+/* -------------------------------------------- */
+/* future */
+/* -------------------------------------------- */
+.future{
+  &__copy{
+    font-size: rem(12);
+  }
+}
+
+@media (min-width: 765px) {
+  .future{
+    &__copy{
+      font-size: rem(16);
+      line-height: 1.6;
+    }
+  }
+}
+
+/* -------------------------------------------- */
+/* step */
+/* -------------------------------------------- */
+.step{
+  &__copy{
+    font-size: rem(12);
+  }
+
+  //---------- step本体 ----------
+  &__cont{
+    padding-top: 50px;
+  }
+
+  &__image{
+    position: relative;
+    width: 44.8%;
+  }
+
+  &__icon{
+    position: absolute;
+    top: -22%;
+    right: -12%;
+    // top: -22px;
+    // right: -18px;
+  }
+
+  //文字の方
+  &__body{
+    flex:1;
+  }
+
+  &__title{
+    font-size: rem(16);
+    color: $green;
+  }
+
+  &__desc.sp-only{
+    font-size: rem(12);
+    margin-top: 12px;
+  }
+}
+
+.examination-first-step,
+.examination-second-step{
+  border: 1px solid $green;
+  background-color: $white;
+  padding: 16px;
+  margin-top: 20px;
+  font-size: rem(10);
+  line-height: 1.6;
+}
+
+.examination-list{
+
+  &__title{
+    font-weight: 700;
+  }
+
+  &__item::before{
+    content:"●";
+    color:$skyblue;
+  }
+}
+
+.examination-second-step{
+  .examination-list__item::before{
+    color:$textColor;
+  }
+
+  &__text{
+    font-weight: 700;
+    margin-top: 12px;
+  }
+}
+
+//step2の表内のリスト
+.examination-second-step-list{
+  margin-top: 20px;
+
+  &__title{
+    font-weight: 700;
+    padding-bottom: 12px;
+  }
+
+  &__desc{
+    padding-left: 8px;
+    &-left{
+      min-width: 80px;
+      display: inline-block;
+    }
+  }
+}
+
+
+@media (min-width: 765px) {
+  .step{
+    &__copy{
+      font-size: rem(16);
+      line-height: 1.6;
+    }
+  }
+}
+
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+
+@media (min-width: 765px) {
+
+}
+
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+
+@media (min-width: 765px) {
+
+}
+
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+
+@media (min-width: 765px) {
+
+}
