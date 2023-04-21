@@ -61,7 +61,22 @@ select::-ms-expand {
   display: none;
 }
 
-/*----- common -----*/
+body {
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Arial, Verdana, sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  color: #3D2F23;
+  background-color: #fff;
+}
+
+@media (min-width: 765px) {
+  body {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+}
 .bg-cream {
   background-color: #fffaeb;
 }
@@ -133,6 +148,10 @@ select::-ms-expand {
   transform: translate(-50%, -50%) rotate(90deg);
 }
 
+.page-lead-common {
+  font-size: 0.75rem;
+}
+
 /*----- flex -----*/
 .flex {
   display: flex;
@@ -173,6 +192,10 @@ select::-ms-expand {
   .icon-wrap.--ss {
     width: 32px;
     height: 32px;
+  }
+  .page-lead-common {
+    font-size: 1rem;
+    line-height: 1.8;
   }
 }
 /* -------------------------------------------- */

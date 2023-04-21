@@ -21,40 +21,16 @@ $greenHover: #83AC32;
 $gray: #ccc;
 $brown: #A07907;
 
-body {
-	font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Arial, Verdana,sans-serif;
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: rem(14);
-  line-height: 1.5;
-  letter-spacing: 0.05em;
-  color: $textColor;
-  background-color: #fff;
-}
-
-@media (min-width: 765px) {
-
-  body {
-    font-size: rem(16);
-  }
-
-}
-
-
 /* -------------------------------------------- */
 /* future */
 /* -------------------------------------------- */
 .future{
-  &__copy{
-    font-size: rem(12);
-  }
+
 }
 
 @media (min-width: 765px) {
   .future{
-    &__copy{
-      font-size: rem(16);
-      line-height: 1.6;
-    }
+
   }
 }
 
@@ -62,9 +38,6 @@ body {
 /* step */
 /* -------------------------------------------- */
 .step{
-  &__copy{
-    font-size: rem(12);
-  }
 
   //---------- step本体 ----------
   &__cont{
@@ -80,8 +53,6 @@ body {
     position: absolute;
     top: -22%;
     right: -12%;
-    // top: -22px;
-    // right: -18px;
   }
 
   //文字の方
@@ -123,10 +94,6 @@ body {
 }
 
 .examination-second-step{
-  .examination-list__item::before{
-    color:$textColor;
-  }
-
   &__text{
     font-weight: 700;
     margin-top: 12px;
@@ -154,33 +121,320 @@ body {
 
 @media (min-width: 765px) {
   .step{
-    &__copy{
+
+    //---------- step本体 ----------
+    &__cont{
+      padding-top: 100px;
+    }
+  
+    &__image{
+      width: 30%;
+    }
+  
+    &__icon{
+      top: -22%;
+      right: -12%;
+    }
+  
+    //文字の方
+    &__body{
+      padding-top: 0;
+      padding-left: 40px;
+      margin-top: -30px;
+    }
+  
+    &__title{
+      font-size: rem(32);
+    }
+
+    &__desc.pc-only{
       font-size: rem(16);
-      line-height: 1.6;
+      line-height: 1.8;
+      margin-top: 26px;
+    }
+  }
+  
+  .examination-first-step,
+  .examination-second-step{
+    padding: 24px;
+    margin-top: 24px;
+    font-size: rem(16);
+    line-height: 1.8;
+  }
+  
+  .examination-second-step{
+    &__text{
+      margin-top: 34px;
+    }
+  }
+  
+  //step2の表内のリスト
+  .examination-second-step-list{
+    margin-top: 40px;
+  
+    &__title{
+      padding-bottom: 16px;
+    }
+  
+    &__desc{
+      padding-left: 16px;
+
+      &-left{
+        min-width: 130px;
+      }
     }
   }
 }
 
 /* -------------------------------------------- */
-/*  */
+/* 新規参入 */
 /* -------------------------------------------- */
+.sannyu{
+
+
+}
+
+//必要なものリスト
+.sannyu-list{
+  font-size: rem(10);
+  line-height: 1.6;
+  padding: 4px 8px;
+  
+  &__wrap{
+    border: 1px solid $green;
+    padding: 16px;
+    margin-top: 20px;
+  }
+  
+  &__title{
+    font-size: rem(10);
+  }
+}
+
+//表
+.sannyu-table{
+  font-size: rem(12);
+  line-height: 1.6;
+  margin-top: 24px;
+  
+  tr{
+    &:nth-child(odd){
+      background-color: rgba(151, 199, 54, 0.25);
+    }
+    
+    &:nth-child(even){
+      background-color: $white;
+    }
+  }
+
+  th{
+    padding: 10px;
+    text-align: center;
+  }
+
+  td{
+    padding: 12px;
+  }
+  
+  &__left{
+    vertical-align: top;
+    width: 32.8%;
+  }
+  
+  &__right{
+    border-right: #fff solid 1px;
+    flex:auto;
+  }
+}
+
+@media (min-width: 765px) {
+  //必要なものリスト
+  .sannyu-list{
+    font-size: rem(16);
+    line-height: 1.8;
+    padding: 16px 16px;
+    
+    &__wrap{
+      padding: 24px;
+      margin-top: 40px;
+    }
+    
+    &__title{
+      font-size: rem(16);
+    }
+  }
+  
+  //表
+  .sannyu-table{
+    font-size: rem(16);
+    line-height: 1.8;
+    margin-top: 40px;
+  
+    th{
+      padding: 10px;
+    }
+  
+    td{
+      padding: 16px;
+    }
+    
+    &__left{
+      width: 20%;
+    }
+  }
+
+}
+
+/* -------------------------------------------- */
+/*能力を引き出す  */
+/* -------------------------------------------- */
+.withdraw{
+
+}
 
 @media (min-width: 765px) {
 
 }
 
 /* -------------------------------------------- */
-/*  */
+/* コグトレ */
 /* -------------------------------------------- */
+.cogtr{
+
+}
+
+//横並びのアイテム
+.cogtr-list{
+  
+  &__item{
+    margin-top: 32px;
+  }
+
+  &__image{
+    width: 77.6%;
+    margin: 0 auto;
+  }
+  
+  &__title{
+    font-size: rem(12);
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  //テキスト
+  &__desc{
+    margin-top: 12px;
+    font-size: rem(12);
+  }
+}
 
 @media (min-width: 765px) {
+  //横並びのアイテム
+  .cogtr-list{
+    display: flex;
+    justify-content: space-between;
+    
+    &__item{
+      margin-top: 40px;
+      width: 30%;
+    }
+  
+    &__image{
+      width: 100%;
+    }
+    
+    &__title{
+      font-size: rem(16);
+      margin-top: 24px;
+    }
+  
+    //テキスト
+    &__desc{
+      margin-top: 40px;
+      font-size: rem(16);
+    }
+  }
 
 }
 
 /* -------------------------------------------- */
-/*  */
+/* 解決策 */
 /* -------------------------------------------- */
+.resolution{
+
+  &__cont{
+    align-items: center;
+  }
+
+  &__image{
+    width: 36%;
+    position: relative;
+  }
+
+  &__icon{
+    position: absolute;
+    top: -14%;
+    right: -15%;
+  }
+
+  &__body{
+    padding: 0;
+  }
+
+  &__title{
+    color:$green;
+    font-size: rem(16);
+    margin-left: 20px;
+  }
+
+  &__desc{
+    font-weight: 700;
+
+    &.sp-only{
+      margin-top: 20px;
+    }
+  }
+}
+
+.resolution-list-item{
+  margin-top: 37px;
+}
 
 @media (min-width: 765px) {
+  .resolution{
 
+    &__cont{
+      align-items: flex-start;
+    }
+
+    &__image{
+      width: 24%;
+    }
+  
+    &__icon{
+      top: -14%;
+      right: -15%;
+    }
+  
+    &__body{
+      padding-left: 40px;
+    }
+  
+    &__title{
+      font-size: rem(32);
+      margin-left: 0;
+      line-height: 1.2;
+    }
+  
+    &__desc{
+
+      &.pc-only{
+        flex:auto;
+      }
+    }
+  }
+  
+  .resolution-list-item{
+    margin-top: 75px;
+  }
 }

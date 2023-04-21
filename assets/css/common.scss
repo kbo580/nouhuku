@@ -66,7 +66,6 @@ header,main,section,footer, div, ul, li, h1,h2,h3,dl,dt,dd{
   // border: 1px solid rgba(0,0,0,0.1);
 }
 
-/*----- common -----*/ 
 @function rem($px){
   @return ($px/16) *1rem;
 }
@@ -82,6 +81,25 @@ $green: #97C736;
 $greenHover: #83AC32;
 $gray: #ccc;
 $brown: #A07907;
+
+body {
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Arial, Verdana,sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: rem(14);
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  color: $textColor;
+  background-color: #fff;
+}
+
+@media (min-width: 765px) {
+  
+  body {
+    font-size: rem(16);
+    line-height: 1.8;
+  }
+
+}
 
 .bg-cream{
   background-color: $cream;
@@ -107,7 +125,6 @@ $brown: #A07907;
     padding: 0 20px;
   }
 }
-
 
 .pc-only{
   display: none;
@@ -166,6 +183,11 @@ $brown: #A07907;
   transform: translate(-50%, -50%) rotate(90deg);
 }
 
+//下層ページの見出しの下のリード文
+.page-lead-common{
+  font-size: rem(12);
+}
+
 /*----- flex -----*/
 .flex{
   display: flex;
@@ -220,6 +242,13 @@ $brown: #A07907;
       height: 32px;
     }
   }
+
+  //下層ページの見出しの下のリード文
+  .page-lead-common{
+    font-size: rem(16);
+    line-height: 1.8;
+  }
+
 }
 
 
