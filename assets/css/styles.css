@@ -594,17 +594,6 @@
 .feature-card__wrap {
   margin-top: 32px;
 }
-.feature-card__num {
-  width: 24px;
-  height: 16px;
-  object-fit: cover;
-  margin-right: 8px;
-}
-.feature-card__heading {
-  font-size: 0.75rem;
-  border-bottom: 2px dashed #23C7CE;
-  padding-bottom: 16px;
-}
 .feature-card__image {
   margin: 16px auto 0;
   width: 69.3333333333vw;
@@ -634,15 +623,6 @@
   }
   .feature-card__wrap {
     margin-top: 40px;
-  }
-  .feature-card__num {
-    width: 48px;
-    height: 32px;
-    margin-right: 16px;
-  }
-  .feature-card__heading {
-    font-size: 1.5rem;
-    padding-bottom: 24px;
   }
   .feature-card__image {
     margin: 0;

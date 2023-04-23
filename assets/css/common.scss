@@ -98,7 +98,10 @@ body {
     font-size: rem(16);
     line-height: 1.8;
   }
+}
 
+.bold{
+  font-weight: 700;
 }
 
 .bg-cream{
@@ -326,6 +329,9 @@ body {
   }
   &.--noufukurenkei{
     background: url(../images/noufukurenkei-bg.png) center/cover no-repeat;
+  }
+  &.--howto{
+    background: url(../images/howto-bg.png) center/cover no-repeat;
   }
 }
 
@@ -658,6 +664,20 @@ body {
   }
 }
 
+//---------- 数字付きタイトル ----------
+.numberd-heading{
+    font-size: rem(12);
+    border-bottom: 2px dashed $skyblue;
+    padding-bottom: 16px;
+
+  &__num-image{
+    width: 24px;
+    height: 16px;
+    object-fit: cover;
+    margin-right: 8px;
+  }
+}
+
 //---------- 数字付きリスト ---------
 .numbered-list{
 
@@ -702,7 +722,82 @@ body {
   }
 }
 
-//野菜名の横に付くあしらい
+//----------  表---------- 
+.table-common{
+  font-size: rem(12);
+  line-height: 1.6;
+
+  tr{
+    &:nth-child(odd){
+      background-color: rgba(151, 199, 54, 0.25);
+    }
+    
+    &:nth-child(even){
+      background-color: $white;
+    }
+  }
+
+  th{
+    padding: 10px;
+    text-align: center;
+  }
+
+  td{
+    padding: 12px;
+
+    &:first-child{
+      vertical-align: top;
+    }
+
+    &:last-child{
+      // border-right: #fff solid 1px;
+      flex:auto;
+    }
+  }
+}
+
+//----------  野菜リスト---------- 
+.vegetable-list{
+  margin-top: -2px; //listの上-itemの上のmargin
+
+  &__title{
+    font-size: rem(16);
+    color:$green;
+  }
+
+  &__name{
+    font-size: rem(12);
+    width: 50%;
+    margin-top: 18px;
+  }
+
+  &__desc{
+    font-size: rem(10);
+    margin-top: 20px;
+  }
+
+   //--------- howtoページ用 ------------
+  &.--possible{
+    margin-top: 14px;
+
+    .vegetable-list__name{
+      width: 35.8%;
+      margin-top: 20px;
+
+      //3の倍数
+      &.--possible:nth-child(3n){
+        width: 28.3%;
+      }
+    }
+  }
+
+  &__image{
+    width: calc(80 / 345 *100vw);
+    margin-top: 8px;
+  }
+}
+
+//----------  野菜名の横に付くあしらい ---------- 
 .blue-bar{
 
   &::before{
@@ -716,7 +811,6 @@ body {
   }
 
 }
-
 
 @media (min-width: 765px){
   //---------- カードリスト ---------
@@ -756,7 +850,19 @@ body {
     }
   }
 
-  //---------- 数字付きリスト ---------
+  //---------- 数字付きタイトル ----------
+  .numberd-heading{
+    font-size: rem(24);
+      padding-bottom: 24px;
+
+  &__num-image{
+    width: 48px;
+      height: 32px;
+      margin-right: 16px;
+  }
+}
+
+  //---------- 丸数字付きリスト ---------
   .numbered-list{
   
     &__item{
@@ -790,6 +896,40 @@ body {
       padding-left: 24px;
       padding-top: 24px;
       flex: 1;
+    }
+  }
+
+  //----------  表---------- 
+  .table-common{
+    font-size: rem(16);
+    line-height: 1.8;
+
+    td{
+      padding: 16px;
+
+      &:first-child{
+        // width: 20%;
+      }
+    }
+  }
+
+  //---------- 野菜リスト ---------- 
+  .vegetable-list{
+    margin-top: 0px; 
+  
+    &__title{
+      font-size: rem(32);
+    }
+  
+    &__name{
+      font-size: rem(16);
+      width: 33%;
+      margin-top: 40px;
+    }
+  
+    &__desc{
+      font-size: rem(16);
+      margin-top: 24px;
     }
   }
 

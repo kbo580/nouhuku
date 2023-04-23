@@ -1,0 +1,173 @@
+@charset "UTF-8";
+*{
+  box-sizing: border-box;
+}
+
+
+/*----- common -----*/ 
+@function rem($px){
+  @return ($px/16) *1rem;
+}
+
+$textColor: #3D2F23;
+$white: #fff;
+$cream: #fffaeb;
+$pink: #ea689a;
+$yellow: #FAC017;
+$skyblue: #23C7CE;
+$skyblueHover: #1DB4BA;
+$green: #97C736;
+$greenHover: #83AC32;
+$gray: #ccc;
+$brown: #A07907;
+
+/* -------------------------------------------- */
+/* process */
+/* -------------------------------------------- */
+.process{
+
+}
+
+.process-list{
+  margin-top: 32px;
+
+  &__item{
+    border: 2px solid $skyblue;
+    border-radius: 8px;
+    padding: 16px 16px 12px;
+    background-color: $white;
+  }
+
+  &__image{
+    margin: 16px auto 0;
+    width: 87%;
+  }
+
+  &__desc{
+    font-size: rem(12);
+    margin-top: 16px;
+  }
+
+  //矢印
+  &__arrow-wrap{
+    padding: 23px 0 20px;
+    text-align: center;
+    position: relative;
+  }
+
+  &__arrow{
+    display: inline-block;
+    vertical-align: middle;
+    color: $textColor;
+    line-height: 1;
+    width: 14px;
+    height: 1em;
+    border: 3px solid currentColor;
+    border-left: 0;
+    border-bottom: 0;
+    box-sizing: border-box;
+    transform: translateY(-25%) rotate(135deg);
+    text-align: center;
+    position: relative;
+  }
+
+  //日数
+  &__days{
+    font-weight: 700;
+    margin-left: 20px;
+    font-size: rem(12);
+    line-height: 1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  //下の注釈
+  &__caption{
+    font-size: rem(10);
+    transform: scale(0.8);
+    transform-origin: 100%;
+    text-align: right;
+    margin-top: 12px;
+  }
+}
+
+@media (min-width: 765px) {
+
+}
+
+/* -------------------------------------------- */
+/* 手順 */
+/* -------------------------------------------- */
+.procedure{
+
+}
+
+.procedure-list{
+  &__item{
+    font-size: rem(12);
+    padding: 12px;
+
+    &:nth-child(odd){
+      background: rgba(151, 199, 54, 0.15);
+    }
+
+    &:nth-child(even){
+      background: #fff;
+    }
+  }
+}
+
+@media (min-width: 765px) {
+
+}
+
+/* -------------------------------------------- */
+/* ポイント */
+/* -------------------------------------------- */
+.point{
+
+}
+
+.point-table{
+  margin-top: 32px;
+
+  &__left{
+    width: 30%;
+  }
+}
+
+.hinshitu-table{
+
+  &__caption{
+    font-size: rem(10);
+    text-align: right;
+    margin-top: 24px;
+  }
+}
+
+.seisan-table{
+
+  &__caption{
+    font-size: rem(12);
+    text-align: right;
+    margin-top: 12px;
+  }
+}
+
+
+
+@media (min-width: 765px) {
+
+}
+
+/* -------------------------------------------- */
+/* future */
+/* -------------------------------------------- */
+.future{
+
+}
+
+@media (min-width: 765px) {
+
+}

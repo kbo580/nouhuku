@@ -92,45 +92,11 @@ body {
 /* -------------------------------------------- */
 /* vegetable */
 /* -------------------------------------------- */
-.vegetable-list {
-  margin-top: -2px;
-}
-.vegetable-list__title {
-  font-size: 1rem;
-  color: #97C736;
-}
-.vegetable-list__name {
-  font-size: 0.75rem;
-  width: 50%;
-  margin-top: 18px;
-}
-.vegetable-list__desc {
-  font-size: 0.625rem;
-  margin-top: 20px;
-}
-
 .vegetable-image {
   width: 33.3%;
   flex: 1;
 }
 
-@media (min-width: 765px) {
-  .vegetable-list {
-    margin-top: 0px;
-  }
-  .vegetable-list__title {
-    font-size: 2rem;
-  }
-  .vegetable-list__name {
-    font-size: 1rem;
-    width: 33%;
-    margin-top: 40px;
-  }
-  .vegetable-list__desc {
-    font-size: 1rem;
-    margin-top: 24px;
-  }
-}
 /* -------------------------------------------- */
 /* sales-tec */
 /* -------------------------------------------- */

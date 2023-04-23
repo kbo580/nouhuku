@@ -51,8 +51,8 @@ $brown: #A07907;
 
   &__icon{
     position: absolute;
-    top: -22%;
-    right: -12%;
+    top: -20%;
+    right: -11%;
   }
 
   //文字の方
@@ -129,11 +129,6 @@ $brown: #A07907;
   
     &__image{
       width: 30%;
-    }
-  
-    &__icon{
-      top: -22%;
-      right: -12%;
     }
   
     //文字の方
@@ -213,37 +208,10 @@ $brown: #A07907;
 
 //表
 .sannyu-table{
-  font-size: rem(12);
-  line-height: 1.6;
   margin-top: 24px;
   
-  tr{
-    &:nth-child(odd){
-      background-color: rgba(151, 199, 54, 0.25);
-    }
-    
-    &:nth-child(even){
-      background-color: $white;
-    }
-  }
-
-  th{
-    padding: 10px;
-    text-align: center;
-  }
-
-  td{
-    padding: 12px;
-  }
-  
   &__left{
-    vertical-align: top;
     width: 32.8%;
-  }
-  
-  &__right{
-    border-right: #fff solid 1px;
-    flex:auto;
   }
 }
 
@@ -266,17 +234,8 @@ $brown: #A07907;
   
   //表
   .sannyu-table{
-    font-size: rem(16);
-    line-height: 1.8;
+    
     margin-top: 40px;
-  
-    th{
-      padding: 10px;
-    }
-  
-    td{
-      padding: 16px;
-    }
     
     &__left{
       width: 20%;

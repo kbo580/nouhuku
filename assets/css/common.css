@@ -77,6 +77,10 @@ body {
     line-height: 1.8;
   }
 }
+.bold {
+  font-weight: 700;
+}
+
 .bg-cream {
   background-color: #fffaeb;
 }
@@ -266,6 +270,9 @@ body {
 }
 .page-mv.--noufukurenkei {
   background: url(../images/noufukurenkei-bg.png) center/cover no-repeat;
+}
+.page-mv.--howto {
+  background: url(../images/howto-bg.png) center/cover no-repeat;
 }
 
 .page-heading {
@@ -530,6 +537,18 @@ body {
   margin-right: 8px;
 }
 
+.numberd-heading {
+  font-size: 0.75rem;
+  border-bottom: 2px dashed #23C7CE;
+  padding-bottom: 16px;
+}
+.numberd-heading__num-image {
+  width: 24px;
+  height: 16px;
+  object-fit: cover;
+  margin-right: 8px;
+}
+
 .numbered-list__icon {
   background-color: #23C7CE;
   color: #fff;
@@ -558,6 +577,61 @@ body {
   padding-left: 12px;
   padding-top: 12px;
   flex: 1;
+}
+
+.table-common {
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+.table-common tr:nth-child(odd) {
+  background-color: rgba(151, 199, 54, 0.25);
+}
+.table-common tr:nth-child(even) {
+  background-color: #fff;
+}
+.table-common th {
+  padding: 10px;
+  text-align: center;
+}
+.table-common td {
+  padding: 12px;
+}
+.table-common td:first-child {
+  vertical-align: top;
+}
+.table-common td:last-child {
+  flex: auto;
+}
+
+.vegetable-list {
+  margin-top: -2px;
+}
+.vegetable-list__title {
+  font-size: 1rem;
+  color: #97C736;
+}
+.vegetable-list__name {
+  font-size: 0.75rem;
+  width: 50%;
+  margin-top: 18px;
+}
+.vegetable-list__desc {
+  font-size: 0.625rem;
+  margin-top: 20px;
+}
+.vegetable-list.--possible {
+  margin-top: 14px;
+}
+.vegetable-list.--possible .vegetable-list__name {
+  width: 35.8%;
+  margin-top: 20px;
+}
+.vegetable-list.--possible .vegetable-list__name.--possible:nth-child(3n) {
+  width: 28.3%;
+}
+.vegetable-list__image {
+  width: 23.1884057971vw;
+  margin-top: 8px;
 }
 
 .blue-bar::before {
@@ -600,6 +674,15 @@ body {
     width: 16px;
     margin-right: 4px;
   }
+  .numberd-heading {
+    font-size: 1.5rem;
+    padding-bottom: 24px;
+  }
+  .numberd-heading__num-image {
+    width: 48px;
+    height: 32px;
+    margin-right: 16px;
+  }
   .numbered-list__icon {
     width: 70px;
     height: 70px;
@@ -622,6 +705,28 @@ body {
     padding-left: 24px;
     padding-top: 24px;
     flex: 1;
+  }
+  .table-common {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+  .table-common td {
+    padding: 16px;
+  }
+  .vegetable-list {
+    margin-top: 0px;
+  }
+  .vegetable-list__title {
+    font-size: 2rem;
+  }
+  .vegetable-list__name {
+    font-size: 1rem;
+    width: 33%;
+    margin-top: 40px;
+  }
+  .vegetable-list__desc {
+    font-size: 1rem;
+    margin-top: 24px;
   }
   .blue-bar::before {
     width: 4px;

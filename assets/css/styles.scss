@@ -803,19 +803,6 @@ $brown: #A07907;
     margin-top: 32px;
   }
 
-  &__num{
-    width: 24px;
-    height: 16px;
-    object-fit: cover;
-    margin-right: 8px;
-  }
-
-  &__heading{
-    font-size: rem(12);
-    border-bottom: 2px dashed $skyblue;
-    padding-bottom: 16px;
-  }
-
   &__image{
     margin: 16px auto 0;
     width: calc(260 / 375 *100vw);
@@ -852,17 +839,6 @@ $brown: #A07907;
   
     &__wrap{
       margin-top: 40px;
-    }
-  
-    &__num{
-      width: 48px;
-      height: 32px;
-      margin-right: 16px;
-    }
-  
-    &__heading{
-      font-size: rem(24);
-      padding-bottom: 24px;
     }
   
     &__image{

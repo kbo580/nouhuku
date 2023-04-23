@@ -19,8 +19,8 @@
 }
 .step__icon {
   position: absolute;
-  top: -22%;
-  right: -12%;
+  top: -20%;
+  right: -11%;
 }
 .step__body {
   flex: 1;
@@ -79,10 +79,6 @@
   .step__image {
     width: 30%;
   }
-  .step__icon {
-    top: -22%;
-    right: -12%;
-  }
   .step__body {
     padding-top: 0;
     padding-left: 40px;
@@ -137,30 +133,10 @@
 }
 
 .sannyu-table {
-  font-size: 0.75rem;
-  line-height: 1.6;
   margin-top: 24px;
 }
-.sannyu-table tr:nth-child(odd) {
-  background-color: rgba(151, 199, 54, 0.25);
-}
-.sannyu-table tr:nth-child(even) {
-  background-color: #fff;
-}
-.sannyu-table th {
-  padding: 10px;
-  text-align: center;
-}
-.sannyu-table td {
-  padding: 12px;
-}
 .sannyu-table__left {
-  vertical-align: top;
   width: 32.8%;
-}
-.sannyu-table__right {
-  border-right: #fff solid 1px;
-  flex: auto;
 }
 
 @media (min-width: 765px) {
@@ -177,15 +153,7 @@
     font-size: 1rem;
   }
   .sannyu-table {
-    font-size: 1rem;
-    line-height: 1.8;
     margin-top: 40px;
-  }
-  .sannyu-table th {
-    padding: 10px;
-  }
-  .sannyu-table td {
-    padding: 16px;
   }
   .sannyu-table__left {
     width: 20%;

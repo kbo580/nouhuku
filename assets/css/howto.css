@@ -1,0 +1,102 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+/*----- common -----*/
+/* -------------------------------------------- */
+/* process */
+/* -------------------------------------------- */
+.process-list {
+  margin-top: 32px;
+}
+.process-list__item {
+  border: 2px solid #23C7CE;
+  border-radius: 8px;
+  padding: 16px 16px 12px;
+  background-color: #fff;
+}
+.process-list__image {
+  margin: 16px auto 0;
+  width: 87%;
+}
+.process-list__desc {
+  font-size: 0.75rem;
+  margin-top: 16px;
+}
+.process-list__arrow-wrap {
+  padding: 23px 0 20px;
+  text-align: center;
+  position: relative;
+}
+.process-list__arrow {
+  display: inline-block;
+  vertical-align: middle;
+  color: #3D2F23;
+  line-height: 1;
+  width: 14px;
+  height: 1em;
+  border: 3px solid currentColor;
+  border-left: 0;
+  border-bottom: 0;
+  box-sizing: border-box;
+  transform: translateY(-25%) rotate(135deg);
+  text-align: center;
+  position: relative;
+}
+.process-list__days {
+  font-weight: 700;
+  margin-left: 20px;
+  font-size: 0.75rem;
+  line-height: 1;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.process-list__caption {
+  font-size: 0.625rem;
+  transform: scale(0.8);
+  transform-origin: 100%;
+  text-align: right;
+  margin-top: 12px;
+}
+
+/* -------------------------------------------- */
+/* 手順 */
+/* -------------------------------------------- */
+.procedure-list__item {
+  font-size: 0.75rem;
+  padding: 12px;
+}
+.procedure-list__item:nth-child(odd) {
+  background: rgba(151, 199, 54, 0.15);
+}
+.procedure-list__item:nth-child(even) {
+  background: #fff;
+}
+
+/* -------------------------------------------- */
+/* ポイント */
+/* -------------------------------------------- */
+.point-table {
+  margin-top: 32px;
+}
+.point-table__left {
+  width: 30%;
+}
+
+.hinshitu-table__caption {
+  font-size: 0.625rem;
+  text-align: right;
+  margin-top: 24px;
+}
+
+.seisan-table__caption {
+  font-size: 0.75rem;
+  text-align: right;
+  margin-top: 12px;
+}
+
+/* -------------------------------------------- */
+/* future */
+/* -------------------------------------------- *//*# sourceMappingURL=howto.css.map */
