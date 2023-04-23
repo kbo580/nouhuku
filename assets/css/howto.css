@@ -98,5 +98,120 @@
 }
 
 /* -------------------------------------------- */
-/* future */
-/* -------------------------------------------- *//*# sourceMappingURL=howto.css.map */
+/* device */
+/* -------------------------------------------- */
+.device-list {
+  margin-top: 20px;
+}
+.device-list__title {
+  font-size: 0.75rem;
+}
+.device-list__item {
+  font-size: 0.75rem;
+  padding: 12px;
+}
+.device-list__item:nth-child(odd) {
+  background: #fff;
+}
+.device-list__item:nth-child(even) {
+  background: #fffaeb;
+}
+
+.aa {
+  border: 1px solid #000;
+  width: 100%;
+  clear: both;
+}
+
+.device-label {
+  background: #97C736;
+  color: #fff;
+  font-size: 0.625rem;
+  display: inline-block;
+  padding: 0 8px;
+}
+
+.detail-list {
+  margin-top: 20px;
+}
+.detail-list__item {
+  font-size: 0.625rem;
+  line-height: 1.6;
+}
+.detail-list__image-wrap {
+  width: 150px;
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.detail-list__image-caption {
+  font-size: 0.625rem;
+  transform: scale(0.8);
+  text-align: right;
+  transform-origin: 100%;
+  line-height: 2;
+}
+.detail-list__title {
+  width: 165px;
+  font-size: 0.625rem;
+  border-bottom: 2px dashed #23C7CE;
+  padding-bottom: 12px;
+}
+.detail-list__desc {
+  padding: 12px 0px 32px 12px;
+}
+
+.paddingleft {
+  padding-left: 10px;
+}
+
+.complement {
+  border: 1px solid #97C736;
+  background-color: #fff;
+  padding: 12px;
+  font-size: 0.625rem;
+}
+.complement__desc {
+  margin-top: 12px;
+}
+.complement .process-list__arrow.--complement {
+  width: 12px;
+  color: #97C736;
+  height: 12px;
+}
+.complement__conclution {
+  text-align: center;
+}
+
+/* -------------------------------------------- */
+/* maintenance */
+/* -------------------------------------------- */
+.maintenance-point {
+  border: 1px solid #97C736;
+  font-size: 0.625rem;
+  padding: 12px;
+  line-height: 1.6;
+  margin-top: 32px;
+}
+
+.maintenance-table {
+  margin-top: 20px;
+}
+.maintenance-table__left {
+  width: 30%;
+}
+.maintenance-table__right {
+  width: 30%;
+  vertical-align: top;
+}
+
+.maintenance-faa {
+  border: 1px solid #97C736;
+  font-size: 0.625rem;
+  padding: 12px;
+  margin-top: 20px;
+}
+.maintenance-faa__desc {
+  margin-top: 10px;
+  line-height: 1.6;
+}/*# sourceMappingURL=howto.css.map */

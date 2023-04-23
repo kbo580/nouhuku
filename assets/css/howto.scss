@@ -162,10 +162,168 @@ $brown: #A07907;
 }
 
 /* -------------------------------------------- */
-/* future */
+/* device */
 /* -------------------------------------------- */
-.future{
+.device{
 
+}
+
+//基本仕様のリスト
+.device-list{
+  margin-top: 20px;
+
+  &__title{
+    font-size: rem(12);
+  }
+
+  &__item{
+    font-size: rem(12);
+    padding: 12px;
+    &:nth-child(odd){
+      background: $white;
+    }
+    
+    &:nth-child(even){
+      background: $cream;
+    }
+  }
+}
+
+.aa{
+  border: 1px solid #000;
+  width: 100%;
+   clear: both;
+}
+
+//緑のラベル
+.device-label{
+  background: $green;
+  color:$white;
+  font-size: rem(10);
+  display: inline-block;
+  padding: 0 8px;
+}
+
+//----------- 詳細 -----------
+.detail-list{
+  margin-top: 20px;
+
+  &__item{
+    font-size: rem(10);
+    line-height: 1.6;
+  }
+
+  //画像側
+  &__image-wrap{
+    width: 150px;
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  &__image{
+
+  }
+
+  &__image-caption{
+    font-size: rem(10);
+    transform: scale(0.8);
+    text-align: right;
+    transform-origin: 100%;
+    line-height: 2;
+  }
+
+  //テキスト側
+  &__body{
+    // width: 165px;
+  }
+  
+  &__title{
+    width: 165px;
+    font-size: rem(10);
+    border-bottom: 2px dashed $skyblue;
+    padding-bottom: 12px;
+  }
+  
+  &__desc{
+    padding: 12px 0px 32px 12px;
+  }
+}
+
+.paddingleft{
+  padding-left: 10px;
+}
+
+//-----------  補足 -----------
+.complement{
+  border: 1px solid $green;
+  background-color: $white;
+  padding: 12px;
+  font-size: rem(10);
+
+  &__desc{
+    margin-top: 12px;
+  }
+
+  .process-list__arrow.--complement{
+    width: 12px;
+    color:$green;
+    height: 12px;
+  }
+
+  &__conclution{
+    text-align: center;
+  }
+
+}
+
+@media (min-width: 765px) {
+
+}
+
+/* -------------------------------------------- */
+/* maintenance */
+/* -------------------------------------------- */
+.maintenance{
+
+}
+
+.maintenance-point{
+  border: 1px solid $green;
+  font-size: rem(10);
+  padding: 12px;
+  line-height: 1.6;
+  margin-top: 32px;
+}
+
+.maintenance-table{
+  margin-top: 20px;
+
+  &__left{
+    width: 30%;
+  }
+  
+  &__center{
+    
+  }
+  
+  &__right{
+    width: 30%;
+    vertical-align: top;
+
+  }
+}
+
+.maintenance-faa{
+  border: 1px solid $green;
+  font-size: rem(10);
+  padding: 12px;
+  margin-top: 20px;
+
+  &__desc{
+    margin-top: 10px;
+    line-height: 1.6;
+  }
 }
 
 @media (min-width: 765px) {
