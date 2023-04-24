@@ -945,12 +945,16 @@ body {
 
 }
 
-
-
-/* -------------------------------------------- */
-/* Voiceページ共通 */
-/* -------------------------------------------- */
-.voice{
+//---------- お客さまの声のリスト ---------
+.voice-list{
+  
+  &__item{
+    border: 4px solid $green;
+    padding: 16px 16px 32px;
+    &:not(:first-child){
+      margin-top: 20px;
+    }
+  }
 
   &__heading-cont{
     border-bottom: 1px dashed $green;
@@ -961,11 +965,6 @@ body {
     font-size: rem(16);
   }
 
-  &__wrap{
-    border: 4px solid $green;
-    padding: 16px 16px 32px;
-  }
-  
   &__name{
     font-size: rem(12);
     font-weight: 700;
@@ -984,6 +983,29 @@ body {
     font-size: rem(10);
     transform: scale(0.7);
     transform-origin: 100%;
+  }
+}
+
+//下部の横並びになるもの
+.voice-bottom-col2{
+  &__wrap{
+    padding: 16px;
+    font-size: rem(12);
+    margin-top: 20px;
+    border: 4px solid $green;
+  }
+
+  &__text{
+
+  }
+
+  &__name{
+    margin-top: 32px;
+    font-weight: 700;
+  }
+
+  &__depart{
+    font-weight: 700;
   }
 }
 
@@ -1090,7 +1112,18 @@ body {
 }
 
 @media (min-width: 765px){
-  .voice{
+
+  //---------- お客さまの声のリスト ---------
+  .voice-list{
+    
+    &__item{
+      padding: 28px 40px 64px;
+
+      &:not(:first-child){
+        margin-top: 20px;
+      }
+    }
+
     &__heading-cont{
       padding-bottom: 20px;
     }
@@ -1098,23 +1131,51 @@ body {
     &__heading{
       font-size: rem(32);
     }
-  
-    &__wrap{
-      padding: 28px 40px 64px;
-    }
-    
+
     &__name{
       font-size: rem(16);
       margin-top: 0px;
     }
-  
+
     &__link-wrap{
       margin-top: 12px;
+      display: flex;
+      justify-content: flex-end;
     }
-  
+
     &__link{
       font-size: rem(12);
       transform: scale(1);
+    }
+  }
+
+  //----------- 下部のお客さまの声 ---------
+  .voice-bottom-col2{
+    display: flex;
+    justify-content: space-between;
+
+    &__wrap{
+      padding: 16px;
+      padding: 40px 40px 36px;
+      font-size: rem(16);
+      width: calc((100% - 40px) /2);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+
+    &__text{
+
+    }
+
+    &__name{
+      margin-top: 24px;
+      font-weight: 700;
+    }
+
+    &__depart{
+      font-weight: 700;
     }
   }
 

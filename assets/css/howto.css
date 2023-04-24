@@ -130,6 +130,9 @@
   display: inline-block;
   padding: 0 8px;
 }
+.device-label.--detail {
+  margin-top: 32px;
+}
 
 .detail-list {
   margin-top: 20px;

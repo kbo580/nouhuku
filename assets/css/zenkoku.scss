@@ -64,24 +64,6 @@ body {
   margin-top: 32px;
 }
 
-//下部のお客さまの声
-.zenkoku-voice-bottom{
-
-  &__wrap{
-    padding: 16px;
-    font-size: rem(12);
-    margin-top: 20px;
-  }
-
-  &__name{
-    margin-top: 32px;
-    font-weight: 700;
-  }
-  
-  &__depart{
-    font-weight: 700;
-  }
-}
 
 @media (min-width: 765px) {
   .zenkoku-voice{
@@ -103,31 +85,6 @@ body {
     margin-top: 40px;
   }
   
-  //下部のお客さまの声
-  .zenkoku-voice-bottom{
-    display: flex;
-    justify-content: space-between;
-  
-    &__wrap{
-      padding: 16px;
-      padding: 40px 40px 36px;
-      font-size: rem(16);
-      width: calc((100% - 40px) /2);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      margin-top: 40px;
-    }
-
-    &__name{
-      margin-top: 32px;
-      font-weight: 700;
-    }
-    
-    &__depart{
-      font-weight: 700;
-    }
-  }
 
 }
 

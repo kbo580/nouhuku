@@ -202,6 +202,9 @@ $brown: #A07907;
   font-size: rem(10);
   display: inline-block;
   padding: 0 8px;
+  &.--detail{
+    margin-top: 32px;
+  }
 }
 
 //----------- 詳細 -----------

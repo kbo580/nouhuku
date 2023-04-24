@@ -734,36 +734,50 @@ body {
     margin-right: 8px;
   }
 }
-/* -------------------------------------------- */
-/* Voiceページ共通 */
-/* -------------------------------------------- */
-.voice__heading-cont {
-  border-bottom: 1px dashed #97C736;
-  padding-bottom: 12px;
-}
-.voice__heading {
-  font-size: 1rem;
-}
-.voice__wrap {
+.voice-list__item {
   border: 4px solid #97C736;
   padding: 16px 16px 32px;
 }
-.voice__name {
+.voice-list__item:not(:first-child) {
+  margin-top: 20px;
+}
+.voice-list__heading-cont {
+  border-bottom: 1px dashed #97C736;
+  padding-bottom: 12px;
+}
+.voice-list__heading {
+  font-size: 1rem;
+}
+.voice-list__name {
   font-size: 0.75rem;
   font-weight: 700;
   margin-top: 10px;
   white-space: nowrap;
   text-align: right;
 }
-.voice__link-wrap {
+.voice-list__link-wrap {
   margin-top: 4px;
   display: flex;
   justify-content: flex-end;
 }
-.voice__link {
+.voice-list__link {
   font-size: 0.625rem;
   transform: scale(0.7);
   transform-origin: 100%;
+}
+
+.voice-bottom-col2__wrap {
+  padding: 16px;
+  font-size: 0.75rem;
+  margin-top: 20px;
+  border: 4px solid #97C736;
+}
+.voice-bottom-col2__name {
+  margin-top: 32px;
+  font-weight: 700;
+}
+.voice-bottom-col2__depart {
+  font-weight: 700;
 }
 
 .iconed-heading::before {
@@ -847,25 +861,51 @@ body {
 }
 
 @media (min-width: 765px) {
-  .voice__heading-cont {
-    padding-bottom: 20px;
-  }
-  .voice__heading {
-    font-size: 2rem;
-  }
-  .voice__wrap {
+  .voice-list__item {
     padding: 28px 40px 64px;
   }
-  .voice__name {
+  .voice-list__item:not(:first-child) {
+    margin-top: 20px;
+  }
+  .voice-list__heading-cont {
+    padding-bottom: 20px;
+  }
+  .voice-list__heading {
+    font-size: 2rem;
+  }
+  .voice-list__name {
     font-size: 1rem;
     margin-top: 0px;
   }
-  .voice__link-wrap {
+  .voice-list__link-wrap {
     margin-top: 12px;
+    display: flex;
+    justify-content: flex-end;
   }
-  .voice__link {
+  .voice-list__link {
     font-size: 0.75rem;
     transform: scale(1);
+  }
+  .voice-bottom-col2 {
+    display: flex;
+    justify-content: space-between;
+  }
+  .voice-bottom-col2__wrap {
+    padding: 16px;
+    padding: 40px 40px 36px;
+    font-size: 1rem;
+    width: calc((100% - 40px) / 2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  .voice-bottom-col2__name {
+    margin-top: 24px;
+    font-weight: 700;
+  }
+  .voice-bottom-col2__depart {
+    font-weight: 700;
   }
   .iconed-heading::before {
     width: 48px;
