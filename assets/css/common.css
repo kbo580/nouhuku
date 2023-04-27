@@ -89,6 +89,10 @@ body {
   background-color: #A07907;
 }
 
+.link--border {
+  text-decoration: underline;
+}
+
 .inner {
   margin: 0 auto;
   width: 100%;
@@ -274,6 +278,9 @@ body {
 .page-mv.--howto {
   background: url(../images/howto-bg.png) center/cover no-repeat;
 }
+.page-mv.--event {
+  background: url(../images/event-bg.jpg) center/cover no-repeat;
+}
 
 .page-heading {
   font-size: 1.25rem;
@@ -339,10 +346,6 @@ body {
 }
 .mt20 {
   margin-top: 20px;
-}
-
-.link--border {
-  text-decoration: underline;
 }
 
 .header-btn {

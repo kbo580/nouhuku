@@ -112,6 +112,11 @@ body {
   background-color: $brown;
 }
 
+//ボーダー付きリンク
+.link--border{
+  text-decoration: underline;
+}
+
 .inner{
   margin: 0 auto;
   width: 100%;
@@ -333,6 +338,9 @@ body {
   &.--howto{
     background: url(../images/howto-bg.png) center/cover no-repeat;
   }
+  &.--event{
+    background: url(../images/event-bg.jpg) center/cover no-repeat;
+  }
 }
 
 .page-heading{
@@ -413,11 +421,6 @@ body {
 //ボタン用余白
 .mt20{
   margin-top: 20px;
-}
-
-//ボーダー付きリンク
-.link--border{
-  text-decoration: underline;
 }
 
 //-------- headerのボタン ------
