@@ -776,7 +776,7 @@ body {
     margin-top: 20px;
   }
 
-   //--------- howtoページ用 ------------
+  //--------- howtoページ用 ------------
   &.--possible{
     margin-top: 14px;
 
@@ -795,6 +795,10 @@ body {
     width: calc(80 / 345 *100vw);
     margin-top: 8px;
   }
+}
+.possible-list__cont{
+  // display: flex;
+  // flex-direction: column;
 }
 
 //----------  野菜名の横に付くあしらい ---------- 
@@ -931,9 +935,45 @@ body {
       font-size: rem(16);
       margin-top: 24px;
     }
+
+    //--------- howtoページ用 ------------
+    &.--possible{
+      margin-top: 0;
+      padding-left: 80px;
+  
+      //左の列 幅360px
+      .vegetable-list__name{
+        margin-top: 40px;
+        width: calc(360 / 920 * 100%); //絶対値/幅
+        
+        //真ん中の列 幅340px
+        &.--possible.second{
+          width: calc(340 / 920 * 100%);
+
+          .vegetable-list__image{
+            width: calc(160 / 340 *100%);
+          }
+        }
+      
+        //3の倍数(右の列) 幅220px
+        &.--possible:nth-child(3n){
+          width: calc(220 / 920 * 100%);
+
+          .vegetable-list__image{
+            width: calc(160 / 220 *100%);
+          }
+        }
+      }
+    }
+  
+    &__image{
+      width: calc(160 / 360 * 100%);
+      margin-top: 16px;
+      display: block;
+    }
   }
 
-  //野菜名の横に付くあしらい
+  //--------- 野菜名の横に付くあしらい ---------
   .blue-bar{
 
     &::before{

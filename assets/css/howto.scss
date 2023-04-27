@@ -61,7 +61,7 @@ $brown: #A07907;
     color: $textColor;
     line-height: 1;
     width: 14px;
-    height: 1em;
+    height: 14px;
     border: 3px solid currentColor;
     border-left: 0;
     border-bottom: 0;
@@ -79,6 +79,7 @@ $brown: #A07907;
     line-height: 1;
     position: absolute;
     top: 50%;
+    left: 53%;
     transform: translateY(-50%);
   }
 
@@ -93,6 +94,121 @@ $brown: #A07907;
 }
 
 @media (min-width: 765px) {
+  .process{
+
+  }
+  
+  .process-list{
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  
+    &__item{
+      padding: 24px;
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__heading{
+      order:1;
+      margin-top: 24px;
+      line-height: 1.6;
+    }
+  
+    &__image{
+      margin-top: 0;
+      width: 100%;
+    }
+    
+    &__desc{
+      font-size: rem(16);
+      margin-top: 24px;
+      order:1;
+      min-height: 58px;
+    }
+  
+    //矢印
+    &__arrow-wrap{
+      padding: 0;
+      position: relative;
+      width: 8%;
+      display: flex;
+      align-items: center;
+      
+      //右向きの矢印
+      &.arrow-right{
+        flex-direction: column-reverse;
+
+        .process-list__arrow{
+          transform: translate(-32%, -1%) rotate(45deg);
+        }
+
+        .process-list__days{
+          margin-bottom: 24px;
+        }
+      }
+      
+      //下向きの矢印
+      &.arrow-under{
+        justify-content:flex-end;
+        align-items: center;
+        width: 100%;
+        padding-right: 100px;
+
+        .process-list__days{
+          margin-left: 24px;
+          padding: 32px 0;
+        }
+      }
+
+      //左向きの矢印
+      &.arrow-left{
+        flex-direction: column-reverse;
+
+        .process-list__arrow{
+          transform: translate(0%, -1%) rotate(-135deg);
+        }
+
+        .process-list__days{
+          margin-bottom: 24px;
+        }
+      }
+    }
+  
+    &__arrow{
+      width: 23px;
+      height: 23px;
+      border: 5px solid currentColor;
+      border-left: 0;
+      border-bottom: 0;
+    }
+  
+    //日数
+    &__days{
+      margin-left: 0px;
+      font-size: rem(24);
+      position: static;
+      transform: translateY(0);
+    }
+  
+    //下の注釈
+    &__caption{
+      font-size: rem(16);
+      transform: scale(1);
+      margin-top: 16px;
+    }
+  }
+
+  .order1{
+    order: 1;
+  }
+
+  .order2{
+    order: 2;
+  }
 
 }
 
@@ -106,7 +222,7 @@ $brown: #A07907;
 .procedure-list{
   &__item{
     font-size: rem(12);
-    padding: 12px;
+    padding: 1em;
 
     &:nth-child(odd){
       background: rgba(151, 199, 54, 0.15);
@@ -119,6 +235,16 @@ $brown: #A07907;
 }
 
 @media (min-width: 765px) {
+  .procedure{
+
+  }
+  
+  .procedure-list{
+    &__item{
+      font-size: rem(16);
+      // line-height: 1;
+    }
+  }
 
 }
 
@@ -155,10 +281,35 @@ $brown: #A07907;
   }
 }
 
-
-
 @media (min-width: 765px) {
+  .point{
 
+  }
+  
+  .point-table{
+    margin-top: 40px;
+  
+    &__left{
+      width: 20%;
+    }
+  }
+  
+  .hinshitu-table{
+  
+    &__caption{
+      font-size: rem(16);
+      margin-top: 0px;
+    }
+  }
+  
+  .seisan-table{
+  
+    &__caption{
+      font-size: rem(16);
+      margin-top: 16px;
+    }
+  }
+  
 }
 
 /* -------------------------------------------- */
@@ -192,7 +343,7 @@ $brown: #A07907;
 .aa{
   border: 1px solid #000;
   width: 100%;
-   clear: both;
+  clear: both;
 }
 
 //緑のラベル
@@ -277,10 +428,99 @@ $brown: #A07907;
   &__conclution{
     text-align: center;
   }
-
 }
 
 @media (min-width: 765px) {
+  .device{
+
+  }
+  
+  //基本仕様のリスト
+  .device-list{
+    margin-top: 40px;
+  
+    &__title{
+      font-size: rem(24);
+    }
+  
+    &__item{
+      font-size: rem(16);
+      padding: 16px;
+    }
+  }
+  
+  //緑のラベル
+  .device-label{
+    font-size: rem(16);
+    padding: 0 16px;
+
+    &.--detail{
+      margin-top: 40px;
+    }
+  }
+  
+  //----------- 詳細 -----------
+  .detail-list{
+    margin-top: 20px;
+  
+    &__item{
+      font-size: rem(16);
+      line-height: 1.6;
+    }
+  
+    //画像側
+    &__image-wrap{
+      width: 30%;
+      float: right;
+      margin-left: 40px;
+      margin-bottom: 40px;
+    }
+    
+    &__image{
+  
+    }
+  
+    &__image-caption{
+      font-size: rem(12);
+      transform: scale(1);
+      line-height: 1.5;
+    }
+  
+    //-------- テキスト側 --------
+    &__title{
+      width: 66%;
+      font-size: rem(16);
+      padding-bottom: 16px;
+    }
+    
+    &__desc{
+      padding: 16px 0px 40px 24px;
+    }
+  }
+  
+  .paddingleft{
+    padding-left: 32px;
+  }
+  
+  //-----------  補足 -----------
+  .complement{
+    padding: 24px;
+    font-size: rem(16);
+  
+    &__desc{
+      margin-top: 24px;
+    }
+
+    .process-list__arrow-wrap{
+      margin: 24px auto;
+      justify-content: center;
+    }
+  
+    .process-list__arrow.--complement{
+      width: 24px;
+      height: 24px;
+    }
+  }
 
 }
 
@@ -330,5 +570,41 @@ $brown: #A07907;
 }
 
 @media (min-width: 765px) {
+  .maintenance{
+
+  }
+  
+  .maintenance-point{
+    font-size: rem(16);
+    padding: 16px;
+    margin-top: 40px;
+  }
+  
+  .maintenance-table{
+    margin-top: 24px;
+    width: 100%;
+  
+    &__left{
+      width: 20%;
+    }
+    
+    &__center{
+      width: 60%;
+    }
+    
+    &__right{
+      width: 20%;
+    }
+  }
+  
+  .maintenance-faa{
+    font-size: rem(16);
+    padding: 16px;
+    margin-top: 40px;
+  
+    &__desc{
+      margin-top: 24px;
+    }
+  }
 
 }

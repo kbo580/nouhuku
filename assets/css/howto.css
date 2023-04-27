@@ -35,7 +35,7 @@
   color: #3D2F23;
   line-height: 1;
   width: 14px;
-  height: 1em;
+  height: 14px;
   border: 3px solid currentColor;
   border-left: 0;
   border-bottom: 0;
@@ -51,6 +51,7 @@
   line-height: 1;
   position: absolute;
   top: 50%;
+  left: 53%;
   transform: translateY(-50%);
 }
 .process-list__caption {
@@ -61,12 +62,101 @@
   margin-top: 12px;
 }
 
+@media (min-width: 765px) {
+  .process-list {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .process-list__item {
+    padding: 24px;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+  }
+  .process-list__heading {
+    order: 1;
+    margin-top: 24px;
+    line-height: 1.6;
+  }
+  .process-list__image {
+    margin-top: 0;
+    width: 100%;
+  }
+  .process-list__desc {
+    font-size: 1rem;
+    margin-top: 24px;
+    order: 1;
+    min-height: 58px;
+  }
+  .process-list__arrow-wrap {
+    padding: 0;
+    position: relative;
+    width: 8%;
+    display: flex;
+    align-items: center;
+  }
+  .process-list__arrow-wrap.arrow-right {
+    flex-direction: column-reverse;
+  }
+  .process-list__arrow-wrap.arrow-right .process-list__arrow {
+    transform: translate(-32%, -1%) rotate(45deg);
+  }
+  .process-list__arrow-wrap.arrow-right .process-list__days {
+    margin-bottom: 24px;
+  }
+  .process-list__arrow-wrap.arrow-under {
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding-right: 100px;
+  }
+  .process-list__arrow-wrap.arrow-under .process-list__days {
+    margin-left: 24px;
+    padding: 32px 0;
+  }
+  .process-list__arrow-wrap.arrow-left {
+    flex-direction: column-reverse;
+  }
+  .process-list__arrow-wrap.arrow-left .process-list__arrow {
+    transform: translate(0%, -1%) rotate(-135deg);
+  }
+  .process-list__arrow-wrap.arrow-left .process-list__days {
+    margin-bottom: 24px;
+  }
+  .process-list__arrow {
+    width: 23px;
+    height: 23px;
+    border: 5px solid currentColor;
+    border-left: 0;
+    border-bottom: 0;
+  }
+  .process-list__days {
+    margin-left: 0px;
+    font-size: 1.5rem;
+    position: static;
+    transform: translateY(0);
+  }
+  .process-list__caption {
+    font-size: 1rem;
+    transform: scale(1);
+    margin-top: 16px;
+  }
+  .order1 {
+    order: 1;
+  }
+  .order2 {
+    order: 2;
+  }
+}
 /* -------------------------------------------- */
 /* 手順 */
 /* -------------------------------------------- */
 .procedure-list__item {
   font-size: 0.75rem;
-  padding: 12px;
+  padding: 1em;
 }
 .procedure-list__item:nth-child(odd) {
   background: rgba(151, 199, 54, 0.15);
@@ -75,6 +165,11 @@
   background: #fff;
 }
 
+@media (min-width: 765px) {
+  .procedure-list__item {
+    font-size: 1rem;
+  }
+}
 /* -------------------------------------------- */
 /* ポイント */
 /* -------------------------------------------- */
@@ -97,6 +192,22 @@
   margin-top: 12px;
 }
 
+@media (min-width: 765px) {
+  .point-table {
+    margin-top: 40px;
+  }
+  .point-table__left {
+    width: 20%;
+  }
+  .hinshitu-table__caption {
+    font-size: 1rem;
+    margin-top: 0px;
+  }
+  .seisan-table__caption {
+    font-size: 1rem;
+    margin-top: 16px;
+  }
+}
 /* -------------------------------------------- */
 /* device */
 /* -------------------------------------------- */
@@ -186,6 +297,69 @@
   text-align: center;
 }
 
+@media (min-width: 765px) {
+  .device-list {
+    margin-top: 40px;
+  }
+  .device-list__title {
+    font-size: 1.5rem;
+  }
+  .device-list__item {
+    font-size: 1rem;
+    padding: 16px;
+  }
+  .device-label {
+    font-size: 1rem;
+    padding: 0 16px;
+  }
+  .device-label.--detail {
+    margin-top: 40px;
+  }
+  .detail-list {
+    margin-top: 20px;
+  }
+  .detail-list__item {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  .detail-list__image-wrap {
+    width: 30%;
+    float: right;
+    margin-left: 40px;
+    margin-bottom: 40px;
+  }
+  .detail-list__image-caption {
+    font-size: 0.75rem;
+    transform: scale(1);
+    line-height: 1.5;
+  }
+  .detail-list__title {
+    width: 66%;
+    font-size: 1rem;
+    padding-bottom: 16px;
+  }
+  .detail-list__desc {
+    padding: 16px 0px 40px 24px;
+  }
+  .paddingleft {
+    padding-left: 32px;
+  }
+  .complement {
+    padding: 24px;
+    font-size: 1rem;
+  }
+  .complement__desc {
+    margin-top: 24px;
+  }
+  .complement .process-list__arrow-wrap {
+    margin: 24px auto;
+    justify-content: center;
+  }
+  .complement .process-list__arrow.--complement {
+    width: 24px;
+    height: 24px;
+  }
+}
 /* -------------------------------------------- */
 /* maintenance */
 /* -------------------------------------------- */
@@ -217,4 +391,33 @@
 .maintenance-faa__desc {
   margin-top: 10px;
   line-height: 1.6;
+}
+
+@media (min-width: 765px) {
+  .maintenance-point {
+    font-size: 1rem;
+    padding: 16px;
+    margin-top: 40px;
+  }
+  .maintenance-table {
+    margin-top: 24px;
+    width: 100%;
+  }
+  .maintenance-table__left {
+    width: 20%;
+  }
+  .maintenance-table__center {
+    width: 60%;
+  }
+  .maintenance-table__right {
+    width: 20%;
+  }
+  .maintenance-faa {
+    font-size: 1rem;
+    padding: 16px;
+    margin-top: 40px;
+  }
+  .maintenance-faa__desc {
+    margin-top: 24px;
+  }
 }/*# sourceMappingURL=howto.css.map */
