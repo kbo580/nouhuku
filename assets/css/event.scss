@@ -126,8 +126,13 @@ body {
 
   &__heading{
     font-size: rem(10);
-    border-left: 3px solid $skyblue;
-    padding-left: 8px;
+    display: flex;
+    align-items: center;
+
+    &.blue-bar::before{
+      width: 3px;
+      height: 15px;
+    }
   }
 
   &__graph{
@@ -173,7 +178,13 @@ body {
   
     &__heading{
       font-size: rem(24);
-      padding-left: 16px;
+      // padding-left: 16px;
+
+      &.blue-bar::before{
+        width: 6px;
+        height: 30px;
+        margin-right: 16px;
+      }
     }
   
     &__graph{
