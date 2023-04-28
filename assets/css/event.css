@@ -85,7 +85,6 @@ body {
 .event-voice-list__heading {
   font-size: 0.625rem;
   display: flex;
-  align-items: center;
 }
 .event-voice-list__heading.blue-bar::before {
   width: 3px;
@@ -126,6 +125,7 @@ body {
   }
   .event-voice-list__heading {
     font-size: 1.5rem;
+    align-items: center;
   }
   .event-voice-list__heading.blue-bar::before {
     width: 6px;
@@ -147,7 +147,7 @@ body {
   .event-voice-list__small {
     font-size: 1rem;
     transform: scale(1);
-    padding-left: 16px;
+    padding-left: 24px;
   }
   .event-voice-list .hukusuu {
     font-size: 1rem;

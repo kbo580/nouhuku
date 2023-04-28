@@ -127,7 +127,6 @@ body {
   &__heading{
     font-size: rem(10);
     display: flex;
-    align-items: center;
 
     &.blue-bar::before{
       width: 3px;
@@ -178,7 +177,7 @@ body {
   
     &__heading{
       font-size: rem(24);
-      // padding-left: 16px;
+      align-items: center;
 
       &.blue-bar::before{
         width: 6px;
@@ -205,7 +204,7 @@ body {
     &__small{
       font-size: rem(16);
       transform: scale(1);
-      padding-left: 16px;
+      padding-left: 24px;
     }
 
     .hukusuu{

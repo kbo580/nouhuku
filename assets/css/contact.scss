@@ -1,0 +1,213 @@
+@charset "UTF-8";
+*{
+  box-sizing: border-box;
+}
+
+
+/*----- common -----*/ 
+@function rem($px){
+  @return ($px/16) *1rem;
+}
+
+$textColor: #3D2F23;
+$white: #fff;
+$cream: #fffaeb;
+$pink: #ea689a;
+$yellow: #FAC017;
+$skyblue: #23C7CE;
+$skyblueHover: #1DB4BA;
+$green: #97C736;
+$greenHover: #83AC32;
+$gray: #ccc;
+$brown: #A07907;
+
+body {
+	font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Arial, Verdana,sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: rem(14);
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  color: $textColor;
+  background-color: #fff;
+}
+
+@media (min-width: 765px) {
+  
+  body {
+    font-size: rem(16);
+    line-height: 1.8;
+  }
+
+}
+
+/* -------------------------------------------- */
+/* faq */
+/* -------------------------------------------- */
+form{
+  width: 83.6%;
+  margin: 0 auto;
+}
+.form-parts{
+  margin-top: 32px;
+
+  //名前とラベル
+  &__label{
+    display: flex;
+    align-items: center;
+    font-size: rem(12);
+    font-weight: 700;
+  }
+
+  //form部品
+  &__body,
+  textarea{
+    width: 100%;
+    font-size: rem(12);
+    padding: 11px 12px;
+    display: inline-block;
+    border-radius: 8px;
+    border: 1px solid #cccccc;
+    margin-top: 12px;
+
+    &:focus{
+      background-color: #efefef;
+    }
+  }
+}
+
+textarea{
+  height: 125px;
+}
+
+//チェックボックス
+.checkbox-wrap{
+  margin-top: 26px;
+  display: flex;
+  
+  //左
+  &:nth-child(odd){
+    width: 56%;
+  }
+
+  //右
+  &:nth-child(even){
+    width: 43%;
+  }
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+  padding-left: 36px;
+  vertical-align: middle;
+  position: relative;
+}
+
+.checkbox-label{
+  font-size: rem(12);
+  width: 100%;
+  display: inline-block;
+
+  &.--privacypolicy{
+    border: 1px solid #000;
+    display: block;
+    width: 100%;
+  }
+}
+
+input[type="checkbox"]::before,
+input[type="checkbox"]::after {
+  content: "";
+  display: block; 
+  position: absolute;
+}
+
+input[type="checkbox"]::before {
+  background-color: #fff;
+  border-radius: 0%;
+  border: 1px solid #cccccc;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 0px;
+  box-sizing: border-box;
+}
+
+//チェックマーク
+input[type="checkbox"]::after {
+  border-bottom: 3px solid $green;
+  border-left: 3px solid $green;
+  opacity: 0;
+  height: 7px;
+  width: 17px;
+  transform: rotate(-45deg);
+  top: 2px;
+  left: 6px;
+}
+
+input[type="checkbox"]:checked::after {
+  opacity: 1;/*チェック後表示*/
+}
+
+//ラベル
+.label-body{
+  color: #fff;
+  border-radius: 100px;
+  font-size: rem(10);
+  transform: scale(0.8);
+  transform-origin: 0%;
+  padding: 2px 12px;
+  display: inline-block;
+  margin-left: 12px;
+
+  &.must{
+    background-color: $pink;
+  }
+
+  &.free{
+    background-color: $textColor;
+  }
+}
+
+
+//プライバシーポリシー用
+.privacypolicy{
+  text-align: center;
+  font-size: rem(10);
+  margin-top: 32px;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.checkbox.--privacy::after {
+  border-bottom: 3px solid $green;
+  border-left: 3px solid $green;
+  opacity: 0;
+  height: 7px;
+  width: 17px;
+  transform: rotate(-45deg);
+  top: -7px;
+  left: 6px;
+}
+
+.agree{
+  font-size: rem(12);
+}
+
+input[type="checkbox"].--privacypolicy::after{ 
+  top: 21px;
+  left: 6px;
+}
+
+//送信ボタン
+.form-parts.--confirm{
+  text-align: center;
+  margin-top: 45px;
+}
+
+
+
+@media (min-width: 765px){
+
+}

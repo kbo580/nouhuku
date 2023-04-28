@@ -44,23 +44,6 @@ textarea {
   resize: vertical;
 }
 
-input[type=checkbox],
-input[type=radio] {
-  display: none;
-}
-
-input[type=submit],
-input[type=button],
-label,
-button,
-select {
-  cursor: pointer;
-}
-
-select::-ms-expand {
-  display: none;
-}
-
 body {
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Arial, Verdana, sans-serif;
   font-family: "Noto Sans JP", sans-serif;
@@ -281,6 +264,12 @@ body {
 .page-mv.--event {
   background: url(../images/event-bg.jpg) center/cover no-repeat;
 }
+.page-mv.--faq {
+  background: url(../images/faq-bg.png) center/cover no-repeat;
+}
+.page-mv.--contact {
+  background: url(../images/contact-bg.png) center/cover no-repeat;
+}
 
 .page-heading {
   font-size: 1.25rem;
@@ -344,6 +333,11 @@ body {
   font-size: 1rem;
   padding: 14px 18px;
 }
+.btn.--confirm {
+  font-size: 1rem;
+  padding: 14px 20px;
+}
+
 .mt20 {
   margin-top: 20px;
 }

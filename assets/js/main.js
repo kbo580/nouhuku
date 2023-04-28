@@ -39,5 +39,12 @@ $('.hide').hide();
 $('#moreBtn').on('click', function() {
 	$('.hide').slideToggle();
   return false;
+});
+
+//FAQのアコーディオン
+$('.faq-answer').hide();
+  $('.faq-question').on('click', function() {
+	$(this).toggleClass('active');
+	$(this).next('.faq-answer').slideToggle();
 
 });

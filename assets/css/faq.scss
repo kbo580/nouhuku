@@ -1,0 +1,164 @@
+@charset "UTF-8";
+*{
+  box-sizing: border-box;
+}
+
+
+/*----- common -----*/ 
+@function rem($px){
+  @return ($px/16) *1rem;
+}
+
+$textColor: #3D2F23;
+$white: #fff;
+$cream: #fffaeb;
+$pink: #ea689a;
+$yellow: #FAC017;
+$skyblue: #23C7CE;
+$skyblueHover: #1DB4BA;
+$green: #97C736;
+$greenHover: #83AC32;
+$gray: #ccc;
+$brown: #A07907;
+
+body {
+	font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Arial, Verdana,sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: rem(14);
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  color: $textColor;
+  background-color: #fff;
+}
+
+@media (min-width: 765px) {
+  
+  body {
+    font-size: rem(16);
+    line-height: 1.8;
+  }
+
+}
+
+/* -------------------------------------------- */
+/* faq */
+/* -------------------------------------------- */
+.faq{
+
+  &-wrap{
+    width: 81%;
+    font-size: rem(12);
+  }
+
+  //アイコン
+  &-icon{
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+  }
+}
+
+.faq-list{
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+  padding: 20px 0;
+}
+
+//-------------- 質問 --------------
+.faq-question{
+  position: relative;
+
+  &__plus{
+    position: absolute;
+    right: 0;
+    top: 0%;
+  }
+  
+  //+マーク
+  &__plus span{
+    transition: background .2s;
+    background: $green;
+    width: 12px;
+    height: 2.5px;
+    border-radius: 4px;
+    display: block;
+    position: relative;
+    transform: translateY(5px) rotate(90deg);
+    cursor: pointer;
+    
+    &::before{
+      content:"";
+      background: $green;
+      border-radius: 4px;
+      width: 12px;
+      height: 2.5px;
+      display: block;
+      position: absolute;
+      transform: rotate(90deg);
+      top: 0;
+      left: 0;
+    }
+  }
+
+  //activeがついたとき
+  .faq-question__plus.active span{
+    background: transparent;
+  }
+
+}
+
+//-------------- 答え --------------
+.faq-answer{
+  margin-top: 20px;
+}
+
+@media (min-width: 765px) {
+  .faq{
+
+    &-wrap{
+      width: 87.2%;
+      font-size: rem(16);
+    }
+  
+    //アイコン
+    &-icon{
+      width: 40px;
+      height: 40px;
+      margin-right: 24px;
+    }
+  }
+  
+  .faq-list{
+    border-top: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+    padding: 24px 0;
+  }
+  
+  //-------------- 質問 --------------
+  .faq-question{
+
+    //＋マーク
+    &__plus{
+      position: absolute;
+      right: 0;
+      top: 20%;
+    }
+  
+    &__plus span{
+      width: 24px;
+      height: 5px;
+      
+      &::before{
+        width: 24px;
+        height: 5px;
+      }
+    }
+  }
+  
+  //-------------- 答え --------------
+  .faq-answer{
+    margin-top: 24px;
+  }
+
+
+}
