@@ -44,6 +44,11 @@ textarea {
   resize: vertical;
 }
 
+input::placeholder,
+textarea::placeholder {
+  color: rgba(61, 47, 35, 0.3);
+}
+
 body {
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Arial, Verdana, sans-serif;
   font-family: "Noto Sans JP", sans-serif;
@@ -155,6 +160,9 @@ body {
 }
 .flex.--wrap {
   flex-wrap: wrap;
+}
+.flex.--ais {
+  align-items: flex-start;
 }
 .flex.--aic {
   align-items: center;
@@ -269,6 +277,9 @@ body {
 }
 .page-mv.--contact {
   background: url(../images/contact-bg.png) center/cover no-repeat;
+}
+.page-mv.--report {
+  background: url(../images/report-bg.png) center/cover no-repeat;
 }
 
 .page-heading {
@@ -436,6 +447,10 @@ body {
     padding: 20px 40px;
   }
   .btn.--more {
+    font-size: 1.5rem;
+    padding: 20px 40px;
+  }
+  .btn.--confirm {
     font-size: 1.5rem;
     padding: 20px 40px;
   }

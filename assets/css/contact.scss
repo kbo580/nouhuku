@@ -45,8 +45,11 @@ body {
 /* -------------------------------------------- */
 form{
   width: 83.6%;
+  max-width: 920px;
   margin: 0 auto;
+  margin-top: -32px;
 }
+
 .form-parts{
   margin-top: 32px;
 
@@ -58,9 +61,10 @@ form{
     font-weight: 700;
   }
 
-  //form部品
+  // ------------ form部品 ------------
   &__body,
   textarea{
+    line-height: 1;
     width: 100%;
     font-size: rem(12);
     padding: 11px 12px;
@@ -79,19 +83,15 @@ textarea{
   height: 125px;
 }
 
-//チェックボックス
+// ------------チェックボックス ------------
 .checkbox-wrap{
   margin-top: 26px;
   display: flex;
-  
-  //左
-  &:nth-child(odd){
-    width: 56%;
-  }
 
-  //右
-  &:nth-child(even){
-    width: 43%;
+  //左
+  &.--left{
+    width: 56%;
+    margin-right: 8px;
   }
 }
 
@@ -123,7 +123,6 @@ input[type="checkbox"]::after {
 
 input[type="checkbox"]::before {
   background-color: #fff;
-  border-radius: 0%;
   border: 1px solid #cccccc;
   width: 30px;
   height: 30px;
@@ -136,14 +135,14 @@ input[type="checkbox"]::before {
 
 //チェックマーク
 input[type="checkbox"]::after {
-  border-bottom: 3px solid $green;
-  border-left: 3px solid $green;
+  border-bottom: 2px solid $green;
+  border-left: 2px solid $green;
   opacity: 0;
-  height: 7px;
-  width: 17px;
+  height: 8px;
+  width: 18px;
   transform: rotate(-45deg);
-  top: 2px;
-  left: 6px;
+  top: 12%;
+  left: 18%;
 }
 
 input[type="checkbox"]:checked::after {
@@ -170,8 +169,7 @@ input[type="checkbox"]:checked::after {
   }
 }
 
-
-//プライバシーポリシー用
+// ------------プライバシーポリシー用  ------------
 .privacypolicy{
   text-align: center;
   font-size: rem(10);
@@ -180,34 +178,122 @@ input[type="checkbox"]:checked::after {
   margin-right: calc(50% - 50vw);
 }
 
-.checkbox.--privacy::after {
-  border-bottom: 3px solid $green;
-  border-left: 3px solid $green;
-  opacity: 0;
-  height: 7px;
-  width: 17px;
-  transform: rotate(-45deg);
-  top: -7px;
-  left: 6px;
-}
-
 .agree{
   font-size: rem(12);
 }
 
-input[type="checkbox"].--privacypolicy::after{ 
-  top: 21px;
-  left: 6px;
+input[type="checkbox"].--privacy::after{ 
+  // transform: translateY(-65%) rotate(-45deg);
 }
 
-//送信ボタン
-.form-parts.--confirm{
+// ------------ 送信ボタン ------------
+.confirm-btn-wrap{
   text-align: center;
   margin-top: 45px;
 }
 
 
-
 @media (min-width: 765px){
+  form{
+    width: 100%;
+    margin-top: -40px;
+  }
+  
+  .form-parts{
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    //------------ form部品 ------------
+    &__body,
+    textarea,
+    .checkbox-cont{
+      width: 62.5%;
+      margin-left: 40px;
+      font-size: rem(16);
+    }
+    
+    &__body,
+    textarea{
+      padding: 20px;
+      margin-top: 0px;
+    }
+
+    &.--textarea,
+    &.--checkbox{
+      align-items: start;
+    }
+  
+    //名前とラベル
+    &__label{
+      font-size: rem(16);
+    }
+  }
+  
+  textarea{
+    height: 200px;
+  }
+  
+  //--------- チェックボックス ----------
+  .checkbox-wrap{
+    margin-top: 26px;
+    display: flex;
+
+    &:nth-child(1),
+    &:nth-child(2){
+      margin-top: 0;
+    }
+
+    //左
+    &.--left{
+      width: 56%;
+      margin-right: 8px;
+    }
+  }
+  
+  input[type="checkbox"] {
+    padding-left: 44px;
+  }
+  
+  .checkbox-label{
+    font-size: rem(16);
+  }
+  
+  //チェックマーク
+  input[type="checkbox"]::after {
+    border-bottom: 3px solid $green;
+    border-left: 3px solid $green;
+    top: 25%;
+    left: 12%;
+  }
+  
+  //ラベル
+  .label-body{
+    font-size: rem(16);
+    transform: scale(1);
+    padding: 4px 24px;
+    margin-left: 24px;
+  }
+  
+  //----------- プライバシーポリシー用 -----------
+  .privacypolicy{
+    font-size: rem(16);
+    margin-top: 40px;
+  }
+  
+  .agree{
+    font-size: rem(16);
+  }
+  
+  input[type="checkbox"].--privacy::after{ 
+    transform: translateY(-65%) rotate(-45deg);
+  }
+  
+  //---------- 送信ボタン ------------
+  .confirm-btn-wrap{
+    margin-top: 67px;
+  }
+  
 
 }

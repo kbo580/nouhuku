@@ -44,6 +44,11 @@ textarea {
   resize: vertical;
 }
 
+input::placeholder ,
+textarea::placeholder{
+  color: rgba(61,47,35,0.3 );
+}
+
 input[type='checkbox'],
 input[type='radio'] {
   // display: none;
@@ -212,6 +217,10 @@ body {
     flex-wrap: wrap;
   }
 
+  &.--ais{
+    align-items: flex-start;
+  }
+
   &.--aic{
     align-items: center;
   }
@@ -347,6 +356,9 @@ body {
   &.--contact{
     background: url(../images/contact-bg.png) center/cover no-repeat;
   }
+  &.--report{
+    background: url(../images/report-bg.png) center/cover no-repeat;
+  }
 }
 
 .page-heading{
@@ -422,7 +434,6 @@ body {
   &.--confirm{
     font-size: rem(16);
     padding: 14px 20px;
-    // margin-top: 45px;
   }
 }
 
@@ -546,7 +557,8 @@ body {
     }
   
     &.--confirm{
-  
+      font-size: rem(24);
+      padding: 20px 40px;
     }
   }
 
