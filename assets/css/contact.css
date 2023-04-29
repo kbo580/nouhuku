@@ -21,7 +21,7 @@ body {
   }
 }
 /* -------------------------------------------- */
-/* faq */
+/* フォーム */
 /* -------------------------------------------- */
 form {
   width: 83.6%;
@@ -227,5 +227,36 @@ input[type=checkbox]:checked::after {
   }
   .confirm-btn-wrap {
     margin-top: 67px;
+  }
+}
+/* -------------------------------------------- */
+/* thanks */
+.thanks {
+  /* -------------------------------------------- */
+}
+.thanks__wrap {
+  max-width: 920px;
+  margin: 0 auto;
+}
+.thanks__heading {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-align: center;
+}
+.thanks__desc {
+  border: 1px solid #97C736;
+  padding: 20px;
+  margin-top: 20px;
+  font-size: 0.75rem;
+}
+
+@media (min-width: 765px) {
+  .thanks__heading {
+    font-size: 1.5rem;
+  }
+  .thanks__desc {
+    padding: 16px;
+    margin-top: 64px;
+    font-size: 1rem;
   }
 }/*# sourceMappingURL=contact.css.map */

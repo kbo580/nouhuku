@@ -41,7 +41,7 @@ body {
 }
 
 /* -------------------------------------------- */
-/* faq */
+/* フォーム */
 /* -------------------------------------------- */
 form{
   width: 83.6%;
@@ -295,5 +295,45 @@ input[type="checkbox"].--privacy::after{
     margin-top: 67px;
   }
   
+
+}
+
+/* -------------------------------------------- */
+/* thanks */
+.thanks{
+  /* -------------------------------------------- */
+  &__wrap{
+    max-width: 920px;
+    margin: 0 auto;
+  }
+  
+  &__heading{
+    font-size: rem(12);
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__desc{
+    border: 1px solid $green;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: rem(12);
+  }
+}
+
+@media (min-width: 765px){
+
+  .thanks{
+    
+    &__heading{
+      font-size: rem(24);
+    }
+  
+    &__desc{
+      padding: 16px;
+      margin-top: 64px;
+      font-size: rem(16);
+    }
+  }
 
 }

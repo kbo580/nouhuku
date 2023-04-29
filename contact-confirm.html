@@ -108,8 +108,8 @@
   </header>
 
   <main>
-    <div class="page-mv --report"> 
-      <h2 class="page-heading">資料請求</h2>
+    <div class="page-mv --contact"> 
+      <h2 class="page-heading">お問い合わせ</h2>
     </div>
     <!-- page-mv -->
 
@@ -142,7 +142,7 @@
           <div class="form-parts">
             <div class="form-parts__label">
               <label for="company" class="label-title">会社・団体名</label>
-              <span class="label-body must">必須</span>
+              <span class="label-body free">任意</span>
             </div>
             <!-- /parts__label -->
   
@@ -153,17 +153,6 @@
           <div class="form-parts">
             <div class="form-parts__label">
               <label for="depart" class="label-title">部署</label>
-              <span class="label-body free">任意</span>
-            </div>
-            <!-- /parts__label -->
-  
-            <input type="text" id="depart" placeholder="入力してください" class="form-parts__body"> 
-          </div>
-          <!-- /form-parts -->
-  
-          <div class="form-parts">
-            <div class="form-parts__label">
-              <label for="depart" class="label-title">会社・団体　住所</label>
               <span class="label-body free">任意</span>
             </div>
             <!-- /parts__label -->
@@ -194,14 +183,43 @@
           </div>
           <!-- /form-parts -->
 
-          <div class="form-parts">
+          <div class="form-parts --checkbox">
             <div class="form-parts__label">
-              <label for="mailconfirm" class="label-title">メールアドレス(確認用)</label>
+              お問い合わせ項目
               <span class="label-body must">必須</span>
             </div>
             <!-- /parts__label -->
   
-            <input type="email" id="mailconfirm" placeholder="入力してください" class="form-parts__body"> 
+            <div class="checkbox-cont flex --wrap">
+              
+              <div class="checkbox-wrap --left">
+                <input type="checkbox" name="" id="checkboxA" class="checkbox"><label for="checkboxA" class="checkbox-label">ノウフク道について</label>
+              </div>
+  
+              <div class="checkbox-wrap">
+                <input type="checkbox" name="" id="checkboxB" class="checkbox" checked><label for="checkboxB" class="checkbox-label">サンプル請求</label>
+              </div>
+
+              <div class="checkbox-wrap --left">
+                <input type="checkbox" name="" id="checkboxC" class="checkbox"><label for="checkboxC" class="checkbox-label">取材について</label>
+              </div>
+  
+              <div class="checkbox-wrap">
+                <input type="checkbox" name="" id="checkboxD" class="checkbox" checked><label for="checkboxD" class="checkbox-label">その他</label>
+              </div>
+            </div>
+  
+          </div>
+          <!-- /form-parts -->
+
+          <div class="form-parts --textarea">
+            <div class="form-parts__label">
+              <label for="textarea" class="label-title">お問い合わせ内容</label>
+              <span class="label-body must">必須</span>
+            </div>
+            <!-- /parts__label -->
+  
+            <textarea name="textarea" id="textarea" placeholder="入力してください"></textarea>
           </div>
           <!-- /form-parts -->
 
@@ -213,7 +231,7 @@
           </div>
 
           <div class="confirm-btn-wrap">
-            <a href="report-confirm.html" class="btn --confirm">確認画面</a>
+            <a href="contact-thanks.html" class="btn --confirm">送信する</a>
           </div>
     
         </form>

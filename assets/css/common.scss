@@ -435,6 +435,11 @@ body {
     font-size: rem(16);
     padding: 14px 20px;
   }
+
+  &.--thanks{
+    font-size: rem(16);
+    padding: 14px 36px;
+  }
 }
 
 //ボタン用余白
@@ -559,6 +564,11 @@ body {
     &.--confirm{
       font-size: rem(24);
       padding: 20px 40px;
+    }
+
+    &.--thanks{
+      font-size: rem(24);
+      padding: 14px 64px;
     }
   }
 
