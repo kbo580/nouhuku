@@ -66,11 +66,6 @@ select::-ms-expand {
   // display: none;
 }
 
-header,main,section,footer, div, ul, li, h1,h2,h3,dl,dt,dd{
-  // background-color: rgba(0,200,100,0.1);
-  // border: 1px solid rgba(0,0,0,0.1);
-}
-
 @function rem($px){
   @return ($px/16) *1rem;
 }
@@ -125,8 +120,6 @@ body {
 .inner{
   margin: 0 auto;
   width: 100%;
-  // background-color: rgba(241,92,168,0.2);
-  // border: 1px dotted #333;
 
   &.--l{
     max-width: 1040px;
@@ -274,7 +267,6 @@ body {
 /* -------------------------------------------- */
 //section間の余白
 .sec-pad{
-  // border: 1px solid #000;
   padding-top: 52px;
   padding-bottom: 52px;
 }
@@ -449,24 +441,34 @@ body {
 
 //-------- headerのボタン ------
 .header-btn{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-  padding: 10px 8px;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
+  padding: 10px 2px;
   font-weight: 700;
-  font-size: 10px;
-
+  border-right: 1px #fff solid;
+  // border: 1px solid red;
+  line-height: 1;
+  text-align: center;
+  
+  //ボタンテキスト
   &__text{
-    margin-top: 8px;
+    font-size: rem(10);
+    transform: scale(0.8);
+    display: inline-block;
+    background-color: #fc2;
+  }
+  
+  //アイコン
+  &__icon{
+    margin-bottom: 2px;
+    width: 14px;
+    height: 14px;
   }
 }
 
-.header-btn__icon{
-  width: 14px;
-  height: 14px;
-}
+
 
 .siryou-btn{
   background-color: $skyblue;
@@ -546,8 +548,6 @@ body {
   }
 }
 
-
-
 @media (min-width: 765px) {
   .btn{
   
@@ -583,8 +583,14 @@ body {
     font-size: 16px;
     padding: 16px;
     
+    //ボタンテキスト
     &__text{
       margin-top: 16px;
+    }
+      //アイコン
+    &__icon{
+      width: 28px;
+      height: 28px;
     }
   }
 
@@ -596,10 +602,7 @@ body {
     min-width: 132px;
   }
 
-  .header-btn__icon{
-    width: 28px;
-    height: 28px;
-  }
+
 
   //-------- PC用メニューのボタン(上の２つ) ------
   .pcMenuBtn{
@@ -1324,7 +1327,53 @@ body {
 
 }
 
+/* -------------------------------------------- */
+/* header */
+/* -------------------------------------------- */
+.header{
+  &__wrap{
+    height: 100%;
+    // border: 2px solid #fc2;
+  }
+  
+  &__btn-wrap{
+    display: flex;
+    height: 100%;
+    // border: 1px solid #000;
+  }
+}
 
+//----- ロゴ -----
+.header-logo{
+  // padding-left: 20px;
+
+  &__link{
+    width: 100%;
+    line-height: 1;
+  }
+
+  &__image{
+    width: 125px;
+  }
+}
+
+@media (min-width: 765px) {
+  .header{
+    &__wrap{
+      height: 100px;
+    }
+  }
+
+  //-----ロゴ -----
+  .header-logo{
+    padding-left: 40px;
+
+    &__image{
+      width: 230px;
+    }
+  }
+
+}
 
 
 
@@ -1338,6 +1387,12 @@ body {
   .nav-next{
     &:hover{
       background: $greenHover;
+    }
+  }
+
+  .pc-nav-list__link{
+    &:hover{
+      color:#83AC32;
     }
   }
 

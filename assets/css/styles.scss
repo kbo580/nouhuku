@@ -23,52 +23,6 @@ $brown: #A07907;
 
 
 /* -------------------------------------------- */
-/* header */
-/* -------------------------------------------- */
-.header{
-  &__wrap{
-    height: 100%;
-  }
-  
-  &__btn-wrap{
-    display: flex;
-    height: 100%;
-  }
-}
-
-//----- ロゴ -----
-.header-logo{
-  padding-left: 20px;
-
-  &__link{
-    width: 100%;
-    line-height: 1;
-  }
-
-  &__image{
-    width: 150px;
-  }
-}
-
-@media (min-width: 765px) {
-  .header{
-    &__wrap{
-      height: 100px;
-    }
-  }
-
-  //-----ロゴ -----
-  .header-logo{
-    padding-left: 40px;
-
-    &__image{
-      width: 230px;
-    }
-  }
-
-}
-
-/* -------------------------------------------- */
 /* ナビメニュー */
 /* -------------------------------------------- */
 //----- スマホ用ナビ -----
@@ -1169,7 +1123,6 @@ $brown: #A07907;
   font-size: rem(10);
   transform: scale(0.7);
   transform-origin: 0%;
-  white-space: nowrap;
   margin-top: 12px;
 }
 
@@ -1195,18 +1148,22 @@ $brown: #A07907;
   .footer__link{
     &--left{
       width: auto;
-      margin-right: 64px;
+      width: 27.6%;
+      // margin-right: 64px;
     }
     
     &--center{
       width: auto;
+      width: 59%;
       display: block;
       font-size: rem(14);
       flex: auto;
+      border: 1px solid #fff;
     }
     
     &--right{
       width: auto;
+      width: 13.3%;
       position: relative;
     }
   }

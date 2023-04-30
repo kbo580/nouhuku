@@ -5,39 +5,6 @@
 
 /*----- common -----*/
 /* -------------------------------------------- */
-/* header */
-/* -------------------------------------------- */
-.header__wrap {
-  height: 100%;
-}
-.header__btn-wrap {
-  display: flex;
-  height: 100%;
-}
-
-.header-logo {
-  padding-left: 20px;
-}
-.header-logo__link {
-  width: 100%;
-  line-height: 1;
-}
-.header-logo__image {
-  width: 150px;
-}
-
-@media (min-width: 765px) {
-  .header__wrap {
-    height: 100px;
-  }
-  .header-logo {
-    padding-left: 40px;
-  }
-  .header-logo__image {
-    width: 230px;
-  }
-}
-/* -------------------------------------------- */
 /* ナビメニュー */
 /* -------------------------------------------- */
 .sp-nav {
@@ -869,7 +836,6 @@
   font-size: 0.625rem;
   transform: scale(0.7);
   transform-origin: 0%;
-  white-space: nowrap;
   margin-top: 12px;
 }
 
@@ -889,16 +855,19 @@
   }
   .footer__link--left {
     width: auto;
-    margin-right: 64px;
+    width: 27.6%;
   }
   .footer__link--center {
     width: auto;
+    width: 59%;
     display: block;
     font-size: 0.875rem;
     flex: auto;
+    border: 1px solid #fff;
   }
   .footer__link--right {
     width: auto;
+    width: 13.3%;
     position: relative;
   }
   .footer-logo {
