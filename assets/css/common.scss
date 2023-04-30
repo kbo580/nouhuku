@@ -258,7 +258,6 @@ body {
     font-size: rem(16);
     line-height: 1.8;
   }
-
 }
 
 
@@ -439,77 +438,6 @@ body {
   margin-top: 20px;
 }
 
-//-------- headerのボタン ------
-.header-btn{
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // justify-content: center;
-  padding: 10px 2px;
-  font-weight: 700;
-  border-right: 1px #fff solid;
-  // border: 1px solid red;
-  line-height: 1;
-  text-align: center;
-  
-  //ボタンテキスト
-  &__text{
-    font-size: rem(10);
-    transform: scale(0.8);
-    display: inline-block;
-    background-color: #fc2;
-  }
-  
-  //アイコン
-  &__icon{
-    margin-bottom: 2px;
-    width: 14px;
-    height: 14px;
-  }
-}
-
-
-
-.siryou-btn{
-  background-color: $skyblue;
-  color: $white;
-}
-
-.contact-btn{
-  background-color: $green;
-  color: $white;
-}
-
-//-------- スマホ用メニューのボタン ------
-.spMenuBtn{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 160px;
-  font-weight: 400;
-  line-height: 1;
-  width: 158px;
-  padding: 12px;
-
-  &__wrap{
-    padding: 0px 20px;
-    margin-top: 32px;
-
-    .spMenuBtn:first-child{
-      margin-right: 20px;
-    }
-  }
-
-  &__icon{
-    margin-right: 8px;
-    width: 24px;
-  }
-
-  &__text{
-    font-size: rem(16);
-  }
-}
-
 //-------- footerのボタン(バナー) ------
 .footer-btn{
   width: 110px;
@@ -578,29 +506,7 @@ body {
   }
 
 
-  //-------- headerのボタン ------
-  .header-btn{
-    font-size: 16px;
-    padding: 16px;
-    
-    //ボタンテキスト
-    &__text{
-      margin-top: 16px;
-    }
-      //アイコン
-    &__icon{
-      width: 28px;
-      height: 28px;
-    }
-  }
-
-  .siryou-btn{
-    min-width: 98px;
-  }
-
-  .contact-btn{
-    min-width: 132px;
-  }
+  
 
 
 
@@ -1327,72 +1233,49 @@ body {
 
 }
 
-/* -------------------------------------------- */
-/* header */
-/* -------------------------------------------- */
-.header{
-  &__wrap{
-    height: 100%;
-    // border: 2px solid #fc2;
-  }
-  
-  &__btn-wrap{
-    display: flex;
-    height: 100%;
-    // border: 1px solid #000;
-  }
-}
-
-//----- ロゴ -----
-.header-logo{
-  // padding-left: 20px;
-
-  &__link{
-    width: 100%;
-    line-height: 1;
-  }
-
-  &__image{
-    width: 125px;
-  }
-}
-
-@media (min-width: 765px) {
-  .header{
-    &__wrap{
-      height: 100px;
-    }
-  }
-
-  //-----ロゴ -----
-  .header-logo{
-    padding-left: 40px;
-
-    &__image{
-      width: 230px;
-    }
-  }
-
-}
-
-
-
-
 
 /*-------------  Hover Event ------------ */
 @media (hover: hover){
   //ボタン、voiceページの前へ、次へボタン
   .btn,
   .nav-previous,
-  .nav-next{
+  .nav-next,
+  .contact-btn{
+
     &:hover{
       background: $greenHover;
+    }
+  }
+
+  .siryou-btn{
+    &:hover{
+      background: $skyblueHover;
+    }
+  }
+
+  .pcMenuBtn{
+
+    &:hover{
+      background-color:rgba(151, 199, 54, 0.1);
+      color: $greenHover;
     }
   }
 
   .pc-nav-list__link{
     &:hover{
       color:#83AC32;
+      position: relative;
+    }
+    
+    &:hover::before{
+      content:"・";
+      font-size: 22px;
+      line-height: 1;
+      position: absolute;
+      top:-20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color:$greenHover;
     }
   }
 

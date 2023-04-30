@@ -3,7 +3,7 @@ $(function(){
     $(this).toggleClass('active');
     $('#nav').toggleClass('active');
     $('body').toggleClass('active');
-    $('.sp-nav').fadeToggle();
+    $('.sp-nav').toggleClass("active");
 
   });
   
