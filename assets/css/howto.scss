@@ -340,12 +340,6 @@ $brown: #A07907;
   }
 }
 
-.aa{
-  border: 1px solid #000;
-  width: 100%;
-  clear: both;
-}
-
 //緑のラベル
 .device-label{
   background: $green;
@@ -361,10 +355,11 @@ $brown: #A07907;
 //----------- 詳細 -----------
 //画像側
 .detail-list__image-wrap{
-  width: 44.8%;
+  width: 45%;
   float: right;
   margin: 30px 0 20px 20px;
   padding-top: 20px;
+  margin-left: 6%;
 }
 
 //キャプション
@@ -402,7 +397,6 @@ $brown: #A07907;
     padding-top: 12px;
     padding-left: 12px;
   }
-  
 }
 
 .paddingleft{
@@ -416,6 +410,7 @@ $brown: #A07907;
   padding: 12px;
   margin-top: 32px;
   font-size: rem(10);
+  clear: both;
 
   &__desc{
     margin-top: 12px;
@@ -462,41 +457,45 @@ $brown: #A07907;
   }
   
   //----------- 詳細 -----------
+  //画像側
+  .detail-list__image-wrap{
+    width: 30%;
+    padding-top: 40px;
+    margin-left: 4%;
+  }
+
+  //キャプション
+  .detail-list__image-caption{
+    font-size: rem(12);
+    transform: scale(1);
+    line-height: 1.5;
+    margin-top: 8px;
+  }
+
+  .detail-list__image-cont:not(:first-child){
+    margin-top: 40px; 
+  }
+
+  //文字側
   .detail-list{
-    margin-top: 20px;
-  
+
     &__item{
       font-size: rem(16);
-      line-height: 1.6;
+  
+      &:not(:first-child){
+        margin-top: 32px;
+      }
     }
   
-    //画像側
-    &__image-wrap{
-      width: 30%;
-      float: right;
-      margin-left: 40px;
-      margin-bottom: 40px;
-    }
-    
-    &__image{
-  
-    }
-  
-    &__image-caption{
-      font-size: rem(12);
-      transform: scale(1);
-      line-height: 1.5;
-    }
-  
-    //-------- テキスト側 --------
     &__title{
       width: 66%;
       font-size: rem(16);
       padding-bottom: 16px;
     }
-    
+  
     &__desc{
-      padding: 16px 0px 40px 24px;
+      padding-top: 16px;
+      padding-left: 24px;
     }
   }
   
