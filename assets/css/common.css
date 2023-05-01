@@ -181,7 +181,15 @@ body {
   font-weight: 700;
 }
 
-@media (min-width: 765px) {
+@media (min-width: 768px) {
+  .inner.--l {
+    max-width: 1040px;
+    padding: 0 20px;
+  }
+  .inner.--xl {
+    max-width: 1320px;
+    padding: 0 20px;
+  }
   .sp-only {
     display: none;
   }
@@ -253,6 +261,7 @@ body {
   background: #ddd;
   width: 100%;
   padding: 9.6vw 5.3333333333vw;
+  margin-top: 50px;
 }
 .page-mv.--voice {
   background: url(../images/voice-bg.jpg) center/cover no-repeat;
@@ -310,6 +319,7 @@ body {
   }
   .page-mv {
     padding: 72px 20px;
+    margin-top: 80px;
   }
   .page-heading {
     font-size: 2.5rem;
@@ -320,6 +330,12 @@ body {
   }
   .br--pc-only {
     display: block;
+  }
+}
+@media (min-width: 992px) {
+  .page-mv {
+    padding: 72px 20px;
+    margin-top: 100px;
   }
 }
 /* -------------------------------------------- */

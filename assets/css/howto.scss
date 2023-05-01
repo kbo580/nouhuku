@@ -359,49 +359,50 @@ $brown: #A07907;
 }
 
 //----------- 詳細 -----------
+//画像側
+.detail-list__image-wrap{
+  width: 44.8%;
+  float: right;
+  margin: 30px 0 20px 20px;
+  padding-top: 20px;
+}
+
+//キャプション
+.detail-list__image-caption{
+  font-size: rem(10);
+  transform: scale(0.8);
+  text-align: right;
+  transform-origin: 100%;
+  line-height: 2;
+}
+
+.detail-list__image-cont:not(:first-child){
+  margin-top: 20px; 
+}
+
+//文字側
 .detail-list{
-  margin-top: 20px;
 
   &__item{
     font-size: rem(10);
-    line-height: 1.6;
+
+    &:not(:first-child){
+      margin-top: 32px;
+    }
   }
 
-  //画像側
-  &__image-wrap{
-    width: 150px;
-    float: right;
-    margin-left: 20px;
-    margin-bottom: 20px;
-  }
-  
-  &__image{
-
-  }
-
-  &__image-caption{
-    font-size: rem(10);
-    transform: scale(0.8);
-    text-align: right;
-    transform-origin: 100%;
-    line-height: 2;
-  }
-
-  //テキスト側
-  &__body{
-    // width: 165px;
-  }
-  
   &__title{
-    width: 165px;
     font-size: rem(10);
     border-bottom: 2px dashed $skyblue;
     padding-bottom: 12px;
+    width: 49%;
+  }
+
+  &__desc{
+    padding-top: 12px;
+    padding-left: 12px;
   }
   
-  &__desc{
-    padding: 12px 0px 32px 12px;
-  }
 }
 
 .paddingleft{
@@ -413,6 +414,7 @@ $brown: #A07907;
   border: 1px solid $green;
   background-color: $white;
   padding: 12px;
+  margin-top: 32px;
   font-size: rem(10);
 
   &__desc{

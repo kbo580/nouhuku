@@ -24,15 +24,26 @@ body {
 /* -------------------------------------------- */
 .voice-list__image-wrap {
   float: right;
-  width: 150px;
+  width: 44.8%;
   margin-top: 32px;
   display: block;
+  margin-left: 12px;
 }
 
 .voice-list__image:not(:first-child) {
   margin-top: 20px;
 }
 
+@media (min-width: 765px) {
+  .voice-list__image-wrap {
+    width: 32.6%;
+    margin-top: 40px;
+    margin-left: 20px;
+  }
+  .voice-list__image:not(:first-child) {
+    margin-top: 40px;
+  }
+}
 /* -------------------------------------------- */
 /* 流れ */
 /* -------------------------------------------- */

@@ -185,6 +185,7 @@ body {
   height: 2px;
   transform: translate(-50%, -50%);
 }
+
 .icon:before {
   transform: translate(-50%, -50%) rotate(90deg);
 }
@@ -235,7 +236,19 @@ body {
   font-weight: 700;
 }
 
-@media (min-width: 765px) {
+@media (min-width: 768px) {//765
+  .inner{
+  
+    &.--l{
+      max-width: 1040px;
+      padding: 0 20px;
+    }
+  
+    &.--xl{
+      max-width: 1320px;
+      padding: 0 20px;
+    }
+  }
   .sp-only{
     display: none;
   }
@@ -322,6 +335,7 @@ body {
   background: #ddd;
   width: 100%;
   padding: calc(36/375*100vw) calc(20/375*100vw);
+  margin-top: 50px;
   
   &.--voice{
     background: url(../images/voice-bg.jpg) center/cover no-repeat;
@@ -382,6 +396,7 @@ body {
   //下層ページの見出し
   .page-mv{
     padding: 72px 20px;
+    margin-top: 80px;
   }
 
   .page-heading{
@@ -396,6 +411,15 @@ body {
     display: block;
   }
 }
+
+@media (min-width: 992px){
+  //下層ページの見出し
+  .page-mv{
+    padding: 72px 20px;
+    margin-top: 100px;
+  }
+}
+
 /* -------------------------------------------- */
 /* ボタン */
 /* -------------------------------------------- */
@@ -1266,7 +1290,7 @@ body {
       color:#83AC32;
       position: relative;
     }
-    
+
     &:hover::before{
       content:"・";
       font-size: 22px;

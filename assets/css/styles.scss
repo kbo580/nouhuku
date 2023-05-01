@@ -140,6 +140,7 @@ $brown: #A07907;
   }
 }
 
+//activeがついたとき
 .burger.active .bar:nth-of-type(2){
   opacity: 0;
 }
@@ -165,7 +166,83 @@ $brown: #A07907;
   }
 }
 
-@media (min-width: 765px) {
+@media (min-width: 765px){
+  .header{
+
+    &__wrap{
+      padding-left: 40px;
+    }
+  }
+
+   //-----ロゴ -----
+    .header-logo{
+
+    &__image{
+      width: 188px;
+    }
+  }
+
+  //-------- headerのボタン ------
+  .header-btn{
+    padding: 16px 12px;
+    height: 80px;
+    
+    //ボタンテキスト
+    &__text{
+      font-size: rem(14);
+      transform: scale(1);
+    }
+
+    //アイコン
+    &__icon{
+      width: 24px;
+      height: 24px;
+      margin-bottom: 12px;
+    }
+  }
+
+  // ----------- ハンバーガーメニュー  ------------
+  .burger{
+    width: 80px;
+  }
+
+  .bar{
+    height: 2px;
+    left: 50%;
+  
+    &:nth-of-type(1){
+      top:22px;
+    }
+  
+    &:nth-of-type(2){
+      top:32px;
+    }
+    
+    &:nth-of-type(3){
+      top:42px;
+  
+      &::after {
+        top: 8px;
+        left: -4px;
+        font-size: rem(14);
+        transform: scale(1);
+      }
+    }
+  }
+
+  //activeがついたとき
+  .burger.active .bar:nth-of-type(3){
+  
+    &::after{
+      transform: scale(1) translateY(0) rotate(-45deg);
+      top:10px;
+      left:14px;
+    }
+  }
+
+}
+
+@media (min-width: 992px) {
   .header{
 
     &__wrap{
@@ -189,9 +266,9 @@ $brown: #A07907;
     //ボタンテキスト
     &__text{
       font-size: rem(16);
-      transform: scale(1);
     }
-      //アイコン
+
+    //アイコン
     &__icon{
       width: 28px;
       height: 28px;
@@ -204,57 +281,12 @@ $brown: #A07907;
     border-right: none;
   }
 
-  // ----------- ハンバーガーメニュー  ------------
-  .burger{
-    width: 100px;
-  }
-
-  .bar{
-    width: 46%;
-    height: 3px;
-    left: 50%;
-  
-    &:nth-of-type(1){
-      top:22px;
-    }
-  
-    &:nth-of-type(2){
-      top:36px;
-    }
-    
-    &:nth-of-type(3){
-      top:50px;
-  
-      &::after {
-        top: 8px;
-        left: -4px;
-        font-size: rem(16);
-        transform: scale(1);
-      }
-    }
-  }
-
-  .burger.active .bar:nth-of-type(1){
-    width: 40%;
-  }
-  
-  .burger.active .bar:nth-of-type(3){
-    width: 40%;
-  
-    &::after{
-      transform: scale(1) translateY(0) rotate(-45deg);
-      top:12px;
-      left:20px;
-    }
-  }
-
-}
-
-@media (min-width: 992px){
   .burger{
     display: none;
   }
 }
+
+
 
 /* -------------------------------------------- */
 /* ナビメニュー */
