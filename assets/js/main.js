@@ -42,7 +42,7 @@ $('#moreBtn').on('click', function() {
 });
 
 //FAQのアコーディオン
-$('.faq-answer').hide();
+// $('.faq-answer').hide();
   $('.faq-question').on('click', function() {
 	$(this).toggleClass('active');
 	$(this).next('.faq-answer').slideToggle();

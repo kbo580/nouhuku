@@ -1073,7 +1073,6 @@
     display: block;
     font-size: 0.875rem;
     flex: auto;
-    border: 1px solid #fff;
   }
   .footer__link--right {
     width: auto;

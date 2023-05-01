@@ -347,8 +347,10 @@ $brown: #A07907;
   font-size: rem(10);
   display: inline-block;
   padding: 0 8px;
+
   &.--detail{
     margin-top: 32px;
+    margin-bottom: 20px;
   }
 }
 
@@ -357,7 +359,7 @@ $brown: #A07907;
 .detail-list__image-wrap{
   width: 45%;
   float: right;
-  margin: 30px 0 20px 20px;
+  margin: 50px 0 20px 20px;
   padding-top: 20px;
   margin-left: 6%;
 }
@@ -377,6 +379,7 @@ $brown: #A07907;
 
 //文字側
 .detail-list{
+  // margin-top: 20px;
 
   &__item{
     font-size: rem(10);
@@ -453,6 +456,7 @@ $brown: #A07907;
 
     &.--detail{
       margin-top: 40px;
+      margin-bottom: 14px;
     }
   }
   
