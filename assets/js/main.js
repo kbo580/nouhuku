@@ -4,6 +4,11 @@ $(function(){
     $('#nav').toggleClass('active');
     $('body').toggleClass('active');
     $('.sp-nav').toggleClass("active");
+    if ($(".burger").hasClass('active')) {
+      $("#burgerText").text("CLOSE");
+    }else{
+      $("#burgerText").text("MENU");
+      }
 
   });
   
@@ -42,9 +47,9 @@ $('#moreBtn').on('click', function() {
 });
 
 //FAQのアコーディオン
-// $('.faq-answer').hide();
+$('.faq-answer').hide();
   $('.faq-question').on('click', function() {
 	$(this).toggleClass('active');
-	$(this).next('.faq-answer').slideToggle();
+	$(this).next('.faq-answer').slideToggle(300);
 
 });

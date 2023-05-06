@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-<title></title>
+<title>ノウフク道</title>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
         </a>
       </h1>
 
-      <div class="header-link-wrap flex --aic">
+      <div class="header-link-wrap">
         <!-- pc-nav -->
         <div class="pc-nav">
           <div class="pc-nav__btnWrap">
@@ -61,6 +61,7 @@
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
+            <span id="burgerText" class="burger-text">MENU</span>
           </div>
         </div>
         <!-- /header__btn-wrap -->
@@ -80,6 +81,7 @@
           <li class="sp-nav-list__item"><a href="history.html" class="sp-nav-list__link">ノウフク道のあゆみ</a></li>
           <li class="sp-nav-list__item"><a href="noufukurenkei.html" class="sp-nav-list__link">農福連携の進め方</a></li>
           <li class="sp-nav-list__item"><a href="howto.html" class="sp-nav-list__link">野菜の作り方と装置の話</a></li>
+          <li class="sp-nav-list__item"><a href="event.html" class="sp-nav-list__link">導入事例・イベント情報</a></li>
           <li class="sp-nav-list__item"><a href="faq.html" class="sp-nav-list__link">よくある質問</a></li>
         </ul>
       </nav>
@@ -151,7 +153,7 @@
               <img src="assets/images/onayami-icon-01.png" alt="" >
             </div>
 
-            <h3 class="onayami-list__heading">天候</h3>
+            <h3 class="onayami-list__heading"><img src="assets/images/onayami-01.png" alt="天候" class="onayami-list__heading-image"></h3>
 
             <p class="onayami-list__desc">天候や気温に左右されて思うように収穫ができない</p>
 
@@ -164,8 +166,7 @@
             <div class="onayami-list__icon">
               <img src="assets/images/onayami-icon-02.png" alt="" >
             </div>
-
-            <h3 class="onayami-list__heading">身体への負担</h3>
+            <h3 class="onayami-list__heading"><img src="assets/images/onayami-02.png" alt="身体への負担" class="onayami-list__heading-image"></h3>
 
             <p class="onayami-list__desc">身体への負担が大きく利用者さんに平等に作業をお願いできない</p>
 
@@ -179,7 +180,7 @@
               <img src="assets/images/onayami-icon-03.png" alt="" >
             </div>
 
-            <h3 class="onayami-list__heading">知識</h3>
+            <h3 class="onayami-list__heading"><img src="assets/images/onayami-03.png" alt="知識" class="onayami-list__heading-image"></h3>
 
             <p class="onayami-list__desc">農業に関する知識がない</p>
 
@@ -187,12 +188,14 @@
               <img src="assets/images/onayami-tag-03.png" alt="">
             </div>
 
+            </li>
+
           <li class="onayami-list__item">
             <div class="onayami-list__icon">
               <img src="assets/images/onayami-icon-04.png" alt="" >
             </div>
 
-            <h3 class="onayami-list__heading">マニュアル化</h3>
+            <h3 class="onayami-list__heading"><img src="assets/images/onayami-04.png" alt="マニュアル化" class="onayami-list__heading-image"></h3>
 
             <p class="onayami-list__desc">マニュアル化されていない作業が多く、教えるのが難しい</p>
 
@@ -206,20 +209,22 @@
               <img src="assets/images/onayami-icon-05.png" alt="" >
             </div>
 
-            <h3 class="onayami-list__heading">休日出勤</h3>
+            <h3 class="onayami-list__heading"></h3>
+            <h3 class="onayami-list__heading"><img src="assets/images/onayami-05.png" alt="休日出勤" class="onayami-list__heading-image"></h3>
 
             <p class="onayami-list__desc">農繁期は職員さんが休日出勤をして収穫しなければいけない</p>
 
             <div class="onayami-list__tag">
               <img src="assets/images/onayami-tag-05.png" alt="">
             </div>
+            </li>
 
           <li class="onayami-list__item">
             <div class="onayami-list__icon">
               <img src="assets/images/onayami-icon-06.png" alt="" >
             </div>
 
-            <h3 class="onayami-list__heading">早朝作業</h3>
+            <h3 class="onayami-list__heading"><img src="assets/images/onayami-06.png" alt="早朝作業" class="onayami-list__heading-image"></h3>
 
             <p class="onayami-list__desc">収穫時間帯が朝早い</p>
 
@@ -242,8 +247,15 @@
         <ul class="middle-banners-list">
 
           <li class="middle-banners-list__item">
-            <a href="voice.html" class="middle-banners-list__image --voice">
-              <div class="middle-banners-list__cont plus">
+            <a href="history.html" class="middle-banners-list__wrap bgImage">
+
+              <span class="mask">ges/m-banner-voice-sp.jpg" alt="">
+                </picture> -->
+
+                <img src="assets/images/m-banner-voice-pc.jpg" alt="" class="cta-image">
+              </span>
+
+              <div class="middle-banners-list__cont flex --jcsb --aic plus ">
                 <p class="middle-banners-list__text">お客様からの声</p>
                 <div class="icon-wrap --ss"><span class="icon"></span></div>
               </div>
@@ -251,13 +263,19 @@
           </li>
 
           <li class="middle-banners-list__item">
-            <a href="history.html" class="middle-banners-list__image --aboutus">
-              <div class="middle-banners-list__cont plus ">
+            <a href="history.html" class="middle-banners-list__wrap bgImage">
+
+              <span class="mask">
+                <img src="assets/images/m-banner-aboutus-pc.jpg" alt="" class="cta-image">
+              </span>
+
+              <div class="middle-banners-list__cont flex --jcsb --aic plus ">
                 <p class="middle-banners-list__text">私たちについて</p>
                 <div class="icon-wrap --ss"><span class="icon"></span></div>
               </div>
             </a>
           </li>
+
         </ul>
 
       </div>
@@ -542,163 +560,162 @@
 
     </section>
     <!-- /delicious -->
+    
+    <div class="cta">
+      <div class="l-image__wrap flex">
+  
+        <a href="report.html" class="l-image --siryou bgImage">
+          <span class="mask">
+            <img src="assets/images/cta-siryou.png" alt="" class="cta-image">
+          </span>
+          <p class="l-image__text">資料請求</p>
+        </a>
+  
+        <a href="contact.html" class="l-image --contact bgImage">
+          <span class="mask">
+            <img src="assets/images/cta-contact.png" alt="" class="cta-image">
+          </span>
+          <p class="l-image__text">お問い合わせ</p>
+        </a>
+      </div>
+      <!-- l-image__wrap -->
+  
+      <div class="inner --l">
+  
+        <div class="pc-only">
+  
+          <div class="wide-image__wrap">
+            <a href="faq.html" class="wide-image bgImage">
+              <span class="mask">
+                <img src="assets/images/cta-wide-image.png" alt="" class="cta-image">
+              </span>
+  
+              <div class="wide-image__text-wrap flex --aic --jcsb plus">
+                <p class="wide-image__text">よくある質問</p>
+                <div class="icon-wrap --l"><span class="icon"></span></div>
+              </div>
+            </a>
+          </div>
+          <!-- cta__wide-image-wrap -->
+  
+          <ul class="s-image__wrap flex --wrap --jcsb">
+            
+            <li class="s-image voice plus">
+              <a href="voice.html" class="s-image bgImage">
+                <span class="mask">
+                  <img src="assets/images/cta-s-image_01.png" alt="" class="cta-image">
+                </span>
+    
+                <div class="s-image__text-wrap flex --aic --jcsb plus">
+                  <p class="s-image__text">お客様からの声</p>
+                  <div class="icon-wrap --s"><span class="icon"></span></div>
+                </div>
+              </a>
+            </li>
+            
+            <li class="s-image customer plus">
+              <a href="zenkoku.html" class="s-image bgImage">
+                <span class="mask">
+                  <img src="assets/images/cta-s-image_02.png" alt="" class="cta-image">
+                </span>
+    
+                <div class="s-image__text-wrap flex --aic --jcsb plus">
+                  <p class="s-image__text">全国の販売先</p>
+                  <div class="icon-wrap --s"><span class="icon"></span></div>
+                </div>
+              </a>
+            </li>
+            
+            <li class="s-image history plus">
+              <a href="history.html" class="s-image bgImage">
+                <span class="mask">
+                  <img src="assets/images/cta-s-image_03.png" alt="" class="cta-image">
+                </span>
+    
+                <div class="s-image__text-wrap flex --aic --jcsb plus">
+                  <p class="s-image__text">ノウフク道のあゆみ</p>
+                  <div class="icon-wrap --s"><span class="icon"></span></div>
+                </div>
+              </a>
+            </li>
+            
+            <li class="s-image event plus">
+              <a href="event.html" class="s-image bgImage">
+                <span class="mask">
+                  <img src="assets/images/cta-s-image_04.png" alt="" class="cta-image">
+                </span>
+    
+                <div class="s-image__text-wrap flex --aic --jcsb plus">
+                  <p class="s-image__text">導入事例・イベント情報</p>
+                  <div class="icon-wrap --s"><span class="icon"></span></div>
+                </div>
+              </a>
+            </li>
+            
+            <li class="s-image howto plus">
+              <a href="howto.html" class="s-image bgImage">
+                <span class="mask">
+                  <img src="assets/images/cta-s-image_05.png" alt="" class="cta-image">
+                </span>
+    
+                <div class="s-image__text-wrap flex --aic --jcsb plus">
+                  <p class="s-image__text">野菜の作り方と装置の話</p>
+                  <div class="icon-wrap --s"><span class="icon"></span></div>
+                </div>
+              </a>
+            </li>
+            
+            <li class="s-image noufukurenkei plus">
+              <a href="noufukurenkei.html" class="s-image bgImage">
+                <span class="mask">
+                  <img src="assets/images/cta-s-image_06.png" alt="" class="cta-image">
+                </span>
+    
+                <div class="s-image__text-wrap flex --aic --jcsb plus">
+                  <p class="s-image__text">農福連携の進め方</p>
+                  <div class="icon-wrap --s"><span class="icon"></span></div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- pc-only -->
+  
+      </div>
+      <!-- /inner --l -->
+  
+      <div class="footer__btn-wrap flex --jcc">
+        <a href="https://www.seidenkogyo.co.jp/" target="_blank" class="footer-btn seiden-logo">
+          <img src="assets/images/seiden_logo.png" alt="">
+        </a>
+  
+        <a href="https://www.social-house.jp/" target="_blank" class="footer-btn social_house-logo">
+          <img src="assets/images/social_house.png" alt="">
+        </a>
+      </div>
+      <!-- footer__btn-wrap -->
+  
+    </div>
+    <!-- /cta -->
 
+    <div id="toTop" class="toTop"><a href="#"></a></div>
   </main>
 
-  <div class="cta">
-    <div class="l-image__wrap flex">
-
-      <a href="report.html" class="l-image --siryou bgImage">
-        <span class="mask">
-          <img src="assets/images/cta-siryou.png" alt="" class="cta-image">
-        </span>
-        <p class="l-image__text">資料請求</p>
-      </a>
-
-      <a href="contact.html" class="l-image --contact bgImage">
-        <span class="mask">
-          <img src="assets/images/cta-contact.png" alt="" class="cta-image">
-        </span>
-        <p class="l-image__text">お問い合わせ</p>
-      </a>
-    </div>
-    <!-- l-image__wrap -->
-
-    <div class="inner --l">
-
-      <div class="pc-only">
-
-        <div class="wide-image__wrap">
-          <a href="faq.html" class="wide-image bgImage">
-            <span class="mask">
-              <img src="assets/images/cta-wide-image.png" alt="" class="cta-image">
-            </span>
-
-            <div class="wide-image__text-wrap flex --aic --jcsb plus">
-              <p class="wide-image__text">よくある質問</p>
-              <div class="icon-wrap --l"><span class="icon"></span></div>
-            </div>
-          </a>
-        </div>
-        <!-- cta__wide-image-wrap -->
-
-        <ul class="s-image__wrap flex --wrap --jcsb">
-          
-          <li class="s-image voice plus">
-            <a href="voice.html" class="s-image bgImage">
-              <span class="mask">
-                <img src="assets/images/cta-s-image_01.png" alt="" class="cta-image">
-              </span>
-  
-              <div class="s-image__text-wrap flex --aic --jcsb plus">
-                <p class="s-image__text">お客様からの声</p>
-                <div class="icon-wrap --s"><span class="icon"></span></div>
-              </div>
-            </a>
-          </li>
-          
-          <li class="s-image customer plus">
-            <a href="zenkoku.html" class="s-image bgImage">
-              <span class="mask">
-                <img src="assets/images/cta-s-image_02.png" alt="" class="cta-image">
-              </span>
-  
-              <div class="s-image__text-wrap flex --aic --jcsb plus">
-                <p class="s-image__text">全国の販売先</p>
-                <div class="icon-wrap --s"><span class="icon"></span></div>
-              </div>
-            </a>
-          </li>
-          
-          <li class="s-image history plus">
-            <a href="history.html" class="s-image bgImage">
-              <span class="mask">
-                <img src="assets/images/cta-s-image_03.png" alt="" class="cta-image">
-              </span>
-  
-              <div class="s-image__text-wrap flex --aic --jcsb plus">
-                <p class="s-image__text">ノウフク道のあゆみ</p>
-                <div class="icon-wrap --s"><span class="icon"></span></div>
-              </div>
-            </a>
-          </li>
-          
-          <li class="s-image event plus">
-            <a href="event.html" class="s-image bgImage">
-              <span class="mask">
-                <img src="assets/images/cta-s-image_04.png" alt="" class="cta-image">
-              </span>
-  
-              <div class="s-image__text-wrap flex --aic --jcsb plus">
-                <p class="s-image__text">導入事例・イベント情報</p>
-                <div class="icon-wrap --s"><span class="icon"></span></div>
-              </div>
-            </a>
-          </li>
-          
-          <li class="s-image howto plus">
-            <a href="howto.html" class="s-image bgImage">
-              <span class="mask">
-                <img src="assets/images/cta-s-image_05.png" alt="" class="cta-image">
-              </span>
-  
-              <div class="s-image__text-wrap flex --aic --jcsb plus">
-                <p class="s-image__text">野菜の作り方と装置の話</p>
-                <div class="icon-wrap --s"><span class="icon"></span></div>
-              </div>
-            </a>
-          </li>
-          
-          <li class="s-image noufukurenkei plus">
-            <a href="noufukurenkei.html" class="s-image bgImage">
-              <span class="mask">
-                <img src="assets/images/cta-s-image_06.png" alt="" class="cta-image">
-              </span>
-  
-              <div class="s-image__text-wrap flex --aic --jcsb plus">
-                <p class="s-image__text">農福連携の進め方</p>
-                <div class="icon-wrap --s"><span class="icon"></span></div>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <!-- pc-only -->
-
-        
-    </div>
-    <!-- /inner --l -->
-
-
-  </div>
-  <!-- /cta -->
-
   <footer id="footer" class="footer">
-
-    <div class="footer__btn-wrap flex --jcc">
-      <a href="https://www.seidenkogyo.co.jp/" target="_blank" class="footer-btn seiden-logo">
-        <img src="assets/images/seiden_logo.png" alt="">
-      </a>
-
-      <a href="https://www.social-house.jp/" target="_blank" class="footer-btn social_house-logo">
-        <img src="assets/images/social_house.png" alt="">
-      </a>
-    </div>
-    <!-- footer__btn-wrap -->
-
-    <div class="footer__link-wrap flex --jcsb">
+    
+    <div class="footer__link-wrap flex">
 
       <div class="footer__link--left">
         <figure class="footer-logo">
           <img src="assets/images/footer-logo.png" alt="">
         </figure>
 
-        <p class="footer-info">〒370-0871 群馬県高崎市上豊岡町571-9<br>Tel. 027-343-5111（代）<br>Fax. 027-343-5811</p>
+        <p class="footer-info nowrap">〒370-0871 群馬県高崎市上豊岡町571-9<br>Tel. 027-343-5111（代）<br>Fax. 027-343-5811</p>
       </div>
       <!-- footer__link--left -->
 
       <div class="footer__link--center">
-        <nav class="flex">
+        <nav class="flex --jcsa">
           <!-- 1列目 -->
           <div class="footer-link-title">
             <a href="index.html" class="footer-nav-list__link">ノウフク道トップ</a>
@@ -729,7 +746,7 @@
       <!-- footer__link--center -->
 
       <div class="footer__link--right flex --fdc">
-        <div class="footer-sns-wrap">
+        <!-- <div class="footer-sns-wrap">
           <a href="" class="footer-icon fb-icon">
             <img src="assets/images/footer_fb-icon.png" alt="">
           </a>
@@ -737,10 +754,10 @@
           <a href="" class="footer-icon tw-icon">
             <img src="assets/images/footer_tw-icon.png" alt="">
           </a>
-        </div>
+        </div> -->
         <!-- footer-sns-wrap -->
 
-        <p class="footer-copy">Copyright © 2023 noufukudo All right reserved.</p>
+        <p class="footer-copy nowrap">Copyright © 2023 noufukudo All right reserved.</p>
 
       </div>
       <!-- footer__link--right -->
@@ -749,7 +766,6 @@
     <!-- footer__link-wrap -->
     
   </footer>
-  <div id="toTop" class="toTop"><a href="#"></a></div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="assets/js/main.js"></script>

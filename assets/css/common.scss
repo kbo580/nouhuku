@@ -86,7 +86,7 @@ body {
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Arial, Verdana,sans-serif;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: rem(14);
-  line-height: 1.5;
+  line-height: 1.6;
   letter-spacing: 0.05em;
   color: $textColor;
   background-color: #fff;
@@ -192,7 +192,7 @@ body {
 
 //下層ページの見出しの下のリード文
 .page-lead-common{
-  font-size: rem(12);
+  font-size: rem(14);
 }
 
 /*----- flex -----*/
@@ -227,6 +227,10 @@ body {
     justify-content: center;
   }
 
+  &.--jcsa{
+    justify-content: space-around;
+  }
+
   &.--rev{
     flex-direction: column-reverse;
   }
@@ -234,6 +238,11 @@ body {
 
 .bold{
   font-weight: 700;
+}
+
+	
+.nowrap{
+  white-space: nowrap;
 }
 
 @media (min-width: 768px) {//765
@@ -249,6 +258,7 @@ body {
       padding: 0 20px;
     }
   }
+
   .sp-only{
     display: none;
   }
@@ -449,6 +459,7 @@ body {
   &.--confirm{
     font-size: rem(16);
     padding: 14px 20px;
+    min-width: 105px;
   }
 
   &.--thanks{
@@ -473,18 +484,20 @@ body {
 
 //-------- topへ戻るボタン ------
 .toTop{
+  position: sticky;
+  bottom: 16px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  margin-left: auto;
   width: 44px;
   height: 44px;
-  position: fixed;
-  right: 20px;
-  bottom: 1%;
-  background: $green;
-
+  
   a{
-    position: relative;
-    display: block;
     width: 100%;
     height: 100%;
+    position: relative;
+    display: block;
+    background: $green;
 
     &::before{
       font-family: 'Font Awesome 5 Free';
@@ -516,11 +529,7 @@ body {
     &.--confirm{
       font-size: rem(24);
       padding: 20px 40px;
-    }
-
-    &.--thanks{
-      font-size: rem(24);
-      padding: 14px 64px;
+      min-width: 180px;
     }
   }
 
@@ -528,10 +537,6 @@ body {
   .mt20{
     margin-top: 40px;
   }
-
-
-  
-
 
 
   //-------- PC用メニューのボタン(上の２つ) ------
@@ -560,10 +565,13 @@ body {
 
   //-------- topへ戻るボタン ------
   .toTop{
+    margin-right: 40px;
+    margin-bottom: 40px;
+    bottom: 40px;
     width: 64px;
     height: 64px;
-    right: 40px;
-  
+    margin-top: -64px;
+    
     a{
       &::before{
         font-size: 32px;
@@ -610,13 +618,13 @@ body {
   }
 
   &__heading{
-    font-size: rem(12);
+    font-size: rem(14);
     margin-top: 21px;
-    min-height: 55px;
+    min-height: 90px;
   }
   
   &__desc{
-    font-size: rem(12);
+    font-size: rem(14);
     padding: 12px 0;
     border-bottom: 1px solid #dddddd;
     min-height: 115px;
@@ -681,7 +689,7 @@ body {
   }
 
   &__answer{
-    font-size: rem(12);
+    font-size: rem(14);
     margin-top: 18px;
   }
 
@@ -1338,12 +1346,23 @@ body {
   .cta-image{
     transform: scale(1);
     transition: transform .3s ease-in-out;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   
   .l-image:hover .cta-image,
   .wide-image:hover .cta-image,
-  .s-image:hover .cta-image{
+  .s-image:hover .cta-image,
+  .middle-banners-list__bgimage:hover .cta-image,
+  .middle-banners-list__item:hover .cta-image{
     transform: scale(1.2);
+  }
+
+  .link--border{
+    &:hover{
+      text-decoration: none;
+    }
   }
 
 

@@ -155,7 +155,7 @@
 /* 手順 */
 /* -------------------------------------------- */
 .procedure-list__item {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   padding: 1em;
 }
 .procedure-list__item:nth-child(odd) {

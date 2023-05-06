@@ -16,6 +16,7 @@
 <body>
   <header id="header" class="header">
     <div class="header__wrap flex --jcsb">
+
       <h1 class="header-logo flex --aic">
         <a href="index.html" class="header-logo__link">
           <img src="assets/images/logo.png" alt="" class="header-logo__image">
@@ -44,7 +45,7 @@
 
         <div class="header__btn-wrap"> 
           <a href="report.html" class="header-btn siryou-btn">
-            <div class="">
+            <div class="header-btn__icon">
               <img src="assets/images/icon-siryou.svg" alt="資料請求のアイコン" class="header-btn__icon">
             </div>
             <span class="header-btn__text">資料請求</span>
@@ -61,6 +62,7 @@
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
+            <span id="burgerText" class="burger-text">MENU</span>
           </div>
         </div>
         <!-- /header__btn-wrap -->
@@ -80,11 +82,12 @@
           <li class="sp-nav-list__item"><a href="history.html" class="sp-nav-list__link">ノウフク道のあゆみ</a></li>
           <li class="sp-nav-list__item"><a href="noufukurenkei.html" class="sp-nav-list__link">農福連携の進め方</a></li>
           <li class="sp-nav-list__item"><a href="howto.html" class="sp-nav-list__link">野菜の作り方と装置の話</a></li>
+          <li class="sp-nav-list__item"><a href="event.html" class="sp-nav-list__link">導入事例・イベント情報</a></li>
           <li class="sp-nav-list__item"><a href="faq.html" class="sp-nav-list__link">よくある質問</a></li>
         </ul>
       </nav>
 
-      <div class="spMenuBtn__wrap flex">
+      <div class="spMenuBtn__wrap flex --jcc">
         <a href="report.html" class="spMenuBtn siryou-btn">
           <div class="">
             <img src="assets/images/icon-siryou.svg" alt="資料請求のアイコン" class="spMenuBtn__icon">
@@ -323,13 +326,9 @@
     </section>
     <!-- /sales -->
 
-
-
-
-
   </main>
 
-   <div class="cta">
+  <div class="cta">
     <div class="l-image__wrap flex">
 
       <a href="report.html" class="l-image --siryou bgImage">
@@ -449,15 +448,8 @@
       </div>
       <!-- pc-only -->
 
-        
     </div>
     <!-- /inner --l -->
-
-
-  </div>
-  <!-- /cta -->
-
-  <footer id="footer" class="footer">
 
     <div class="footer__btn-wrap flex --jcc">
       <a href="https://www.seidenkogyo.co.jp/" target="_blank" class="footer-btn seiden-logo">
@@ -470,73 +462,81 @@
     </div>
     <!-- footer__btn-wrap -->
 
-    <div class="footer__link-wrap flex --jcsb">
+  </div>
+  <!-- /cta -->
 
-      <div class="footer__link--left">
-        <figure class="footer-logo">
-          <img src="assets/images/footer-logo.png" alt="">
-        </figure>
+  <div id="toTop" class="toTop"><a href="#"></a></div>
+</main>
 
-        <p class="footer-info">〒370-0871 群馬県高崎市上豊岡町571-9<br>Tel. 027-343-5111（代）<br>Fax. 027-343-5811</p>
-      </div>
-      <!-- footer__link--left -->
 
-      <div class="footer__link--center">
-        <nav class="flex">
-          <!-- 1列目 -->
-          <div class="footer-link-title">
-            <a href="index.html" class="footer-nav-list__link">ノウフク道トップ</a>
-          </div>
-
-          <!-- 2列目 -->
-          <ul class="footer-nav-list --left">
-            <li class="footer-nav-list__item"><a href="voice.html" class="footer-nav-list__link">お客様からの声</a></li>
-            <li class="footer-nav-list__item"><a href="zenkoku.html" class="footer-nav-list__link">全国の販売先</a></li>
-            <li class="footer-nav-list__item"><a href="history.html" class="footer-nav-list__link">ノウフク道のあゆみ</a></li>
-            <li class="footer-nav-list__item"><a href="noufukurenkei.html" class="footer-nav-list__link">農福連携の進め方</a></li>
-          </ul>
-
-          <!-- 3列目 -->
-          <ul class="footer-nav-list --right">
-            <li class="footer-nav-list__item"><a href="howto.html" class="footer-nav-list__link">野菜の作り方と装置の話</a></li>
-            <li class="footer-nav-list__item"><a href="event.html" class="footer-nav-list__link">導入事例・イベント情報</a></li>
-            <li class="footer-nav-list__item"><a href="faq.html" class="footer-nav-list__link">よくある質問</a></li>
-          </ul>
-
-          <!-- 4列目 -->
-          <ul class="">
-            <li class="footer-nav-list__item"><a href="report.html" class="footer-nav-list__link">資料請求</a></li>
-            <li class="footer-nav-list__item"><a href="contact.html" class="footer-nav-list__link">お問い合わせ</a></li>
-          </ul>
-        </nav>
-      </div>
-      <!-- footer__link--center -->
-
-      <div class="footer__link--right flex --fdc">
-        <div class="footer-sns-wrap">
-          <a href="" class="footer-icon fb-icon">
-            <img src="assets/images/footer_fb-icon.png" alt="">
-          </a>
+<footer id="footer" class="footer">
   
-          <a href="" class="footer-icon tw-icon">
-            <img src="assets/images/footer_tw-icon.png" alt="">
-          </a>
+  <div class="footer__link-wrap flex">
+
+    <div class="footer__link--left">
+      <figure class="footer-logo">
+        <img src="assets/images/footer-logo.png" alt="">
+      </figure>
+
+      <p class="footer-info nowrap">〒370-0871 群馬県高崎市上豊岡町571-9<br>Tel. 027-343-5111（代）<br>Fax. 027-343-5811</p>
+    </div>
+    <!-- footer__link--left -->
+
+    <div class="footer__link--center">
+      <nav class="flex --jcsa">
+        <!-- 1列目 -->
+        <div class="footer-link-title">
+          <a href="index.html" class="footer-nav-list__link">ノウフク道トップ</a>
         </div>
-        <!-- footer-sns-wrap -->
 
-        <p class="footer-copy">Copyright © 2023 noufukudo All right reserved.</p>
+        <!-- 2列目 -->
+        <ul class="footer-nav-list --left">
+          <li class="footer-nav-list__item"><a href="voice.html" class="footer-nav-list__link">お客様からの声</a></li>
+          <li class="footer-nav-list__item"><a href="zenkoku.html" class="footer-nav-list__link">全国の販売先</a></li>
+          <li class="footer-nav-list__item"><a href="history.html" class="footer-nav-list__link">ノウフク道のあゆみ</a></li>
+          <li class="footer-nav-list__item"><a href="noufukurenkei.html" class="footer-nav-list__link">農福連携の進め方</a></li>
+        </ul>
 
-      </div>
-      <!-- footer__link--right -->
+        <!-- 3列目 -->
+        <ul class="footer-nav-list --right">
+          <li class="footer-nav-list__item"><a href="howto.html" class="footer-nav-list__link">野菜の作り方と装置の話</a></li>
+          <li class="footer-nav-list__item"><a href="event.html" class="footer-nav-list__link">導入事例・イベント情報</a></li>
+          <li class="footer-nav-list__item"><a href="faq.html" class="footer-nav-list__link">よくある質問</a></li>
+        </ul>
+
+        <!-- 4列目 -->
+        <ul class="">
+          <li class="footer-nav-list__item"><a href="report.html" class="footer-nav-list__link">資料請求</a></li>
+          <li class="footer-nav-list__item"><a href="contact.html" class="footer-nav-list__link">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- footer__link--center -->
+
+    <div class="footer__link--right flex --fdc">
+      <!-- <div class="footer-sns-wrap">
+        <a href="" class="footer-icon fb-icon">
+          <img src="assets/images/footer_fb-icon.png" alt="">
+        </a>
+
+        <a href="" class="footer-icon tw-icon">
+          <img src="assets/images/footer_tw-icon.png" alt="">
+        </a>
+      </div> -->
+      <!-- footer-sns-wrap -->
+
+      <p class="footer-copy nowrap">Copyright © 2023 noufukudo All right reserved.</p>
 
     </div>
-    <!-- footer__link-wrap -->
-    
-  </footer>
-  <div id="toTop" class="toTop"><a href="#"></a></div>
+    <!-- footer__link--right -->
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="assets/js/main.js"></script>
+  </div>
+  <!-- footer__link-wrap -->
+  
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 
 </html>

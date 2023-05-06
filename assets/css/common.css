@@ -53,7 +53,7 @@ body {
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Arial, Verdana, sans-serif;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 0.875rem;
-  line-height: 1.5;
+  line-height: 1.6;
   letter-spacing: 0.05em;
   color: #3D2F23;
   background-color: #fff;
@@ -145,7 +145,7 @@ body {
 }
 
 .page-lead-common {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
 }
 
 /*----- flex -----*/
@@ -173,12 +173,19 @@ body {
 .flex.--jcc {
   justify-content: center;
 }
+.flex.--jcsa {
+  justify-content: space-around;
+}
 .flex.--rev {
   flex-direction: column-reverse;
 }
 
 .bold {
   font-weight: 700;
+}
+
+.nowrap {
+  white-space: nowrap;
 }
 
 @media (min-width: 768px) {
@@ -363,6 +370,7 @@ body {
 .btn.--confirm {
   font-size: 1rem;
   padding: 14px 20px;
+  min-width: 105px;
 }
 .btn.--thanks {
   font-size: 1rem;
@@ -382,18 +390,20 @@ body {
 }
 
 .toTop {
+  position: sticky;
+  bottom: 16px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  margin-left: auto;
   width: 44px;
   height: 44px;
-  position: fixed;
-  right: 20px;
-  bottom: 1%;
-  background: #97C736;
 }
 .toTop a {
-  position: relative;
-  display: block;
   width: 100%;
   height: 100%;
+  position: relative;
+  display: block;
+  background: #97C736;
 }
 .toTop a::before {
   font-family: "Font Awesome 5 Free";
@@ -419,10 +429,7 @@ body {
   .btn.--confirm {
     font-size: 1.5rem;
     padding: 20px 40px;
-  }
-  .btn.--thanks {
-    font-size: 1.5rem;
-    padding: 14px 64px;
+    min-width: 180px;
   }
   .mt20 {
     margin-top: 40px;
@@ -446,9 +453,12 @@ body {
     margin-right: 40px;
   }
   .toTop {
+    margin-right: 40px;
+    margin-bottom: 40px;
+    bottom: 40px;
     width: 64px;
     height: 64px;
-    right: 40px;
+    margin-top: -64px;
   }
   .toTop a::before {
     font-size: 32px;
@@ -486,12 +496,12 @@ body {
   bottom: -10px;
 }
 .card-list__heading {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   margin-top: 21px;
-  min-height: 55px;
+  min-height: 90px;
 }
 .card-list__desc {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   padding: 12px 0;
   border-bottom: 1px solid #dddddd;
   min-height: 115px;
@@ -539,7 +549,7 @@ body {
   font-size: 0.75rem;
 }
 .numbered-list__answer {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   margin-top: 18px;
 }
 .numbered-list__body {
@@ -1003,10 +1013,18 @@ body {
   .cta-image {
     transform: scale(1);
     transition: transform 0.3s ease-in-out;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .l-image:hover .cta-image,
   .wide-image:hover .cta-image,
-  .s-image:hover .cta-image {
+  .s-image:hover .cta-image,
+  .middle-banners-list__bgimage:hover .cta-image,
+  .middle-banners-list__item:hover .cta-image {
     transform: scale(1.2);
+  }
+  .link--border:hover {
+    text-decoration: none;
   }
 }/*# sourceMappingURL=common.css.map */

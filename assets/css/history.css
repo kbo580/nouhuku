@@ -75,7 +75,7 @@
   padding: 12px 0;
 }
 .thought-list__desc-wrap {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   margin-top: 12px;
 }
 .thought-list__desc:not(:first-child) {
@@ -113,7 +113,7 @@
 /* -------------------------------------------- */
 .mission-vision {
   line-height: 1.6;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
 }
 .mission-vision__image {
   width: 150px;
@@ -194,7 +194,7 @@
   margin-top: 32px;
 }
 .message-list {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
 }
 .message-list__item {
   margin-top: 16px;

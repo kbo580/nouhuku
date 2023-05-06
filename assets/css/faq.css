@@ -7,7 +7,6 @@ body {
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Arial, Verdana, sans-serif;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 0.875rem;
-  line-height: 1.5;
   letter-spacing: 0.05em;
   color: #3D2F23;
   background-color: #fff;
@@ -40,37 +39,26 @@ body {
 
 .faq-question {
   position: relative;
-}
-.faq-question__plus {
-  position: absolute;
-  right: 0;
-  top: 0%;
-}
-.faq-question__plus span {
-  transition: background 0.2s;
-  background: #97C736;
-  width: 12px;
-  height: 2.5px;
-  border-radius: 4px;
-  display: block;
-  position: relative;
-  transform: translateY(5px) rotate(90deg);
   cursor: pointer;
 }
-.faq-question__plus span::before {
+.faq-question__heading::before, .faq-question__heading::after {
   content: "";
   background: #97C736;
   border-radius: 4px;
-  width: 12px;
-  height: 2.5px;
   display: block;
   position: absolute;
-  transform: rotate(90deg);
-  top: 0;
-  left: 0;
+  width: 12px;
+  height: 2.5px;
+  top: 10px;
+  right: 0;
 }
-.faq-question .faq-question__plus.active span {
-  background: transparent;
+.faq-question__heading::after {
+  transform: rotate(90deg);
+  transition: transform 0.5s, opacity 0.5s;
+}
+.faq-question.active .faq-question__heading::after {
+  transform: rotate(0deg);
+  opacity: 0;
 }
 
 .faq-answer {
@@ -92,18 +80,11 @@ body {
     border-bottom: 1px solid #ededed;
     padding: 24px 0;
   }
-  .faq-question__plus {
-    position: absolute;
+  .faq-question__heading::before, .faq-question__heading::after {
+    width: 24px;
+    height: 5px;
+    top: 20px;
     right: 0;
-    top: 20%;
-  }
-  .faq-question__plus span {
-    width: 24px;
-    height: 5px;
-  }
-  .faq-question__plus span::before {
-    width: 24px;
-    height: 5px;
   }
   .faq-answer {
     margin-top: 24px;
