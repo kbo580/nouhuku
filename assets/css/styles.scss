@@ -29,7 +29,7 @@ $brown: #A07907;
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 3;
 
   &__wrap{
     height: 100%;
@@ -1071,6 +1071,7 @@ $brown: #A07907;
       width: 100%;
       height: 100%;
       object-fit: cover;
+      border-radius: 4px;
     }
   }
 
@@ -1282,6 +1283,7 @@ $brown: #A07907;
     top: 0;
     z-index: 1;
     border-radius: 8px;
+    transition: background-color .4s;
   }
 }
 
@@ -1294,6 +1296,10 @@ $brown: #A07907;
   justify-content: center;
   position: relative;
 
+  .mask{
+    border-radius: 0;
+  }
+
   &__text{
     color:$white;
     border: 1px solid $white;
@@ -1302,7 +1308,11 @@ $brown: #A07907;
     font-weight: 700;
     line-height: 1;
     position: absolute;
-    // z-index: 2;
+    z-index: 2;
+  }
+
+  &.bgImage::before{
+    border-radius: 0px;
   }
 }
 
@@ -1323,7 +1333,7 @@ $brown: #A07907;
     top: 0;
     left: 0;
     width: 100%;
-    // z-index: 2;
+    z-index: 2;
   }
   
   &__text{

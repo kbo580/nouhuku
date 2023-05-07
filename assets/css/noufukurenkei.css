@@ -12,6 +12,7 @@
 /* -------------------------------------------- */
 .step__cont {
   padding-top: 50px;
+  align-items: center;
 }
 .step__image {
   position: relative;
@@ -24,6 +25,7 @@
 }
 .step__body {
   flex: 1;
+  padding-top: 0;
 }
 .step__title {
   font-size: 1rem;
@@ -75,12 +77,13 @@
 @media (min-width: 765px) {
   .step__cont {
     padding-top: 100px;
+    align-items: start;
   }
   .step__image {
     width: 30%;
   }
   .step__body {
-    padding-top: 0;
+    padding-top: 10px;
     padding-left: 40px;
     margin-top: -30px;
   }

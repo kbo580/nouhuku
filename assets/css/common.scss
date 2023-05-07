@@ -131,6 +131,9 @@ body {
     padding: 0 20px;
   }
 }
+.none{
+  display:none
+}
 
 .pc-only{
   display: none;
@@ -318,20 +321,20 @@ body {
 //セクションの見出し
 .sec-heading{
   position: relative;
-  margin-bottom: 1em;
   font-size: rem(18);
   font-weight: 500;
   letter-spacing: 0;
   text-align: center;
-  margin-bottom: 43px;
+  margin-bottom: 32px;
+  padding-bottom: 9px;
   
   &::before {
     content: '';
     position: absolute;
-    bottom: -15px;
     display: inline-block;
     width: 32px;
-    height: 4px;
+    height: 2px;
+    bottom: 0;
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
@@ -396,10 +399,12 @@ body {
 @media (min-width: 765px){
   .sec-heading{
     font-size: rem(36);
-    margin-bottom: 92px;
+    padding-bottom: 18px;
+    margin-bottom: 64px;
     
     &::before {
       width: 64px;
+      height: 4px;
     }
   }
 
@@ -571,6 +576,8 @@ body {
     width: 64px;
     height: 64px;
     margin-top: -64px;
+    display: none;
+    z-index: 2;
     
     a{
       &::before{
@@ -685,7 +692,7 @@ body {
   &__title{
     font-weight: 700;
     font-size: rem(12);
-
+    line-height: 1;
   }
 
   &__answer{
@@ -705,14 +712,15 @@ body {
   font-size: rem(12);
   line-height: 1.6;
 
-  tr{
-    &:nth-child(odd){
-      background-color: rgba(151, 199, 54, 0.25);
-    }
-    
-    &:nth-child(even){
-      background-color: $white;
-    }
+  &__heading{
+    background-color: rgba(151, 199, 54, 0.25);
+  }
+
+  &__odd{
+    background-color: $white;
+  }
+  &__even{
+    background-color: rgba(151, 199, 54, 0.15);
   }
 
   th{
@@ -721,7 +729,7 @@ body {
   }
 
   td{
-    padding: 12px;
+    padding: 8px 12px;
 
     &:first-child{
       vertical-align: top;
@@ -745,6 +753,7 @@ body {
 
   &__name{
     font-size: rem(12);
+    line-height: 1;
     width: 50%;
     margin-top: 18px;
   }
@@ -772,6 +781,7 @@ body {
   &__image{
     width: calc(80 / 345 *100vw);
     margin-top: 8px;
+    padding-left: 8px;
   }
 }
 .possible-list__cont{
@@ -786,6 +796,16 @@ body {
     content: "";
     width: 2px;
     height: 8px;
+    background: $skyblue;
+    display: inline-block;
+    border-radius: 8px;
+    margin-right: 7px;
+  }
+
+  &.--possible::before{
+    content: "";
+    width: 2px;
+    height: 12px;
     background: $skyblue;
     display: inline-block;
     border-radius: 8px;
@@ -837,14 +857,14 @@ body {
   //---------- 数字付きタイトル ----------
   .numberd-heading{
     font-size: rem(24);
-      padding-bottom: 24px;
+    padding-bottom: 24px;
 
-  &__num-image{
-    width: 48px;
-      height: 32px;
-      margin-right: 16px;
+    &__num-image{
+      width: 47px;
+      height: 31px;
+      margin-right: 15px;
+    }
   }
-}
 
   //---------- 丸数字付きリスト ---------
   .numbered-list{
@@ -889,7 +909,7 @@ body {
     line-height: 1.8;
 
     td{
-      padding: 16px;
+      padding: 10px 16px;
 
       &:first-child{
         // width: 20%;
@@ -961,6 +981,12 @@ body {
       height: 16px;
       margin-right: 8px;
     }
+
+    &.--possible::before{
+      width: 4px;
+      height: 16px;
+      margin-right: 14px;
+    }
   }
 
 }
@@ -979,7 +1005,7 @@ body {
 .voice-list{
   
   &__item{
-    border: 4px solid $green;
+    border: 2px solid $green;
     padding: 16px 16px 32px;
     &:not(:first-child){
       margin-top: 20px;
@@ -1022,7 +1048,7 @@ body {
     padding: 16px;
     font-size: rem(12);
     margin-top: 20px;
-    border: 4px solid $green;
+    border: 2px solid $green;
   }
 
   &__text{
@@ -1132,6 +1158,10 @@ body {
       left: 50%;
       transform: translate(-50%, -50%);
     }
+
+    &.disable{
+      opacity: .5;
+    }
   }
 }
 
@@ -1150,7 +1180,7 @@ body {
       padding: 28px 40px 64px;
 
       &:not(:first-child){
-        margin-top: 20px;
+        margin-top: 40px;
       }
     }
 
@@ -1358,12 +1388,21 @@ body {
   .middle-banners-list__item:hover .cta-image{
     transform: scale(1.2);
   }
+  
+  .l-image:hover.bgImage::before,
+  .wide-image:hover.bgImage::before,
+  .s-image:hover .bgImage::before,
+  .middle-banners-list__bgimage:hover .bgImage::before,
+  .middle-banners-list__item:hover .bgImage::before{
+    background-color: rgba(0, 0, 0, 0.25);
+  }
 
   .link--border{
     &:hover{
       text-decoration: none;
     }
   }
+
 
 
 

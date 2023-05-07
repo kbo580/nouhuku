@@ -219,7 +219,7 @@
 }
 .device-list__item {
   font-size: 0.75rem;
-  padding: 12px;
+  padding: 8px 12px;
 }
 .device-list__item:nth-child(odd) {
   background: #fff;
@@ -310,7 +310,7 @@
   }
   .device-list__item {
     font-size: 1rem;
-    padding: 16px;
+    padding: 10px 16px;
   }
   .device-label {
     font-size: 1rem;

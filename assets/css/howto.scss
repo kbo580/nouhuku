@@ -329,7 +329,8 @@ $brown: #A07907;
 
   &__item{
     font-size: rem(12);
-    padding: 12px;
+    padding: 8px 12px;
+
     &:nth-child(odd){
       background: $white;
     }
@@ -445,7 +446,7 @@ $brown: #A07907;
   
     &__item{
       font-size: rem(16);
-      padding: 16px;
+      padding: 10px 16px;
     }
   }
   

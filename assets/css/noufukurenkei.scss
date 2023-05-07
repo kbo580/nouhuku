@@ -42,6 +42,7 @@ $brown: #A07907;
   //---------- step本体 ----------
   &__cont{
     padding-top: 50px;
+    align-items: center;
   }
 
   &__image{
@@ -58,6 +59,7 @@ $brown: #A07907;
   //文字の方
   &__body{
     flex:1;
+    padding-top: 0;
   }
 
   &__title{
@@ -125,6 +127,7 @@ $brown: #A07907;
     //---------- step本体 ----------
     &__cont{
       padding-top: 100px;
+      align-items: start;
     }
   
     &__image{
@@ -133,7 +136,7 @@ $brown: #A07907;
   
     //文字の方
     &__body{
-      padding-top: 0;
+      padding-top: 10px;
       padding-left: 40px;
       margin-top: -30px;
     }

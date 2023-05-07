@@ -40,9 +40,20 @@ $('#toTop').click(function(){
 });
 
 //アコーディオン
-$('.hide').hide();
-$('#moreBtn').on('click', function() {
-	$('.hide').slideToggle();
+$('.hideA').hide();
+$('.hideB').hide();
+$('#moreBtnB').hide();
+
+$('#moreBtnA').on('click', function() {
+  $('.hideA').slideDown(300);
+  $(this).hide();
+  $('#moreBtnB').show();
+  
+  return false;
+});
+
+$('#moreBtnB').on('click', function() {
+	$('.hideB').slideDown(300);
   return false;
 });
 

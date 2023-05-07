@@ -12,7 +12,7 @@
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 3;
 }
 .header__wrap {
   height: 100%;
@@ -794,6 +794,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 4px;
 }
 .feature-card__desc {
   font-size: 0.75rem;
@@ -943,6 +944,7 @@
   top: 0;
   z-index: 1;
   border-radius: 8px;
+  transition: background-color 0.4s;
 }
 
 .l-image {
@@ -953,6 +955,9 @@
   justify-content: center;
   position: relative;
 }
+.l-image .mask {
+  border-radius: 0;
+}
 .l-image__text {
   color: #fff;
   border: 1px solid #fff;
@@ -961,6 +966,10 @@
   font-weight: 700;
   line-height: 1;
   position: absolute;
+  z-index: 2;
+}
+.l-image.bgImage::before {
+  border-radius: 0px;
 }
 
 .wide-image {
@@ -977,6 +986,7 @@
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 2;
 }
 .wide-image__text {
   color: #fff;

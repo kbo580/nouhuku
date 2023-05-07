@@ -94,6 +94,10 @@ body {
   padding: 0 20px;
 }
 
+.none {
+  display: none;
+}
+
 .pc-only {
   display: none;
 }
@@ -243,20 +247,20 @@ body {
 /* -------------------------------------------- */
 .sec-heading {
   position: relative;
-  margin-bottom: 1em;
   font-size: 1.125rem;
   font-weight: 500;
   letter-spacing: 0;
   text-align: center;
-  margin-bottom: 43px;
+  margin-bottom: 32px;
+  padding-bottom: 9px;
 }
 .sec-heading::before {
   content: "";
   position: absolute;
-  bottom: -15px;
   display: inline-block;
   width: 32px;
-  height: 4px;
+  height: 2px;
+  bottom: 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
@@ -319,10 +323,12 @@ body {
 @media (min-width: 765px) {
   .sec-heading {
     font-size: 2.25rem;
-    margin-bottom: 92px;
+    padding-bottom: 18px;
+    margin-bottom: 64px;
   }
   .sec-heading::before {
     width: 64px;
+    height: 4px;
   }
   .page-mv {
     padding: 72px 20px;
@@ -459,6 +465,8 @@ body {
     width: 64px;
     height: 64px;
     margin-top: -64px;
+    display: none;
+    z-index: 2;
   }
   .toTop a::before {
     font-size: 32px;
@@ -547,6 +555,7 @@ body {
 .numbered-list__title {
   font-weight: 700;
   font-size: 0.75rem;
+  line-height: 1;
 }
 .numbered-list__answer {
   font-size: 0.875rem;
@@ -562,18 +571,21 @@ body {
   font-size: 0.75rem;
   line-height: 1.6;
 }
-.table-common tr:nth-child(odd) {
+.table-common__heading {
   background-color: rgba(151, 199, 54, 0.25);
 }
-.table-common tr:nth-child(even) {
+.table-common__odd {
   background-color: #fff;
+}
+.table-common__even {
+  background-color: rgba(151, 199, 54, 0.15);
 }
 .table-common th {
   padding: 10px;
   text-align: center;
 }
 .table-common td {
-  padding: 12px;
+  padding: 8px 12px;
 }
 .table-common td:first-child {
   vertical-align: top;
@@ -591,6 +603,7 @@ body {
 }
 .vegetable-list__name {
   font-size: 0.75rem;
+  line-height: 1;
   width: 50%;
   margin-top: 18px;
 }
@@ -611,12 +624,22 @@ body {
 .vegetable-list__image {
   width: 23.1884057971vw;
   margin-top: 8px;
+  padding-left: 8px;
 }
 
 .blue-bar::before {
   content: "";
   width: 2px;
   height: 8px;
+  background: #23C7CE;
+  display: inline-block;
+  border-radius: 8px;
+  margin-right: 7px;
+}
+.blue-bar.--possible::before {
+  content: "";
+  width: 2px;
+  height: 12px;
   background: #23C7CE;
   display: inline-block;
   border-radius: 8px;
@@ -660,9 +683,9 @@ body {
     padding-bottom: 24px;
   }
   .numberd-heading__num-image {
-    width: 48px;
-    height: 32px;
-    margin-right: 16px;
+    width: 47px;
+    height: 31px;
+    margin-right: 15px;
   }
   .numbered-list__icon {
     width: 70px;
@@ -692,7 +715,7 @@ body {
     line-height: 1.8;
   }
   .table-common td {
-    padding: 16px;
+    padding: 10px 16px;
   }
   .vegetable-list {
     margin-top: 0px;
@@ -739,6 +762,11 @@ body {
     height: 16px;
     margin-right: 8px;
   }
+  .blue-bar.--possible::before {
+    width: 4px;
+    height: 16px;
+    margin-right: 14px;
+  }
 }
 @media (min-width: 992px) {
   .card-list__heading {
@@ -746,7 +774,7 @@ body {
   }
 }
 .voice-list__item {
-  border: 4px solid #97C736;
+  border: 2px solid #97C736;
   padding: 16px 16px 32px;
 }
 .voice-list__item:not(:first-child) {
@@ -781,7 +809,7 @@ body {
   padding: 16px;
   font-size: 0.75rem;
   margin-top: 20px;
-  border: 4px solid #97C736;
+  border: 2px solid #97C736;
 }
 .voice-bottom-col2__name {
   margin-top: 32px;
@@ -865,6 +893,10 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.post-navigation .nav-previous.disable,
+.post-navigation .nav-next.disable {
+  opacity: 0.5;
+}
 
 .btn.--return {
   padding: 16px 20px;
@@ -876,7 +908,7 @@ body {
     padding: 28px 40px 64px;
   }
   .voice-list__item:not(:first-child) {
-    margin-top: 20px;
+    margin-top: 40px;
   }
   .voice-list__heading-cont {
     padding-bottom: 20px;
@@ -1023,6 +1055,13 @@ body {
   .middle-banners-list__bgimage:hover .cta-image,
   .middle-banners-list__item:hover .cta-image {
     transform: scale(1.2);
+  }
+  .l-image:hover.bgImage::before,
+  .wide-image:hover.bgImage::before,
+  .s-image:hover .bgImage::before,
+  .middle-banners-list__bgimage:hover .bgImage::before,
+  .middle-banners-list__item:hover .bgImage::before {
+    background-color: rgba(0, 0, 0, 0.25);
   }
   .link--border:hover {
     text-decoration: none;
